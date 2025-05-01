@@ -6,7 +6,7 @@ cuid: cm40qo1d1000d09lj5f4z5c5p
 slug: infected-networks-ctf
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733164794990/124af439-6dad-4c46-8b49-afd443eadedb.jpeg
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1732815551740/5f7db4f7-6076-4f83-98ea-9f0503e404f0.jpeg
-tags: the-last-of-us, capturetheflag, ctf-writeup
+tags: ctf-writeup, cyber-events
 ---
 
 ### Introduction
