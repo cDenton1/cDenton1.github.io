@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "My First Blog Post"
 ---
 This is my first blog post here on GitHub!<br>
