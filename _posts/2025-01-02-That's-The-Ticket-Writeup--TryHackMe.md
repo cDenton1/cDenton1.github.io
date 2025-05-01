@@ -1,5 +1,5 @@
 ---
-title: "That's The Ticket Writeup- TryHackMe"
+title: "That's The Ticket Writeup - TryHackMe"
 datePublished: Thu Jan 02 2025 06:20:58 GMT+0000 (Coordinated Universal Time)
 cuid: cm5extmym000c09mk7vqj151n
 slug: thats-the-ticket-writeup-tryhackme
