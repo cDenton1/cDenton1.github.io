@@ -1,0 +1,19 @@
+---
+layout: default
+title: Cybersecurity Events
+---
+
+<h1>Cybersecurity Events</h1>
+<b>
+  I have attended a handful of cybersecurity related events since starting my college studies, this page will be dedicated to articles where I reflect on what I was able to learn while while at these events and my
+  overall experience.
+</b>
+<ul>
+  {% for post in site.posts %}
+    {% if post.tags contains "cyber-events" %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
