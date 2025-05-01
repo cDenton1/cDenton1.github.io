@@ -1,6 +1,18 @@
 title: Denton's Blog
-description: Cybersecurity and tech focused blog from a college student
+description: Cybersecurity and tech blog from a college student
 theme: jekyll-theme-slate
 
+nav:
+  - title: Home
+    url: /
+  - title: CTF Writeups
+    url: /ctf-writeups.html
+  - title: Cybersecurity Events
+    url: /cyber-events.html
+  - title: Projects
+    url: /projects.html
+  - title: About Me
+    url: /about-me.html
+    
 sass:
   style: compressed
