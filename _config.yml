@@ -5,14 +5,14 @@ theme: jekyll-theme-slate
 nav:
   - title: Home
     url: /
-  - title: CTF Writeups
-    url: /ctf-writeups.html
-  - title: Cybersecurity Events
-    url: /cyber-events.html
+  - title: Writeups
+    url: /writeups.html
+  - title: Events
+    url: /events.html
   - title: Projects
     url: /projects.html
-  - title: About Me
-    url: /about-me.html
+  - title: About
+    url: /about.html
     
 sass:
   style: compressed
