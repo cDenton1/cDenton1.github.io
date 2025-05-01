@@ -33,7 +33,11 @@
           <nav>
             <ul style="list-style: none; display: flex; gap: 1rem; padding: 0;">
               {% for item in site.nav %}
-                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                <li>
+                  <a href="{{ item.url }}" style="color: white;">
+                    {{ item.title }}
+                  </a>
+                </li>
               {% endfor %}
             </ul>
           </nav>
