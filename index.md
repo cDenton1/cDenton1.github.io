@@ -8,15 +8,16 @@ title: Denton's Blog
 Recent Posts:
 <ul>
   {% for post in site.posts limit:5 %}
-  <li style="margin-bottom: 1.5rem;">
+  <li class="post-preview">
     {% if post.image %}
-      <img src="{{ post.image }}" alt={{ post.title }}" Style="width: 100px; height: auto; float: left; margin-right: 1rem;" />
+      <img src="{{ post.image }}" alt="{{ post.title }}" />
     {% endif %}
-    <a href="{{ post.url }}" style="font-size: 1.2rem; font-weight: bold;">{{ post.title }}</a><br>
-    <small>
-      {{ post.date | date: "%B %d, %Y" }}
-    </small> <br>
-    <div style="clear: both;"></div>
+    <div>
+      <a href="{{ post.url }}">{{ post.title }}</a> <br>
+      <small>
+        {{ post.date | date: "%B %d, %Y" }}{% if post.read_time %} * {{ post.read_time}}{% endif %}
+      </small> <br>
+    </div>
   </li>
   {% endfor %}
 </ul>
