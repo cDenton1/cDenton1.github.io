@@ -1,10 +1,9 @@
 ---
 title: "My Experience with a HackRF One"
 datePublished: Fri Dec 20 2024 01:18:21 GMT+0000 (Coordinated Universal Time)
-cuid: cm4w2ae0c000q09mb6i4befrj
-slug: hackrf-one
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1738542871480/5422931e-bc7c-4743-b5da-31c3cc6a38e4.png
+image: assets/images/hackrfone.png
 tags: [projects]
+read_time: "9 min read"
 ---
 
 During one of my last weeks in my wireless security class this semester, one of the tasks for a lab I was working on was to use a HackRF One to tune into different radio stations and signals. During my lab period I spent a few hours trying out different SDR software, tuning into different channels and just messing around. Even after the class, I continued to try different things with it. This tool is actually really cool and I wish I had more than a couple days to use it, but the semester ended recently and I have to return it to the school prior. In my short time of testing things out and just learning more, I tested out listening to a wider range of signals, looked into other signals besides typical radio stations, and looked into some projects I could try that would incorporate the HackRF.
