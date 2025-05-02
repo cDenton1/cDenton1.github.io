@@ -11,12 +11,14 @@
 .post-preview {
   margin-bottom: 2rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .post-preview img {
   width: 100px;
+  height: auto;
   margin-right: 1rem;
+  border-radius: 5px;
 }
 
 .post-preview a {
