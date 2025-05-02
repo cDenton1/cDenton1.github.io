@@ -7,7 +7,6 @@ tags: [ctf-writeup, cyber-events]
 read_time: "6 min read"
 ---
 
-
 ### Introduction
 
 Back on November 2nd, I had the opportunity to compete in the Last of Us themed CTF, Infected Networks, hosted by SAIT, Megabyte SAIT, Women in CyberSecurity (WiCyS) UofC, and The Cybersecurity Club - UCalgary. My teammate and I placed 3rd in the teams category. It was an awesome experience, and as a way to solidify my knowledge I put together a challenge walkthrough on Google Sheets, which I am now transferring and sharing over here with a nicer look (hopefully to be the first of many).
