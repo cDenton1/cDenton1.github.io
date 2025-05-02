@@ -1,10 +1,10 @@
 ---
+layout: default
 title: "That's The Ticket Writeup - TryHackMe"
 datePublished: Thu Jan 02 2025 06:20:58 GMT+0000 (Coordinated Universal Time)
-cuid: cm5extmym000c09mk7vqj151n
-slug: thats-the-ticket-writeup-tryhackme
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1736114639858/c170f0f7-82da-4637-a745-0e1eabc1242c.png
+image: /assets/images/thatstheticket.png
 tags: [tryhackme, tryhackme-walkthrough, ctf-writeup]
+read_time: "9 min read"
 ---
 
 ## IT Support are going to have a bad day, can you get into the admin account?
