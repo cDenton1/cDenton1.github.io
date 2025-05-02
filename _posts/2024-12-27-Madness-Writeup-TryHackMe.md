@@ -1,10 +1,9 @@
 ---
 title: "Madness Writeup - TryHackMe"
 datePublished: Fri Dec 27 2024 02:16:39 GMT+0000 (Coordinated Universal Time)
-cuid: cm564gbup000608l1buk7a01e
-slug: madness-writeup-tryhackme
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1735242767578/0136fe31-570b-445f-863e-a156766c73c3.png
+image: assets/images/madnesswriteup.png
 tags: [tryhackme, ctf-writeup, tryhackme-walkthrough]
+read_time: "9 min read"
 ---
 
 ## Will you be consumed by Madness?
