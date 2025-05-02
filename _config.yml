@@ -11,6 +11,8 @@ nav:
     url: /events.html
   - title: Projects
     url: /projects.html
+  - title: All Posts
+    url: /all-posts.html
   - title: About
     url: /about.html
     
