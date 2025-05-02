@@ -15,7 +15,7 @@ Recent Posts:
     <div>
       <a href="{{ post.url }}">{{ post.title }}</a> <br>
       <small>
-        {{ post.date | date: "%B %d, %Y" }}{% if post.read_time %} * {{ post.read_time}}{% endif %}
+        {{ post.date | date: "%B %d, %Y" }}{% if post.read_time %} - {{ post.read_time}}{% endif %}
       </small> <br>
     </div>
   </li>
