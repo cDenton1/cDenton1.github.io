@@ -1,10 +1,9 @@
 ---
 title: "CyberSci Regionals 2024"
 datePublished: Sun Dec 01 2024 02:24:19 GMT+0000 (Coordinated Universal Time)
-cuid: cm44za1o900040ajr63x7dsfu
-slug: cybersci-regionals-2024
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733020375316/8b9ae1ac-214d-4f90-b218-28640c1d10d1.jpeg
+image: assets/images/cybersciregionals.jpeg
 tags: [cyber-events]
+read_time: "9 min read"
 ---
 
 ### Introduction
