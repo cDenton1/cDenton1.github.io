@@ -2,12 +2,11 @@
 layout: default
 title: "Infected Networks CTF 2024"
 datePublished: Thu Nov 28 2024 03:12:10 GMT+0000 (Coordinated Universal Time)
-cuid: cm40qo1d1000d09lj5f4z5c5p
-slug: infected-networks-ctf
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733164794990/124af439-6dad-4c46-8b49-afd443eadedb.jpeg
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1732815551740/5f7db4f7-6076-4f83-98ea-9f0503e404f0.jpeg
+image: assets/images/infectednetworksctf.jpeg
 tags: [ctf-writeup, cyber-events]
+read_time: "6 min read"
 ---
+
 
 ### Introduction
 
