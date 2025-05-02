@@ -11,8 +11,16 @@ title: Projects
 <ul>
   {% for post in site.posts %}
     {% if post.tags contains "projects" %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+      <li class="post-preview">
+        {% if post.image %}
+          <img src="{{ post.image }}" alt="{{ post.title }}" />
+        {% endif %}
+        <div>
+          <a href="{{ post.url }}">{{ post.title }}</a> <br>
+          <small>
+            {{ post.date | date: "%B %d, %Y" }}{% if post.read_time %} - {{ post.read_time}}{% endif %}
+          </small> <br>
+        </div>
       </li>
     {% endif %}
   {% endfor %}
