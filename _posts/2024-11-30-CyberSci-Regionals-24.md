@@ -1,6 +1,5 @@
 ---
 title: "CyberSci Regionals 2024"
-datePublished: Sun Dec 01 2024 02:24:19 GMT+0000 (Coordinated Universal Time)
 image: assets/images/cybersciregionals.jpeg
 tags: [cyber-events]
 read_time: "9 min read"

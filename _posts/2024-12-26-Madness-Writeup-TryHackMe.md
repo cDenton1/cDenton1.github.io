@@ -1,8 +1,7 @@
 ---
 title: "Madness Writeup - TryHackMe"
-datePublished: Fri Dec 27 2024 02:16:39 GMT+0000 (Coordinated Universal Time)
 image: assets/images/madnesswriteup.png
-tags: [tryhackme, ctf-writeup, tryhackme-walkthrough]
+tags: [tryhackme, ctf-writeup]
 read_time: "9 min read"
 ---
 
