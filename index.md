@@ -5,6 +5,8 @@ title: Denton's Blog
 
 # Welcome to my blog!
 
+**NOTICE:** Read the first blog post listed in recent for context about why the website looks and works the way it does currently
+
 Recent Posts:
 <ul>
   {% for post in site.posts limit:5 %}
