@@ -1,9 +1,8 @@
 ---
 layout: default
 title: "That's The Ticket Writeup - TryHackMe"
-datePublished: Thu Jan 02 2025 06:20:58 GMT+0000 (Coordinated Universal Time)
 image: /assets/images/thatstheticket.png
-tags: [tryhackme, tryhackme-walkthrough, ctf-writeup]
+tags: [tryhackme, ctf-writeup]
 read_time: "9 min read"
 ---
 
