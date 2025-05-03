@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Infected Networks CTF 2024"
-datePublished: Thu Nov 28 2024 03:12:10 GMT+0000 (Coordinated Universal Time)
 image: assets/images/infectednetworksctf.jpeg
 tags: [ctf-writeup, cyber-events]
 read_time: "6 min read"
