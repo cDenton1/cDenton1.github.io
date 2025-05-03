@@ -1,7 +1,7 @@
 ---
 title: "My Experience With a Raspberry Pi Pico"
 image: assets/images/raspberrypipico.png
-tags: [raspberry-pi, projects]
+tags: [raspberry-pi, projects, python]
 read_time: "11 min read"
 ---
 
