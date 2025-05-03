@@ -1,7 +1,7 @@
 ---
 title: "Password Analyzer & Manager"
 image: assets/images/passwordanalyzermanager.png
-tags: python, python-programming, password-manager, python-projects, password-security
+tags: [python, school-projects, projects]
 read_time: "9 min read"
 ---
 
