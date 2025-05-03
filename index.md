@@ -9,9 +9,6 @@ Recent Posts:
 <ul>
   {% for post in site.posts limit:5 %}
   <li class="post-preview">
-    {% if post.image %}
-      <img src="{{ post.image }}" alt="{{ post.title }}" />
-    {% endif %}
     <div>
       <a href="{{ post.url }}">{{ post.title }}</a> <br>
       <small>
