@@ -1,8 +1,7 @@
 ---
 title: "My Experience With a Raspberry Pi Pico"
-datePublished: Mon Feb 03 2025 00:33:25 GMT+0000 (Coordinated Universal Time)
 image: assets/images/raspberrypipico.png
-tags: programming-blogs, python, raspberry-pi, raspberry-pi-pico
+tags: [raspberry-pi, projects]
 read_time: "11 min read"
 ---
 
