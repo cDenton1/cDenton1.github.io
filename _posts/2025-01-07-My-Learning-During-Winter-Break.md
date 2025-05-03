@@ -1,6 +1,5 @@
 ---
 title: "My Learning During Winter Break"
-datePublished: Wed Jan 08 2025 04:32:43 GMT+0000 (Coordinated Universal Time)
 image: 
 tags: [projects, tryhackme, buildingandlearning]
 read_time: "14 min read"
