@@ -13,6 +13,8 @@ nav:
     url: /projects.html
   - title: All Posts
     url: /all-posts.html
+  - title: Tags
+    url: /tags.html
   - title: About
     url: /about.html
     
