@@ -1,6 +1,5 @@
 ---
 title: "My Experience with a HackRF One"
-datePublished: Fri Dec 20 2024 01:18:21 GMT+0000 (Coordinated Universal Time)
 image: assets/images/hackrfone.png
 tags: [projects]
 read_time: "9 min read"
