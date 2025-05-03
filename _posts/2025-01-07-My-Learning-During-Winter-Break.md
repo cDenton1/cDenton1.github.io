@@ -1,7 +1,7 @@
 ---
 title: "My Learning During Winter Break"
 image: 
-tags: [projects, tryhackme, buildingandlearning]
+tags: [projects, tryhackme]
 read_time: "14 min read"
 ---
 
