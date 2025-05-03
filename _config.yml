@@ -14,7 +14,7 @@ nav:
   - title: All Posts
     url: /all-posts.html
   - title: Tags
-    url: /tags.md
+    url: /tags/
   - title: About
     url: /about.html
     
