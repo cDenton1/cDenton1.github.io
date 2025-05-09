@@ -87,7 +87,9 @@ Here is what mine looked like in reference to what I explained above:
 
 ![](/assets/images/raspberryPic1.jpeg "Coin Flip Setup")
 
-Below is the code I wrote for the coin flip game. Once started it will prompt you with heads or tails and tell you which button on the breadboard is for which; left is tails and right is heads. When a user presses a button, the OLED screen will display whatever they had chosen before calling the coin flip animation function, it will decide the result of the coin flip randomly before cycling through the draw coin and draw ellipse functions three times. Then it will land on the winning side and print out a message saying the user either won or lost. If you’re interested, I have included a link to a video below the following code, demonstrating everything combined and running together.
+Below is the code I wrote for the coin flip game. Once started it will prompt you with heads or tails and tell you which button on the breadboard is for which; left is tails and right is heads. When a user presses a button, the OLED screen will display whatever they had chosen before calling the coin flip animation function, it will decide the result of the coin flip randomly before cycling through the draw coin and draw ellipse functions three times. Then it will land on the winning side and print out a message saying the user either won or lost. 
+
+If you’re interested, here is a link to a video demonstrating everything combined and running together, https://youtu.be/iaiqS3QNyAw.
 
 ```python
 import time
@@ -187,8 +189,6 @@ def game():
 game()   # run the game
 ```
 
-Coin Flip Demonstration - https://youtu.be/iaiqS3QNyAw
-
 ---
 
 ## New Physical Elements
@@ -279,7 +279,9 @@ Here is what mine looked like in reference to what I explained above:
 
 ![](/assets/images/raspberryPic2.jpeg "Bar Graph Setup")
 
-Once you have set this up, if you use the code I included below, as you turn the knob clockwise on the potentiometer, the LEDs on the display will get brighter from right to left; if you turn it counter-clockwise, they will get dimmer. It will also print the brightness percentage of the display in the terminal. If you’re interested, I have included a link to a video below the following code, demonstrating everything combined and running together.
+Once you have set this up, if you use the code I included below, as you turn the knob clockwise on the potentiometer, the LEDs on the display will get brighter from right to left; if you turn it counter-clockwise, they will get dimmer. It will also print the brightness percentage of the display in the terminal. 
+
+If you’re interested, here is a link to a video demonstrating everything combined and running together, https://youtu.be/pedJWBaIUEM.
 
 ```python
 from machine import Pin, ADC, PWM
@@ -321,8 +323,6 @@ while True:
 
     utime.sleep(0.1)  # small delay for smooth updates
 ```
-
-Potentiometer and Bar Graph Display - https://youtu.be/pedJWBaIUEM
 
 ---
 
