@@ -5,6 +5,8 @@ tags: [raspberry-pi, projects, python]
 read_time: "11 min read"
 ---
 
+# My Experience With a Raspberry Pi Pico
+
 Four weeks into the semester, my Internet of Things Systems class has quickly become a favourite. Right off the bat we got into working with a Raspberry Pi Pico which has been really exciting. Outside of our first two labs I have been experimenting with other components to expand and solidify my understanding of the wiring aspect and get a feel for everything. In this article I want to talk about what I learned and show some of the things I made on my own, including a couple of projects.
 
 ---
@@ -83,9 +85,9 @@ button_tails = Pin(15, Pin.IN, Pin.PULL_UP)  # button for tails
 
 Here is what mine looked like in reference to what I explained above:
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738524574090/b138236f-9650-4c3f-9462-eff8175f49a2.jpeg align="center")
+![](/assets/images/raspberryPic1.jpeg "Coin Flip Setup")
 
-Below is the code I wrote for the coin flip game. Once started it will prompt you with heads or tails and tell you which button on the breadboard is for which; left is tails and right is heads. When a user presses a button, the OLED screen will display whatever they had chosen before calling the coin flip animation function, it will decide the result of the coin flip randomly before cycling through the draw coin and draw ellipse functions three times. Then it will land on the winning side and print out a message saying the user either won or lost. If you’re interested, I have included an embedded video below the following code of the output once it’s all combined.
+Below is the code I wrote for the coin flip game. Once started it will prompt you with heads or tails and tell you which button on the breadboard is for which; left is tails and right is heads. When a user presses a button, the OLED screen will display whatever they had chosen before calling the coin flip animation function, it will decide the result of the coin flip randomly before cycling through the draw coin and draw ellipse functions three times. Then it will land on the winning side and print out a message saying the user either won or lost. If you’re interested, I have included a link to a video below the following code, demonstrating everything combined and running together.
 
 ```python
 import time
@@ -185,7 +187,7 @@ def game():
 game()   # run the game
 ```
 
-%[https://youtu.be/iaiqS3QNyAw] 
+Coin Flip Demonstration - https://youtu.be/iaiqS3QNyAw
 
 ---
 
@@ -275,9 +277,9 @@ Here is how I setup my breadboard:
 
 Here is what mine looked like in reference to what I explained above:
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738533346503/362f72ca-6ce1-4494-9003-374a330514ba.jpeg align="center")
+![](/assets/images/raspberryPic2.jpeg "Bar Graph Setup")
 
-Once you have set this up, if you use the code I included below, as you turn the knob clockwise on the potentiometer, the LEDs on the display will get brighter from right to left; if you turn it counter-clockwise, they will get dimmer. It will also print the brightness percentage of the display in the terminal. If you’re interested, I have included an embedded video below the following code of the output once it’s all combined.
+Once you have set this up, if you use the code I included below, as you turn the knob clockwise on the potentiometer, the LEDs on the display will get brighter from right to left; if you turn it counter-clockwise, they will get dimmer. It will also print the brightness percentage of the display in the terminal. If you’re interested, I have included a link to a video below the following code, demonstrating everything combined and running together.
 
 ```python
 from machine import Pin, ADC, PWM
@@ -320,7 +322,7 @@ while True:
     utime.sleep(0.1)  # small delay for smooth updates
 ```
 
-%[https://youtu.be/pedJWBaIUEM] 
+Potentiometer and Bar Graph Display - https://youtu.be/pedJWBaIUEM
 
 ---
 
