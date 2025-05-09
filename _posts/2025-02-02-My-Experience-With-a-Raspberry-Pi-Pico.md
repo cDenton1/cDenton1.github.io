@@ -89,7 +89,7 @@ Here is what mine looked like in reference to what I explained above:
 
 Below is the code I wrote for the coin flip game. Once started it will prompt you with heads or tails and tell you which button on the breadboard is for which; left is tails and right is heads. When a user presses a button, the OLED screen will display whatever they had chosen before calling the coin flip animation function, it will decide the result of the coin flip randomly before cycling through the draw coin and draw ellipse functions three times. Then it will land on the winning side and print out a message saying the user either won or lost. 
 
-If you’re interested, here is a link to a video demonstrating everything combined and running together, https://youtu.be/iaiqS3QNyAw.
+If you’re interested, here is a link to a video demonstrating everything combined and running together, [https://youtu.be/iaiqS3QNyAw](https://youtu.be/iaiqS3QNyAw).
 
 ```python
 import time
@@ -281,7 +281,7 @@ Here is what mine looked like in reference to what I explained above:
 
 Once you have set this up, if you use the code I included below, as you turn the knob clockwise on the potentiometer, the LEDs on the display will get brighter from right to left; if you turn it counter-clockwise, they will get dimmer. It will also print the brightness percentage of the display in the terminal. 
 
-If you’re interested, here is a link to a video demonstrating everything combined and running together, https://youtu.be/pedJWBaIUEM.
+If you’re interested, here is a link to a video demonstrating everything combined and running together, [https://youtu.be/pedJWBaIUEM](https://youtu.be/pedJWBaIUEM).
 
 ```python
 from machine import Pin, ADC, PWM
