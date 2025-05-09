@@ -5,6 +5,8 @@ tags: [python, school-projects, projects]
 read_time: "9 min read"
 ---
 
+# Password Analyzer & Manager
+
 My final project for my Scripting for Tool Construction class was by far one of this biggest projects and programs I have ever written and I wanted to go in depth about it, sharing more here. If you are interested in downloading and using it for yourself after reading about it, check out my GitHub for the majority of the files and some info regarding setting it up, [https://github.com/cDenton1/Password-Analyzer-Manager](https://github.com/cDenton1/Password-Analyzer-Manager).
 
 ---
@@ -27,7 +29,7 @@ The program is made up of three main Python files, analyzeCode.py, guiCode.py, a
 
 This is the first thing you see when opening the program. You are met with an input box for the password you want to check, a large space for the results to output, the option to save the password at the bottom, and the option to export the output results.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738608944120/11361529-7016-428c-93cd-ed13230cb8f6.png align="center")
+![](/assets/images/pamPic1.png "Password Analyzer")
 
 When you enter a password and hit analyze, after a few seconds, the password along with the results regarding each of the ten criteria checks are output to the screen. Each check includes a score out of ten, which are then added together and displayed at the bottom. The password shown above for example had a score of 67%. The ten criteria checks include:
 
@@ -64,13 +66,13 @@ The last two criteria sections don’t use the class mentioned above because roc
 
 At the top of the GUI next to the analyzer header, there is a button that switches over to the manager section, clicking it will prompt you for the Master Password to access saved passwords and a blank output screen so can’t bypass the authentication.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1740066262193/f23e4257-4d47-44a3-a5b7-694f30662990.png align="center")
+![](/assets/images/pamPic2.png "Password Manager")
 
 If it’s your first time using the manager section, whatever password you enter will be set as your master password and a popup message will let you know that. Once it’s set if you try to access it later and you enter the wrong password, an error message will popup letting you know it’s incorrect, and kick you back to the analyzer section. If you enter the right password however, it will welcome you back and update the output section to include any saved passwords, except your master password. The email password shown above is just an example of what the output would look like.
 
 Now if you were to hit the ‘Save Password’ button shown at the bottom of the analyzer section screen, you would get a popup requesting for the service the password is used for. After entering the service, it would appear in the manager section. For example the test password shown above would look something like this:
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1740067312751/86bbd462-29de-4d16-97c2-9462b5f64550.png align="center")
+![](/assets/images/pamPic3.png "Password Manager")
 
 Currently, I’m trying to figure out and change this output so that the passwords are all stars here but if you were to hit a button for example, a timed popup would appear with the password so that it’s not constantly shown in plaintext like this whenever you are in the manager section.
 

@@ -5,6 +5,8 @@ tags: [projects, tryhackme]
 read_time: "14 min read"
 ---
 
+# My Learning During Winter Break
+
 My classes started today meaning my winter break is over. During my winter break I have had some ideas for future projects and have messed around with a few different things just to test and learn. I will expand on and dive into all of these in this article. Everything I discuss and go over in here seemed too short to be their own posts, which is why they are all in here. Think of it like a collection of short stories but it is just things that I’ve been doing in my free time for the past few weeks.
 
 ---
@@ -24,7 +26,7 @@ Now I have a semi-decent PC running in my room but that was only the easy part. 
 
 I went with the second one as the pros heavily outweighed everything else: it was easier to setup, get working, and will take up the least amount of space in my already very crowded desk area. Setting it up was simple as it only required plugging in the device, my PC luckily recognized it right away and immediately gave me the option for wi-fi in my network connections.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735870242799/b09d7bf2-31b5-4f70-8760-b4d32931fac1.png align="center")
+![](/assets/images/winterPic1.png "PC Network Connections")
 
 If it hadn’t shown me the above, it did come with a small disk that I would have inserted into the disc slot on the PC to download the required drivers for it to work but luckily that wasn’t required.
 
@@ -42,7 +44,7 @@ If you’re interested in knowing more about the project stay tuned for my post 
 
 ### Error 1: Partially Initialized Module
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1736141204405/227a249d-6651-4d25-9491-49a6b2aa5e50.png align="center")
+![](/assets/images/winterPic2.png "Attribute Error")
 
 I noticed when I went to run the program to test a few small adjusts I made to the code, it was giving me the above output. I was originally really confused because the second function defined in the program is my analyze section as it’s a pretty important part of the overall program. On the right side it mentions a circular import though, this is something I’ve never heard before so I had to do some research.
 

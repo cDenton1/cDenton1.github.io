@@ -15,7 +15,7 @@ I was originally considering doing a writeup after the event but I think I’d h
 
 ---
 
-![CyberSci Logo](assets/images/cybersciPic1.png "CyberSci Logo")
+![CyberSci Logo](/assets/images/cybersciPic1.png "CyberSci Logo")
 
 ### What is CyberSci?
 
@@ -65,4 +65,4 @@ After the four hours of hacking we had the opportunity to chat with everyone at 
 
 The competition was great, and even though I felt like I had just been struggling for four hours, I honestly felt like I learnt quite a lot by the end of the event. It was great getting to meet so many other really cool and talented students in the field and I couldn’t be more thankful for the chance to be apart of something like that. Like I’ve said previously this has been kind of like a tipping point for me to be doing even more, I mean this was what finally pushed me to start posting about what I was learning somewhere besides you know a short post here or there on LinkedIn. I love learning about technology and the security aspects, so experiences like this are really what continue to cement those feelings even more.
 
-![SAIT Students](assets/images/cybersciPic2.jpeg "SAIT Students")
+![SAIT Students](/assets/images/cybersciPic2.jpeg "SAIT Students")

