@@ -1,6 +1,6 @@
 ---
 title: "First GitHub Post"
-tags: [hidden-1]
+tags: [hidden-1, github]
 ---
 This is my first blog post here on GitHub, and setup almost as a way of being a warning.
 
