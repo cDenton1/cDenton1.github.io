@@ -9,10 +9,24 @@ permalink: /tags/
 <ul>
   {% assign tags = site.tags | sort %}
   {% for tag in tags %}
-    {% unless post.tags contains "hidden-3" %}
-        <li>
-          <a href="/tags/{{ tag[0] | slugify }}/">{{ tag[0] }} ({{ tag[1].size }})</a>
-        </li>
+    {% assign tag_name = tag[0] %}
+    
+    {% if tag_name == "hidden-1" or tag_name == "hidden-2" or tag_name == "hidden-3" %}
+      {% continue %}
+    {% endif %}
+
+    {% assign visible_posts = "" | split: "" %}
+
+    {% for post in tag[1] %}
+      {% unless post.tags contains "hidden-3" %}
+        {% assign visible_posts = visible_posts | push: post %}
       {% endunless %}
+    {% endfor %}
+
+    {% if visible_posts.size > 0 %}
+      <li>
+        <a href="/tags/{{ tag_name | slugify }}/">{{ tag_name }} ({{ visible_posts.size }})</a>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
