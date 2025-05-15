@@ -5,7 +5,7 @@ title: Denton's Blog
 
 # Welcome to my blog!
 
-**NOTICE:** Read this blog post for context about why the website looks and works the way it does currently - [link]
+**NOTICE:** Read this blog post for context about why the website looks and works the way it does currently - [First GitHub Post](https://cdenton1.github.io/2025/04/30/First-GitHub-Post.html)
 
 Recent Posts:
 
@@ -18,9 +18,11 @@ Recent Posts:
 
 <ul>
   {% for post in visible_posts limit:5 %}
-    <li>
+    <li class="post-preview">
       <a href="{{ post.url }}">{{ post.title }}</a><br>
-      <small>{{ post.date | date: "%B %d, %Y" }}</small>
+      <small>
+        {{ post.date | date: "%B %d, %Y" }}
+      </small> <br>
     </li>
   {% endfor %}
 </ul>
