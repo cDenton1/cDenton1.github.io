@@ -1,7 +1,7 @@
 ---
 title: "Bandit Writeup - OverTheWire"
 tags: [ctf-writeup, overthewire, otw-bandit]
-read_time: 
+read_time: "3 min read"
 ---
 
 # Bandit Writeup - OverTheWire
