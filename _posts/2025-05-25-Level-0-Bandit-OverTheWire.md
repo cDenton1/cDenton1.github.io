@@ -1,7 +1,7 @@
 ---
 title: "Level 0 - OverTheWire Bandit"
 tags: [overthewire, otw-bandit, hidden-1, hidden-2]
-read_time: "2 min read"
+read_time: "1 min read"
 ---
 
 # Level 0 - OverTheWire Bandit
@@ -39,6 +39,6 @@ The first level was simply to login, meaning you have successfully completed it 
 
 ---
 
-Next Level: [Level 1 - File Reading]()
+Next Level: [Level 1 - File Reading](https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html)
 
 ---
