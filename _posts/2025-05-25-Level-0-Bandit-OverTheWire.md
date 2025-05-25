@@ -8,6 +8,8 @@ read_time: "2 min read"
 
 To know more about OverTheWire, check out my post, [Bandit Writeup - OverTheWire](https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html). For these walkthroughs, I will be using a Linux OS.
 
+---
+
 ## Level Goal
 
 The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
@@ -34,3 +36,9 @@ Once you hit enter, it will prompt you for the password, which you can type in (
 ![Terminal Output](/assets/images/otw-b0.png)
 
 The first level was simply to login, meaning you have successfully completed it and are ready to move onto the next level.
+
+---
+
+Next Level: [Level 1 - File Reading]()
+
+---
