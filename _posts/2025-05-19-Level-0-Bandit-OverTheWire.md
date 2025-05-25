@@ -1,6 +1,6 @@
 ---
 title: "Level 0 - OverTheWire Bandit"
-tags: [overthewire, otw-bandit]
+tags: [overthewire, otw-bandit, hidden-1, hidden-2]
 read_time:
 ---
 
@@ -32,3 +32,5 @@ You can then fill in the command with the information you know, which should loo
 Once you hit enter, it will prompt you for the password, which you can type in (if using a Linux OS, it will be hidden). If you did the right command, and entered the password correctly, you should be greeted with a welcome page like the one shown below.
 
 ![Terminal Output](/assets/images/otw-b0.png)
+
+The first level was simply to login, meaning you have successfully completed it and are ready to move onto the next level.
