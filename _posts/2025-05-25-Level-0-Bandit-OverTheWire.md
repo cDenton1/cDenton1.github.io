@@ -34,3 +34,9 @@ Once you hit enter, it will prompt you for the password, which you can type in (
 ![Terminal Output](/assets/images/otw-b0.png)
 
 The first level was simply to login, meaning you have successfully completed it and are ready to move onto the next level.
+
+---
+
+Next Level: [Level 1 - File Reading]()
+
+---
