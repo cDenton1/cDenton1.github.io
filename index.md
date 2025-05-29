@@ -7,7 +7,7 @@ title: Denton's Blog
 
 **Exciting News:** In June I'll be flying out to Ottawa to compete at CyberSci Nationals! I attended CyberSci Regionals back in November, where my team and I placed third, and which led to me being invited to apply for a spot on the Junior Team. If you're interested, checkout my post about my experience at regionals, and I'll make sure to post an update about Nationals once I'm back! - [CyberSci Regionals 2024](https://cdenton1.github.io/2024/11/30/CyberSci-Regionals-24.html)
 
-Recent Posts:
+### Recent Posts:
 
 {% assign visible_posts = "" | split: "" %}
 {% for post in site.posts %}
