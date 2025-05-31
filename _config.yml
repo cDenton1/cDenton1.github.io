@@ -2,6 +2,16 @@ title: Denton's Blog
 description: A cybersecurity and tech focused blog from a college student
 theme: jekyll-theme-slate
 
+plugins:
+  - jekyll-include-cache
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+
 nav:
   - title: Home
     url: /
