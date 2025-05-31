@@ -1,7 +1,7 @@
 ---
 title: "Level 2 - OverTheWire Bandit"
 tags: [overthewire, otw-bandit, hidden-1, hidden-2]
-read_time: 
+read_time: "1 min read"
 ---
 
 # Level 2 - OverTheWire Bandit
