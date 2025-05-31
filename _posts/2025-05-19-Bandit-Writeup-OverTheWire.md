@@ -35,4 +35,6 @@ Early on, most of the levels went through pretty basic commands. Some of the lev
 For each level I’ve tried my best to take notes regarding my process for solving it and anything else I may have learnt. I'm going to do my best to hide any credentials in any screenshots I share in here to follow the rules. **NOTE**, passwords for levels do occasionally change so if you found a writeup that lists them, they might no longer be the current password. Below you will find my post links for each level walkthrough; I will do my best to post each one as soon as possible and update this regularly, as I release each post. 
 
 [Level 0](https://cdenton1.github.io/2025/05/25/Level-0-Bandit-OverTheWire.html) - SSH Login <br>
-[Level 1](https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html) - File Reading
+[Level 1](https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html) - File Reading <br>
+[Level 2](https://cdenton1.github.io/2025/05/31/Level-2-Bandit-OverTheWire.html) - Accessing Unusually Named Files <br>
+Level 3 - Spaces In a Filename
