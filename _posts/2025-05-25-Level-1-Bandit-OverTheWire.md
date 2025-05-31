@@ -34,6 +34,6 @@ If you are logged into bandit0, simply running `ls` to confirm the required file
 
 ---
 
-Next Level: Level 2 - Finding Files
+Next Level: Level 2 - Accessing Unusually Named Files
 
 ---
