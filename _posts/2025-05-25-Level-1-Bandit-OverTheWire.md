@@ -34,6 +34,6 @@ If you are logged into bandit0, simply running `ls` to confirm the required file
 
 ---
 
-Next Level: Level 2 - Accessing Unusually Named Files
+Next Level: [Level 2 - Accessing Unusually Named Files](https://cdenton1.github.io/2025/05/31/Level-2-Bandit-OverTheWire.html)
 
 ---
