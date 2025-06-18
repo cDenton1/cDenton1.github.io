@@ -1,6 +1,6 @@
 ---
 title: "CyberSci Nationals 2025"
-tags: [cyber-events]
+tags: [cyber-events, hidden-1, hidden-2, hidden-3]
 read_time: "__ min read"
 ---
 
