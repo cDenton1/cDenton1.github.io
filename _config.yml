@@ -26,7 +26,7 @@ nav:
   - title: Tags
     url: /tags/
   - title: About
-    url: /about.html
+    url: /about
     
 sass:
   style: compressed
