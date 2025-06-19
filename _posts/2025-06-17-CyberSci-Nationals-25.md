@@ -46,11 +46,110 @@ Our initial hour was spent ensuring Tulip was working, setting up Git repos on e
 
 ## CTF/Jeopardy Competition - Sunday June 15
 
-In comparison to the defence competition, this would be the type of competition most people are used to seeing. 
+In comparison to the defence competition, this is the more common type of competition most people are used to seeing. We were given eight hours to complete as many challenges as possible from a wide variety of categories. 
 
-We were given eight hours to complete as many challenges as possible from a wide variety of categories. Each challenge is initially worth 500 points but as more people completed them, the worth of the challenge would decrease.
+Each challenge was initially worth 500 points but as more people completed them, the worth of the challenge would decrease. The CTF didn't require much prep day of, unlike the defence competition. This meant our team spent more time discussing who was focusing where.
 
-The CTF didn't require much prep day of, unlike the defence competition. This meant our team spent some time discussing who was focusing where. Only thing we created for the CTF was a small discord server for us to have different channels where could separate the discussions of each challenge so they all weren't in our main group chat.
+### Challenge Writeups
+
+There were a lot of challenges and I had worked on quite a few during the eight hour competition; solving a couple on my own, and working with my teammates to help solve a handful more. My main focus ended up being on the cryptography, OSINT, and hardware challenges.
+
+#### Rigged Ballot Location - OSINT 296 points
+
+Challenge description stated, ...
+
+Provided files included the image, **BallotRiggers.jpg**, shown below.
+
+![](/assets/images/cybersci-nat25/BallotRiggers.jpg)
+
+I initially started off by moving the file into my Kali Linux VM where I could easily run it through a handful of different tools and commands; including **zsteg**, **steghide**, and **exiftool**. 
+
+- zsteg returned with nothing
+- exiftool gave me a lot of information regarding the image, but nothing useful for the challenge
+- steghide got stuck since I didn't have a password.
+
+From there I had moved over to Google where I could reverse image search the picture, and a few film review sites and wiki pages had come up regarding the 1985 film, _Commando_. I had sifted through a couple before my teammate and I both came across the site, [Filming Locations of Commando | MovieLoci.com](https://www.movieloci.com/4300-Commando?from=8&count=8&sortby=9&sortdirection=0)
+
+It included the uncropped version of the picture we were provided, geographical information, and the name of who owned the compound in the film, _Arius_. 
+
+With our new found information, I wasn't entirely sure of our next steps. My teammate assumed this couldn't be it as it seemed too easy, so I went back to my VM to give steghide another try. This time using the characters name as the passphrase, we were successfully able to retrive this challenges flag.
+
+```bash
+$ steghide extract -sf BallotRiggers.jpg
+Enter passphrase:
+wrote extracted data to "Flag.txt"
+
+$ cat Flag.txt
+CybersciNats{R1gged_B4llot_Stor4ge_290948}
+```
+
+#### 256 - Crypto 100 points
+
+...
+
+#### dot dot dot - Crypto 427 points
+
+...
+
+#### staged - Crypto 207 points
+
+Challenge description stated, ...
+
+Provided files included a text file, **cipher.txt**, which was 44 lines of just under 4500 smiling and frowning emojis. 
+
+This was the first challenge that both Sam and I had opened once the competition started, and he immediatly had an idea so I swapped over to another challenge while he began to work on this one. It had a few steps along the way and was passed around quite a bit amongst our team.
+
+**Step 1**: He had noticed the emojis were only smiling and frowning, so he converted them to binary: 🙁 = 0 and 🙂 = 1. The emojis converted to binary became:
+```
+0100001101100001011001010111001101100001011100100010000001110111011010010111010001101000001000000110000100100000011000100110100101110100001000000110111101100110001000000111001101110000011010010110001101100101001000000110011001110010011011110110110100100000011101000110100001100101001000000110001101101000011001010110011000001010001100100110111000110110001100100011011000110001001101110011001100110110001101010011011000110100001100100110111000110010001100000011011001110011001101100111001000110010001100000011001001101110001101110110111000110110001110010011011100110000001100100110111000110000011011100011010000111000001100110011010000110111001100110011010000111001001101000011000100110100001110000011001001101111001101000111000100110011001101000011010000110111001101100011001100110100001100010011001001110011001101110011100000110011001100110011010000110101001101110011011100110101001100010011011001110001001101000011000100110101001100010011010000110001001101110011011100110100001101010011011100110111001101000111000000110011001110010011010100110110001101010011011100110100001101010011010100110000001101000011000100110100011100110011011100110101001101110011011100110110001101110011010100111001001101000011011100110011001101000011010000110110001100100111001100110101001101110011010100110001001101100011100000110101001110000011011001101111001101000011010000110100001101100011001100110100001101110011000100110100011100010011001001101111001101010110111000110111001100000011011100111000001100110011100100110010011100110011010000110011001101110011100100110100011100110011010000111000001100110011001000110100011100110011011100110111001101110011001100110010011011110011010000110101001101000011100100110011001100100011001001101111001100110011011000110100011011100011011100110001001100100110111100110101001110010011011100110101001101100011011000110100001110010011010001110010001101010011001100110111001100100011011001110000001101010011001100110110001101100011001100111000001101010011001000110101001101000011011000110100001100110011100000110011001101000011010000110011001100110011011000110100011100010011011000110111001101000011000100110100001100010011010000110001001101000011000100110011011100010011001101110001
+```
+
+**Step 2**: From there he converted the binary and got the following:
+```
+Caesar with a bit of spice from the chef
+2n62617365642n206s6r202n7n69702n0n4834734941482o4q344763412s78334577516q4151417745774p3956574550414s757767594734462s575168586o444634714q2o5n7078392s43794s48324s77732o4549322o364n712o597566494r53726p536638525464383443364q67414141413q3q
+```
+
+At this point, he had gotten stuck, so he put everything he had found so far into Discord so another teammate could work on it from where he left off. I had given it a try from here but everything I was getting was a dead end. Paul decided to give it a go and he was able to get **Steps 3 and 4**:
+```
+*based* on *zip*
+H4sIAH+M4GcA/x3EwQmAQAwEwL9VWEPAOuwgYG4F/WQhXkDF4qM+Zpx9/CyOH2Ows+EI2+6Jq+YufINSrlSf8RTd84C6MgAAAA==
+```
+
+And from there it turned into:
+```
+not not and and or
+bxcdsrbhz5oe^ui2o^uid^o2yu^nOd|
+```
+
+I gave it another try from this point since when I had initially seen that, I thought I had an idea where to go but it wasn't entirely working out. Returning to it later I had much better luck. I used the follwing script to decrypt the **5th and Final Step** of the challenge and retrive the flag.
+```py
+ciphertext = b"bxcdsrbhz5oe^ui2o^uid^o2yu^nOd|"              # encrypted data as bytes
+
+def is_readable(s):                                          # checks if the string consists entirely of printable ASCII
+    return all(32 <= c < 127 for c in s)                     # helps filter out nonsense
+
+for key in range(256):                                       # loops through every possible byte key
+    plaintext = bytes([c ^ key for c in ciphertext])         # XOR every byte with key and creates a new byte object
+    if is_readable(plaintext):                               # checks if plaintext is readable
+        print(f"Key {key}: {plaintext.decode('ascii')}")     # prints key and plaintext
+```
+
+Running the above script gave us a list plaintext which did include the flag and the corresponding key:
+```bash
+$ python stagedA3.py 
+Key 1: cybersci{4nd_th3n_the_n3xt_oNe}
+```
+
+Another more simple option for the above step would be to throw the string into [CyberChef](https://gchq.github.io/CyberChef/#recipe=XOR_Brute_Force(1,100,0,'Standard',false,true,false,'')&input=YnhjZHNyYmh6NW9lXnVpMm9edWlkXm8yeXVebk9kfA) and use the XOR Brute Force operation.
+
+#### Badge 1 - Badge 100 points
+
+...
+
+#### Badge 2 - Badge 100 points
+
+...
 
 ---
 
