@@ -16,13 +16,13 @@ nav:
   - title: Home
     url: /
   - title: Writeups
-    url: /writeups.html
+    url: /writeups
   - title: Events
-    url: /events.html
+    url: /events
   - title: Projects
-    url: /projects.html
+    url: /projects
   - title: All Posts
-    url: /all-posts.html
+    url: /all-posts
   - title: Tags
     url: /tags/
   - title: About
