@@ -46,7 +46,11 @@ Our initial hour was spent ensuring Tulip was working, setting up Git repos on e
 
 ## CTF/Jeopardy Competition - Sunday June 15
 
-...
+In comparison to the defence competition, this would be the type of competition most people are used to seeing. 
+
+We were given eight hours to complete as many challenges as possible from a wide variety of categories. Each challenge is initially worth 500 points but as more people completed them, the worth of the challenge would decrease.
+
+The CTF didn't require much prep day of, unlike the defence competition. This meant our team spent some time discussing who was focusing where. Only thing we created for the CTF was a small discord server for us to have different channels where could separate the discussions of each challenge so they all weren't in our main group chat.
 
 ---
 
