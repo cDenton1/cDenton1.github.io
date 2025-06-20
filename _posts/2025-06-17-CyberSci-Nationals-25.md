@@ -97,9 +97,13 @@ Provided File: **_____._**, a ____ file which included what is shown below.
 -.-.-.---.....-....-.-....--....----...-.........--..--.-......--.....-.-.-----..-.....-...-..--..-.-----..-..-----..-....
 ```
 
-It was confirmed in the challenge description that it is morse code without spaces, and gave us a handful of other hints to narrow down the decoding process; only letters a-z.
+It is confirmed in the challenge description that it's morse code without spaces, and gave us some other hints to narrow down the decoding process: it's only letters a-z and includes __cybersci__
 
-Sam and I tackled this one together because it honestly didn't seem like a lot till we realized just how many different possibilities of letters there are.
+Sam and I tackled this one together because it  didn't seem like a lot till we realized just how many different possibilities of letters there are.
+
+I had tried writing a script to make the process quicker but I kept running into the issue where it would string together mainly 'e' and 't' since they are simply '.' and '-'. This caused the output to mainly be flooded with long strings of e and t, with a few different letters changed at the end.
+
+Our next idea since we were given the clue that the string 'cybersci' was in it, was confirm whether it was at the beginning or end of the string and work from there.
 
 #### staged - Crypto 207 points
 
