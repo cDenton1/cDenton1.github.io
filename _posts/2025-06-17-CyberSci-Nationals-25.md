@@ -56,9 +56,9 @@ There were a lot of challenges and I had worked on quite a few during the eight 
 
 #### Rigged Ballot Location - OSINT 296 points
 
-Challenge description stated, ...
+Challenge Description: ...
 
-Provided files included the image, **BallotRiggers.jpg**, shown below.
+Provided File: **BallotRiggers.jpg**, the image shown below.
 
 ![](/assets/images/cybersci-nat25/BallotRiggers.jpg)
 
@@ -66,7 +66,7 @@ I initially started off by moving the file into my Kali Linux VM where I could e
 
 - zsteg returned with nothing
 - exiftool gave me a lot of information regarding the image, but nothing useful for the challenge
-- steghide got stuck since I didn't have a password.
+- steghide got stuck since I didn't have a password
 
 From there I had moved over to Google where I could reverse image search the picture, and a few film review sites and wiki pages had come up regarding the 1985 film, _Commando_. I had sifted through a couple before my teammate and I both came across the site, [Filming Locations of Commando | MovieLoci.com](https://www.movieloci.com/4300-Commando?from=8&count=8&sortby=9&sortdirection=0)
 
@@ -89,13 +89,23 @@ CybersciNats{R1gged_B4llot_Stor4ge_290948}
 
 #### dot dot dot - Crypto 427 points
 
-...
+Challenge Description: ...
+
+Provided File: **_____._**, a ____ file which included what is shown below. 
+
+```
+-.-.-.---.....-....-.-....--....----...-.........--..--.-......--.....-.-.-----..-.....-...-..--..-.-----..-..-----..-....
+```
+
+It was confirmed in the challenge description that it is morse code without spaces, and gave us a handful of other hints to narrow down the decoding process; only letters a-z.
+
+Sam and I tackled this one together because it honestly didn't seem like a lot till we realized just how many different possibilities of letters there are.
 
 #### staged - Crypto 207 points
 
-Challenge description stated, ...
+Challenge Description: ...
 
-Provided files included a text file, **cipher.txt**, which was 44 lines of just under 4500 smiling and frowning emojis. 
+Provided File: **cipher.txt**, a text file which was 44 lines of just under 4500 smiling and frowning emojis. 
 
 This was the first challenge that both Sam and I had opened once the competition started, and he immediatly had an idea so I swapped over to another challenge while he began to work on this one. It had a few steps along the way and was passed around quite a bit amongst our team.
 
@@ -122,7 +132,9 @@ not not and and or
 bxcdsrbhz5oe^ui2o^uid^o2yu^nOd|
 ```
 
-I gave it another try from this point since when I had initially seen that, I thought I had an idea where to go but it wasn't entirely working out. Returning to it later I had much better luck. I used the follwing script to decrypt the **5th and Final Step** of the challenge and retrive the flag.
+I'm not entirely sure what Paul had done to get the above steps, I could see similarities between some of what I was getting and the output of step 3, but nothing extremely close. 
+
+I gave it another try from this point since when I had initially seen the results of step 4, I thought I had an idea where to go but it wasn't entirely working out. Returning to it later I had much better luck. I used the follwing script to decrypt the **5th and Final Step** of the challenge and retrive the flag.
 ```py
 ciphertext = b"bxcdsrbhz5oe^ui2o^uid^o2yu^nOd|"              # encrypted data as bytes
 
@@ -135,7 +147,7 @@ for key in range(256):                                       # loops through eve
         print(f"Key {key}: {plaintext.decode('ascii')}")     # prints key and plaintext
 ```
 
-Running the above script gave us a list plaintext which did include the flag and the corresponding key:
+Running the above script gave us a list of plaintext strings, which did include the flag and the corresponding key:
 ```bash
 $ python stagedA3.py 
 Key 1: cybersci{4nd_th3n_the_n3xt_oNe}
