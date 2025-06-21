@@ -50,15 +50,13 @@ In comparison to the defence competition, this is the more common type of compet
 
 Each challenge was initially worth 500 points but as more people completed them, the worth of the challenge would decrease. The CTF didn't require much prep day of, unlike the defence competition. This meant our team spent more time discussing who was focusing where.
 
-[Rigged Ballot Location](#rigged-ballot-location)
-
 ### Challenge Writeups
 
 There were a lot of challenges and I had worked on quite a few during the eight hour competition; solving a couple on my own, and working with my teammates to help solve a handful more. My main focus ended up being on the cryptography, OSINT, and hardware challenges.
 
 | Challenge              | Category         | Points |
 |------------------------|------------------|--------|
-| [Rigged Ballot Location](#rigged-ballot-location) | OSINT            | 296    |
+| Rigged Ballot Location | OSINT            | 296    |
 | 256                    | Crypto           | 100    |
 | dot dot dot            | Crypto           | 427    |
 | staged                 | Crypto           | 207    |
@@ -77,7 +75,7 @@ I initially started off by moving the file into my Kali Linux VM where I could e
 - exiftool gave me a lot of information regarding the image, but nothing useful for the challenge
 - steghide got stuck since I didn't have a password
 
-From there I had moved over to Google where I could reverse image search the picture, and a few film review sites and wiki pages had come up regarding the 1985 film, _Commando_. I had sifted through a couple before my teammate and I both came across the site, [Filming Locations of Commando | MovieLoci.com](https://www.movieloci.com/4300-Commando?from=8&count=8&sortby=9&sortdirection=0)
+From there I had moved over to Google where I could reverse image search the picture, and a few film review sites and wiki pages had come up regarding the 1985 film, _Commando_. I had sifted through a couple before my teammate and I both came across the site, [Filming Locations of Commando - MovieLoci.com](https://www.movieloci.com/4300-Commando?from=8&count=8&sortby=9&sortdirection=0)
 
 It included the uncropped version of the picture we were provided, geographical information, and the name of who owned the compound in the film, _Arius_. 
 
@@ -200,8 +198,8 @@ Sam put together a script that would convert the morse code, string the letters 
 While Sam had that running, I was manually converting and trying different strings with a couple different morse code tools I found online:
 
 - [Morse Code Translator](https://morsecode.world/international/translator.html), a very simple morse code translator that I could easily keep track of the string with.
-- [Morse Code | dCode](https://www.dcode.fr/morse-code), a translator with a no spaces and a "brute force" option (one of my favourite sites for any decryption challenge).
-- [UnMorse Code Solver | CacheSleuth](https://www.cachesleuth.com/unmorse.html), a decoder to step through it character by character and give you every possible combination.
+- [Morse Code - dCode](https://www.dcode.fr/morse-code), a translator with a no spaces and a "brute force" option (one of my favourite sites for any decryption challenge).
+- [UnMorse Code Solver - CacheSleuth](https://www.cachesleuth.com/unmorse.html), a decoder to step through it character by character and give you every possible combination.
 
 We went back a forward with our mix of tools, and each time we were confident in the next word, we could confirm with each other, and then shorten the string we were working with. Eventually, after us going through this process a few times, we got to the final string, 'CYBERSCI WHO NEEDS SPACES WHEN YOU HAVE PROGRAMMERS'.
 
