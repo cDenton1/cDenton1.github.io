@@ -26,21 +26,53 @@ CyberSci is a security competition with regional events hosted across Canada for
 
 ## Defence Competition - Saturday June 14
 
-Each team was given a subnet with four vulnerable services and an attack bot. Each service was ran in a docker container and users had full sudo permissions, but no access to the attack machine. We were all given one hour to analyze the services and begin fixing vulnerabilites, after that we had four hours of competition time. 
+Each team was given the following:
 
-Once the competition time started, every two minutes, what was called a _tick_ would happen, and the bot would send a mix of benign and malicious requests to each service. The goal was to cause the malicious requests to fail, while letting the benign requests execute successfully. When a malicious request failed, the team would earn points, but if a benign request failed or the service was down at the time of the tick, you would lose points.
+- Subnet with four vulnerable services and an attack bot
+- Each service was ran in a docker container
+- Users had full sudo permissions but no access to the attack machine
+- One hour to analyze the services and begin fixing vulnerabilites
+- Four hours of competition time 
+
+Once the competition time started, every two minutes, what was called a _tick_ would happen, and the bot would send a mix of benign and malicious requests to each service. The goal was to cause the malicious requests to fail, while letting the benign requests execute successfully. 
+
+When a malicious request failed, the team would earn points, but if a benign request failed or the service was down at the time of the tick, you would lose points.
 
 ### Preparation
 
-I had never competed in a competition like this or attempted challenges similar, so I was pretty nervous leading up to it. We were given some info about it a couple days prior, which were pretty handy when it came to planning and preparing. 
-
-I had put together some notes ahead of time as an easy reminder for myself, incase I was blanking on useful or important commands during the competition. One of our teammates also setup Tulip for all of us to access, which came in clutch.
+We were given some info about it a couple days prior, which came in handy for planning and preparing. I had put together some notes ahead of time as a reminder for myself incase I forgot something useful. One of our teammates also setup Tulip for all of us to access, which came in clutch.
 
 Our initial hour was spent ensuring Tulip was working, setting up Git repos on each machine for faster and easier reverting, and the beginning stages of analyzing the services.
 
 ### Comptition
 
-...
+Once the time started, we all began working through one of the four services, letting each other know which ones. 
+
+#### Voter Registry
+
+A couple of us started on this service and it's where I found a python script called **documentscanner.py**. 
+
+- The script dealt with reading files that were uploaded, like PDFs and images, but there wasn't a proper check for the file types.
+- I attempted to add a check that would look at the extension and magic number of the file.
+- Unfortunately, benign requests began to fail after pushing my changes to the service, so we reverted them back.
+
+By the time we had noticed that, I had moved onto another service and I didn't get a chance to go back and try dealing with that service again. As much as I would have loved to take another crack at it, that  taught me a valuable lesson of just how important it is to watch the scoreboard during these types of challenges. Everything takes affect so quickly and you don't want to miss if something is going wrong.
+
+#### Candidate Registry
+
+The service I swapped over to from there was a service for **Candidate Registry**. Here I mainly helped Sam implement some patches for a SQL injection vulnerability that he found. 
+
+- There were two lines in a file that he had spotted while sifting through it's contents.
+- I had taken the fixes he wrote, replaced the necessary lines in the code, and restarted the service.
+- The patch was successful, and we watched the score this time to ensure we didn't miss anything.
+
+#### Realtime Election
+
+This was the last service I had a taken a look at and worked on.; it had a lot to look at. I attempted two patches, one being successful and one that didn't affect our score.
+
+The first one, was in a typescript file that wasn't properly checking information regarding duplicate user info. There seemed to be a lot of vulneribilites similar to that throughout multiple services; making this patch somewhat expected.
+
+The second one was similar to the vulnerabiliy found above but in an SQL file, I attempted to modify what I thought was wrong, but our score didn't change. Time was up not long after so I didn't get much time to explore it any further.
 
 ---
 
@@ -56,7 +88,7 @@ There were a lot of challenges and I had worked on quite a few during the eight 
 
 | Challenge              | Category         | Points |
 |------------------------|------------------|--------|
-| Rigged Ballot Location | OSINT            | 296    |
+| [Rigged Ballot Location](#rigged-ballot-location---osint-296-points) | OSINT            | 296    |
 | 256                    | Crypto           | 100    |
 | dot dot dot            | Crypto           | 427    |
 | staged                 | Crypto           | 207    |
@@ -262,7 +294,7 @@ Key 1: cybersci{4nd_th3n_the_n3xt_oNe}
 
 #### Badge 1 - Badge 100 points
 
-...
+
 
 #### Badge 2 - Badge 100 points
 
