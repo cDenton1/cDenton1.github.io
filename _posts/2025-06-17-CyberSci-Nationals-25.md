@@ -14,6 +14,24 @@ Congrats to everyone who competed and the winners, there was a lot of strong com
 
 **Juniors Script Kiddies**: Paul Lee, Sam Taplin, Jonathan Lok, Daniel Steele, and myself.
 
+<details>
+    <summary><b>Article Content</b></summary>
+    <ul>
+        <li>What is CyberSci</li>
+        <li>Defence Competition
+            <ul>
+                <li>Preparation</li> 
+                <li>Competition</li>
+            </ul>
+        </li>
+        <li>CTF/Jeopardy Competition
+            <ul>
+                <li>Challenge Writeups</li>
+            </ul>
+        </li>
+    </ul>
+</details>
+
 ---
 
 ![CyberSci Logo](/assets/images/cybersciPic1.png "CyberSci Logo")
@@ -89,11 +107,11 @@ There were a lot of challenges and I had worked on quite a few during the eight 
 | Challenge              | Category         | Points |
 |------------------------|------------------|--------|
 | [Rigged Ballot Location](#rigged-ballot-location---osint-296-points) | OSINT            | 296    |
-| 256                    | Crypto           | 100    |
-| dot dot dot            | Crypto           | 427    |
-| staged                 | Crypto           | 207    |
-| Badge 1                | Badge (Hardware) | 100    |
-| Badge 2                | Badge (Hardware) | 100    |
+| [256](#256---crypto-100-points)                    | Crypto           | 100    |
+| [dot dot dot](#dot-dot-dot---crypto-427-points)            | Crypto           | 427    |
+| [staged](#staged---crypto-207-points)                 | Crypto           | 207    |
+| [Badge 1](#badge-1---badge-100-points)                | Badge (Hardware) | 100    |
+| [Badge 2](#badge-2---badge-100-points)                | Badge (Hardware) | 100    |
 
 #### Rigged Ballot Location - OSINT 296 points
 
