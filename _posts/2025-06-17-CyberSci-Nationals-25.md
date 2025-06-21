@@ -50,13 +50,24 @@ In comparison to the defence competition, this is the more common type of compet
 
 Each challenge was initially worth 500 points but as more people completed them, the worth of the challenge would decrease. The CTF didn't require much prep day of, unlike the defence competition. This meant our team spent more time discussing who was focusing where.
 
+[Rigged Ballot Location](#rigged-ballot-location)
+
 ### Challenge Writeups
 
 There were a lot of challenges and I had worked on quite a few during the eight hour competition; solving a couple on my own, and working with my teammates to help solve a handful more. My main focus ended up being on the cryptography, OSINT, and hardware challenges.
 
+| Challenge              | Category         | Points |
+|------------------------|------------------|--------|
+| [Rigged Ballot Location](#rigged-ballot-location) | OSINT            | 296    |
+| 256                    | Crypto           | 100    |
+| dot dot dot            | Crypto           | 427    |
+| staged                 | Crypto           | 207    |
+| Badge 1                | Badge (Hardware) | 100    |
+| Badge 2                | Badge (Hardware) | 100    |
+
 #### Rigged Ballot Location - OSINT 296 points
 
-For this challenge were given the file, **BallotRiggers.jpg**, the image shown below. We were tasked with finding out who owned the compound, and using that information to get to the flag.
+For this challenge, were given the file, **BallotRiggers.jpg**, the image shown below. We were tasked with finding out who owned the compound, and using that information to get to the flag.
 
 ![](/assets/images/cybersci-nat25/BallotRiggers.jpg)
 
@@ -83,11 +94,78 @@ CybersciNats{R1gged_B4llot_Stor4ge_290948}
 
 #### 256 - Crypto 100 points
 
-...
+For this challenge, we were given two files: a python script which contained the code shown below, and a text file with three values.
+
+```py
+import math
+from Crypto.Util.number import getPrime
+from secret import FLAG
+
+BITS = 256
+PRIMES = 16
+
+primes = [getPrime(BITS // PRIMES) for _ in range(PRIMES)]
+
+n = math.prod(primes)
+phi = math.prod(p - 1 for p in primes)
+e = 65537
+
+m = int.from_bytes(FLAG, 'big')
+c = pow(m, e, n)
+
+print(f'{n = }')
+print(f'{e = }')
+print(f'{c = }')
+```
+```
+n = 796619421721763408110066621894301379640702094358332972179336180714381814791
+e = 65537
+c = 760460476332603195975870956320663031030142509238270316470240866540546100772
+```
+
+Right off the bat I recognized this challenge to be similar to a typical RSA encryption puzzle but with a bit of a twist; it used 16 smaller primes to form 'n'. Due to this, we were able to brute force all the primes, and convert everything in a python script. 
+
+```
+from Crypto.Util.number import long_to_bytes, inverse
+from sympy import primerange
+
+n = 796619421721763408110066621894301379640702094358332972179336180714381814791
+e = 65537
+c = 760460476332603195975870956320663031030142509238270316470240866540546100772
+
+primes = []                           # empty list for primes
+remaining = n                         # store n for calculating primes
+
+for p in primerange(2**15, 2**16):    # loop through all 16 bit primes
+    while remaining % p == 0:         # check if p divides remaining
+        primes.append(p)              # p is one of the primes
+        remaining //= p               # divides remaining (n) by p
+        if len(primes) == 16:
+            break                     # stop once it finds all 16
+    if len(primes) == 16:
+        break                         # stop once it finds all 16
+
+phi = 1                               # calculate phi, used for computing d
+for p in primes:                      # for RSA, n = p₁*p₂*...*pₙ is the product of (p - 1) for each p
+    phi *= (p - 1)
+
+d = inverse(e, phi)                   # caclulate private key, d
+
+m = pow(c, d, n)                      # decrypt, the reverse of c = pow(m, e, n) from the encrypt script
+flag = long_to_bytes(m)               # convert the flag from an integer into the og string
+print(flag)
+```
+
+Running the above script gave us the flag.
+
+```bash
+$ python sol256.py
+b'cybersci{reest4bl1sh_on_4096}'
+```
 
 #### dot dot dot - Crypto 427 points
 
-For this challenge we were given a text file that included the string shown below. 
+For this challenge, we were given a text file that included the string shown below. 
 
 ```
 -.-.-.---.....-....-.-....--....----...-.........--..--.-......--.....-.-.-----..-.....-...-..--..-.-----..-..-----..-....
@@ -149,7 +227,9 @@ Caesar with a bit of spice from the chef
 2n62617365642n206s6r202n7n69702n0n4834734941482o4q344763412s78334577516q4151417745774p3956574550414s757767594734462s575168586o444634714q2o5n7078392s43794s48324s77732o4549322o364n712o597566494r53726p536638525464383443364q67414141413q3q
 ```
 
-At this point, he had gotten stuck, so he put everything he had found so far into Discord so another teammate could work on it from where he left off. I had given it a try from here but everything I was getting was a dead end. Paul decided to give it a go and he was able to get **Steps 3 and 4**:
+At this point, he had gotten stuck, so he put everything he had found so far into Discord so another teammate could work on it from where he left off. 
+
+I had given it a try from here but everything I was getting was a dead end. Paul decided to give it a go and he was able to get **Steps 3 and 4**:
 ```
 *based* on *zip*
 H4sIAH+M4GcA/x3EwQmAQAwEwL9VWEPAOuwgYG4F/WQhXkDF4qM+Zpx9/CyOH2Ows+EI2+6Jq+YufINSrlSf8RTd84C6MgAAAA==
@@ -176,13 +256,11 @@ for key in range(256):                                       # loops through eve
         print(f"Key {key}: {plaintext.decode('ascii')}")     # prints key and plaintext
 ```
 
-Running the above script gave us a list of plaintext strings, which did include the flag and the corresponding key:
+Another more simple option for the above code would be to throw the string into [CyberChef](https://gchq.github.io/CyberChef/#recipe=XOR_Brute_Force(1,100,0,'Standard',false,true,false,'')&input=YnhjZHNyYmh6NW9lXnVpMm9edWlkXm8yeXVebk9kfA) and use the XOR Brute Force operation. But running the script gave us a list of plaintext strings, which did include the flag and the corresponding key:
 ```bash
 $ python stagedA3.py 
 Key 1: cybersci{4nd_th3n_the_n3xt_oNe}
 ```
-
-Another more simple option for the above step would be to throw the string into [CyberChef](https://gchq.github.io/CyberChef/#recipe=XOR_Brute_Force(1,100,0,'Standard',false,true,false,'')&input=YnhjZHNyYmh6NW9lXnVpMm9edWlkXm8yeXVebk9kfA) and use the XOR Brute Force operation.
 
 #### Badge 1 - Badge 100 points
 
