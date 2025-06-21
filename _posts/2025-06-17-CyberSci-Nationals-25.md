@@ -56,9 +56,7 @@ There were a lot of challenges and I had worked on quite a few during the eight 
 
 #### Rigged Ballot Location - OSINT 296 points
 
-Challenge Description: ...
-
-Provided File: **BallotRiggers.jpg**, the image shown below.
+For this challenge were given the file, **BallotRiggers.jpg**, the image shown below. We were tasked with finding out who owned the compound, and using that information to get to the flag.
 
 ![](/assets/images/cybersci-nat25/BallotRiggers.jpg)
 
@@ -89,27 +87,54 @@ CybersciNats{R1gged_B4llot_Stor4ge_290948}
 
 #### dot dot dot - Crypto 427 points
 
-Challenge Description: ...
-
-Provided File: **_____._**, a ____ file which included what is shown below. 
+For this challenge we were given a text file that included the string shown below. 
 
 ```
 -.-.-.---.....-....-.-....--....----...-.........--..--.-......--.....-.-.-----..-.....-...-..--..-.-----..-..-----..-....
 ```
 
-It is confirmed in the challenge description that it's morse code without spaces, and gave us some other hints to narrow down the decoding process: it's only letters a-z and includes __cybersci__
+The challenge description confirms that it's morse code without spaces, and gave us some other hints to narrow down the decoding process: it's only letters a-z and includes _cybersci_.
 
-Sam and I tackled this one together because it  didn't seem like a lot till we realized just how many different possibilities of letters there are.
+Sam and I tackled this one together because it  didn't seem like a lot till we realized just how many different possibilities of combinations of letters there are. Our initial step, since we were given the clue that the string 'CYBERSCI' was in it, was confirm whether it was at the beginning or end of the string and work from there.
 
-I had tried writing a script to make the process quicker but I kept running into the issue where it would string together mainly 'e' and 't' since they are simply '.' and '-'. This caused the output to mainly be flooded with long strings of e and t, with a few different letters changed at the end.
+```
+-.-. -.-- -... . .-. ... -.-. .. .--....----...-.........--..--.-......--.....-.-.-----..-.....-...-..--..-.-----..-..-----..-....
+ C    Y    B   E  R   S   C   I
+```
 
-Our next idea since we were given the clue that the string 'cybersci' was in it, was confirm whether it was at the beginning or end of the string and work from there.
+From there, I had tried writing a script to make the process quicker but I kept running into the issue where it would string together mainly 'e' and 't' since they are simply '.' and '-'. This caused the output to mainly be flooded with long strings of e and t, with a few different letters changed at the end.
+
+For our next idea, we both gave the string to a different AI model to see if it could narrow down at least the first few letters. ChatGPT originally couldn't find anything that made sense and kept trying to give me something other than letters a-z. Claude gave Sam the first word as 'WHO' but then turned into gibberish the more it went.
+
+We weren't sure if we wanted to trust the next word as 'WHO', but since there really wasn't much of another direction to go. We stuck through with it, and it did really benefit us since it was indeed right.
+
+```
+-.-. -.-- -... . .-. ... -.-. .. .-- .... --- -...-.........--..--.-......--.....-.-.-----..-.....-...-..--..-.-----..-..-----..-....
+ C    Y    B   E  R   S   C   I   W   H    O
+```
+
+We did want to try another script, but we weren't sure we could automate it entirely and it not take the rest of the competititon time to run. We knew if we could speed up the process even just a little bit, it would make it 10x easier.
+
+I wrote a script that took a list of common dictionary words, filtered out any that were less than three characters long, converted them to morse code without spaces, and compared it to the morse code we were given. This gave a list of 1073 matching words, including 'PROGRAMMERS', which at the time I hadn't realized was actually the last word in the string. 
+
+Sam put together a script that would convert the morse code, string the letters together, compare it to a list of dictionary words, and then repeat. It was a little slow, but was actually pretty accurate and helped point us in a good direction. 
+
+While Sam had that running, I was manually converting and trying different strings with a couple different morse code tools I found online:
+
+- [Morse Code Translator](https://morsecode.world/international/translator.html), a very simple morse code translator that I could easily keep track of the string with.
+- [Morse Code | dCode](https://www.dcode.fr/morse-code), a translator with a no spaces and a "brute force" option (one of my favourite sites for any decryption challenge).
+- [UnMorse Code Solver | CacheSleuth](https://www.cachesleuth.com/unmorse.html), a decoder to step through it character by character and give you every possible combination.
+
+We went back a forward with our mix of tools, and each time we were confident in the next word, we could confirm with each other, and then shorten the string we were working with. Eventually, after us going through this process a few times, we got to the final string, 'CYBERSCI WHO NEEDS SPACES WHEN YOU HAVE PROGRAMMERS'.
+
+```
+-.-. -.-- -... . .-. ... -.-. .. .-- .... --- -. . . -.. ... ... .--. .- -.-. . ... .-- .... . -. -.-- --- ..- .... .- ...- . .--. .-. --- --. .-. .- -- -- . .-. ...
+ C    Y    B   E  R   S   C   I   W   H    O  N  E E  D   S   S   P   A   C   E  S   W   H   E N   Y    O   U   H   A   V   E  P    R   O   G   R  A  M  M  E  R   S
+```
 
 #### staged - Crypto 207 points
 
-Challenge Description: ...
-
-Provided File: **cipher.txt**, a text file which was 44 lines of just under 4500 smiling and frowning emojis. 
+The provided files for this challenge included, **cipher.txt**, a text file which was 44 lines of just under 4500 smiling and frowning emojis. 
 
 This was the first challenge that both Sam and I had opened once the competition started, and he immediatly had an idea so I swapped over to another challenge while he began to work on this one. It had a few steps along the way and was passed around quite a bit amongst our team.
 
