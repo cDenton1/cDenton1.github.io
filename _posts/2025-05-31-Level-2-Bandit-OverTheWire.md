@@ -36,6 +36,6 @@ bandit1@bandit:~$ cat ./-
 
 ---
 
-Next Level: Level 3 - Spaces In a Filename
+Next Level: [Level 3 - Spaces In a Filename](https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html)
 
 ---
