@@ -30,7 +30,7 @@ A couple ways to confirm where you are include:
 
 If you are logged into bandit0, simply running `ls` to confirm the required file is there, and then running the command `cat <filename>`, you will recieve the password for the next level.
 
-```bash
+```
 bandit0@bandit:~$ ls
 readme
 
