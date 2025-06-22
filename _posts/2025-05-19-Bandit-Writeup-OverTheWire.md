@@ -37,5 +37,5 @@ For each level I’ve tried my best to take notes regarding my process for solvi
 [Level 0](https://cdenton1.github.io/2025/05/25/Level-0-Bandit-OverTheWire.html) - SSH Login <br>
 [Level 1](https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html) - File Reading <br>
 [Level 2](https://cdenton1.github.io/2025/05/31/Level-2-Bandit-OverTheWire.html) - Accessing Unusually Named Files <br>
-[Level 3](https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html) - Spaces In a Filename
+[Level 3](https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html) - Spaces In a Filename <br>
 Level 4 - Hidden Files
