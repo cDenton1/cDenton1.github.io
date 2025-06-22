@@ -26,7 +26,13 @@ Running the command `ls` will show that the file we're looking for is in the hom
 
 The way we'll get around this is by including the file path before the filename, in our case `cat ./-`. Running this, you will recieve the password to the next level.
 
-![Terminal Output](/assets/images/otw-b1-2.png)
+```
+bandit1@bandit:~$ ls
+-
+
+bandit1@bandit:~$ cat ./-
+[password]
+```
 
 ---
 

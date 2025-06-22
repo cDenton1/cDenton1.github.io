@@ -31,9 +31,40 @@ Using the above information we have, the command will look something like this: 
 
 You can then fill in the command with the information you know, which should look like this: `ssh bandit0@bandit.labs.overthewire.org -p 2220`
 
-Once you hit enter, it will prompt you for the password, which you can type in (if using a Linux OS, it will be hidden). If you did the right command, and entered the password correctly, you should be greeted with a welcome page like the one shown below.
+Once you hit enter, it will prompt you for the password, which you can type in (if using a Linux OS, it will be hidden). If you did the right command, and entered the password correctly, you should be greeted with a welcome page similar to the one shown below.
 
-![Terminal Output](/assets/images/otw-b0.png)
+```
+$ ssh bandit0@bandit.labs.overthewire.org -p 2220                                                                                                                                          
+                         _                     _ _ _   
+                        | |__   __ _ _ __   __| (_) |_ 
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_ 
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+                                                       
+
+                      This is an OverTheWire game server. 
+            More information on http://www.overthewire.org/wargames
+
+bandit0@bandit.labs.overthewire.org's password: 
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+...
+```
 
 The first level was simply to login, meaning you have successfully completed it and are ready to move onto the next level.
 
