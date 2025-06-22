@@ -30,7 +30,19 @@ A couple ways to confirm where you are include:
 
 If you are logged into bandit0, simply running `ls` to confirm the required file is there, and then running the command `cat <filename>`, you will recieve the password for the next level.
 
-![Terminal Output](/assets/images/otw-b0-1.png)
+```bash
+bandit0@bandit:~$ ls
+readme
+
+bandit0@bandit:~$ more readme
+Congratulations on your first steps into the bandit game !!
+Please make sure you have read the rules at http://overthewire.org/rules/
+If you are following a course, workshop, walkthrough or other educational activity,
+please inform the instructor about the rules as well and encourage them to
+contribute to the OverTheWire community so we can keep these games free!
+
+The password you are looking for is: ______________________________
+```
 
 ---
 
