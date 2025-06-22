@@ -41,7 +41,7 @@ If you are following a course, workshop, walkthrough or other educational activi
 please inform the instructor about the rules as well and encourage them to
 contribute to the OverTheWire community so we can keep these games free!
 
-The password you are looking for is: ______________________________
+The password you are looking for is: [password]
 ```
 
 ---
