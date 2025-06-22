@@ -38,3 +38,4 @@ For each level I’ve tried my best to take notes regarding my process for solvi
 [Level 1](https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html) - File Reading <br>
 [Level 2](https://cdenton1.github.io/2025/05/31/Level-2-Bandit-OverTheWire.html) - Accessing Unusually Named Files <br>
 Level 3 - Spaces In a Filename
+Level 4 - Hidden Files
