@@ -1,7 +1,7 @@
 ---
 title: "My Experience With a HackRF One"
 image: assets/images/hackrfone.png
-tags: [projects]
+tags: [projects, hackrf-one]
 read_time: "9 min read"
 ---
 
