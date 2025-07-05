@@ -5,7 +5,7 @@ title: Denton's Blog
 
 # Welcome to my blog!
 
-I recently competed at CyberSci Nationals in Ottawa, placing 6th overall. Check out my latest post to hear more about it, [CyberSci Nationals 2025](https://cdenton1.github.io/2025/06/19/CyberSci-Nationals-25.html). 
+I've started on a new project recently, a modular command line decrypting tool. To get a sneak peek, check out my GitHub repository, [Decrypter](https://github.com/cDenton1/Decrypter).
 
 ### Recent Posts:
 
