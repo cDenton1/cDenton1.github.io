@@ -21,3 +21,7 @@ Now CyberChef is an amazing tool, it offers so much, but sometimes I find it can
 For example, at Nationals, we were given binary but instead of 0/1's, it was frowny and smiley faced emojis. In Decrypter I wanted to build in the option for character substitution in case the user encountered something similar.
 
 Making the tool with the main focus of it being modular also meant that other users could make their own mods to add, or only include a couple of the ones I created, instead of each one.
+
+## Creation Process and Code
+
+There is simply one main python script consisting of less than 200 lines of code. This file includes the logic for dynamic importing of modules, calling each module, the menu pages, and the handling of different command arguments.
