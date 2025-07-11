@@ -3,19 +3,38 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%BE%3C/text%3E%3C/svg%3E">
 
 <style>
+  .title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .title-bar h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
   .social-links {
     display: flex;
     gap: 14px;
-    margin-top: 10px;
   }
 
   .social-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .social-links a:hover {
     color: #66ccff;
+  }
+
+  @media (max-width: 600px) {
+    .title-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 </style>
