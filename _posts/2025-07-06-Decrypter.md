@@ -18,11 +18,9 @@ For those who have read any of my CTF or cybersecurity event related posts, you 
 
 Now CyberChef is an amazing tool, it offers so much, but sometimes I find it can feel like too much. I wanted to condense Decrypter down to what I use the most in CTFs and combine some of the techniques with extra options for solving problems I've had to figure out in the past. 
 
-For example, at Nationals, we were given binary but instead of 0/1's, it was frowny and smiley faced emojis. In Decrypter I wanted to build in the option for character substitution in case the user encountered something similar.
+Making the tool with the main focus of it being modular also meant that other users could make their own mods to add, or limit what modules they use to keep it small. This would also mean expanding the tool would be much easier.
 
-Making the tool with the main focus of it being modular also meant that other users could make their own mods to add, or limit what modules they use to keep it small.
-
-## Creation Process and Code
+## Code
 
 There is simply one main python script consisting of less than 200 lines of code. This file includes the logic for dynamic importing of modules, calling the modules, the menu pages, and the handling of different command arguments. I wanted this file to focus on how the tool would be used and leave the more technical aspects to each module's own script.
 
@@ -49,5 +47,5 @@ Each module prints along with the placement number of where it is in the list, p
 
 ### callMod
 
-This function starts with a try for calling the module, 
+This function starts with a try except for calling the module, it maps the chosen module from a list made while importing the modules and only returns false if there is an error.
 
