@@ -3,11 +3,9 @@ layout: default
 title: Denton's Blog
 ---
 
-# Hey I'm Denton, welcome to my blog!
+Hey I'm Denton, welcome to my blog! Here is a more in-depth look at what I'm learning and working on.
 
-Here is a more in-depth look at what I'm learning and working on.
-
-### Highlight
+### Highlight:
 
 I've started on a new project recently, a **modular command line decrypting tool**. To get a sneak peek, check out my GitHub repository, [Decrypter](https://github.com/cDenton1/Decrypter) and keep an eye out for my related post.
 
