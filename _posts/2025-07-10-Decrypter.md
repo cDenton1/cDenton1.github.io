@@ -1,14 +1,14 @@
 ---
 title: "Decrypter"
-tags: [python, hidden-1, hidden-2, hidden-3]
-read_time: "__ min read"
+tags: [python, projects]
+read_time: "7 min read"
 ---
 
 # Decrypter
 
 Decrypter is a modular command-line decrypting tool offering various techniques and the option of applying multiple methods step-by-step. Some techniques even include other options for brute forcing, digit shifting, and character substitution. Feel free to check out the repository if you're interested, [https://github.com/cDenton1/Decrypter](https://github.com/cDenton1/Decrypter).
 
-Since returning from CyberSci Nationals I had a few different ideas for some projects to work on. I will be honest I was expecting this one to take me at least a month, since I normally only work on these projects in the evening after work. However, due to some unforeseen circumstances in my life, I had a lot of free time this weekend and was able to finish it.
+Since returning from CyberSci Nationals I had a few different ideas for some projects to work on. I will be honest I was expecting this one to take me at least a month, since I normally only work on these projects in the evening after work. However, due to some unforeseen circumstances in my life, I had a lot of free time this past weekend and was able to finish it.
 
 In this post I'm going to talk in-depth about the tool, and the future of it.
 
@@ -43,7 +43,7 @@ The first part consists of parsing the command arguments and dealing with any co
 
 In between all of that it also calls the two functions that import the modules and creates the list used for the selection menu: **loadMods** and **dOptList**.
 
-Once any options have been set or dealt with, and the modules have been imported, the script moves into a while loop that runs as long as the users input doesn't equal 'e'. There are multiple if statements in this while loop for handling the options that are output, and handling the users input. 
+Once any options have been set or dealt with, and the modules have been imported, the script moves into a while loop that runs as long as the user's input doesn't equal 'e'. There are multiple if statements in this while loop for handling the options that are output, and handling the users input. 
 
 For the option menu I setup a page system: 
 - Prints at most five modules from the list
@@ -105,7 +105,7 @@ To ensure proper path check of the modules subfolder, there is an if statement t
 
 ## Future of Decrypter
 
-At the time of this post being made, technicially I have released two versions on GitHub:
+At the time of this post being made, technically I have released two versions on GitHub:
 
 - v1.0.0 - The first official working release
 - v1.0.1 - Included some minor bug fixes
@@ -114,7 +114,7 @@ There aren't that big of differences between the two versions, but my plan for t
 
 ### Method Detect
 
-Similar to 'Magic' on CyberChef, *detect*, will print the entropy of the string and test a few of the available techniques. It will also print out any results that seem either human readable or align with the typical layout/formula of another method (i.e. Base64).
+Similar to 'Magic' on CyberChef, *detect* will print the entropy of the string and test a few of the available techniques. It will also print out any results that seem either human readable or align with the typical layout/formula of another method (i.e. Base64).
 
 ### Method Search
 
@@ -127,5 +127,7 @@ With only ten modules currently available, this isn't the most necessary but wit
 ## Conclusion
 
 Decrypter is a modular command-line decrypting tool offering various techniques and the option of applying multiple methods step-by-step. The tool combines what I find to be commonly used in CTFs along with extra additions to create a simple yet expandable tool.
+
+Building this tool was a great learning experience and something I genuinely see myself using in the future and continuing to work on. It included some things I had never used before and gave me the opportunity to better understand decryption methods and algorithms I had never written.
 
 If you're interested in trying it out for yourself, check it out on GitHub, [https://github.com/cDenton1/Decrypter](https://github.com/cDenton1/Decrypter).
