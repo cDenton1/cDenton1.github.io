@@ -1,6 +1,6 @@
 ---
 title: "About My Blog"
-tags: [projects, html, github, hidden-1, hidden-2, hidden-3]
+tags: [html, github, hidden-1, hidden-2, hidden-3]
 read_time: "__ min read"
 ---
 
