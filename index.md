@@ -3,11 +3,11 @@ layout: default
 title: Denton's Blog
 ---
 
-### Highlight:
+### Highlights:
 
-I competed solo for the first time at the **AL1C3 1N PWN3RLAND** CTF hosted by SAIT on July 26th, and I placed **2nd**!
+Competed solo at the **AL1C3 1N PWN3RLAND** CTF hosted by SAIT on July 26th, and I placed **2nd**!
 
-Released v2.0 of my modular command-line decrypting tool, **Decrypter**. Read more about it [here](https://cdenton1.github.io/2025/07/10/Decrypter.html) or over on [GitHub](https://github.com/cDenton1/Decrypter).
+Released v2.0 of my modular command-line decryption tool, **Decrypter**. Read more about it [here](https://cdenton1.github.io/2025/07/10/Decrypter.html) on my blog, or over on [GitHub](https://github.com/cDenton1/Decrypter).
 
 ### Recent Posts:
 
