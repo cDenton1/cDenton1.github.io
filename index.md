@@ -5,7 +5,9 @@ title: Denton's Blog
 
 ### Highlight:
 
-I've started on a new project recently, a **modular command line decrypting tool**. To get a sneak peek, check out my GitHub repository, [Decrypter](https://github.com/cDenton1/Decrypter) and keep an eye out for my related post.
+I competed solo for the first time at the **AL1C3 1N PWN3RLAND** CTF hosted by SAIT on July 26th, and I placed **2nd**!
+
+Released v2.0 of my modular command-line decrypting tool, **Decrypter**. Read more about it [here](https://cdenton1.github.io/2025/07/10/Decrypter.html) or over on [GitHub](https://github.com/cDenton1/Decrypter).
 
 ### Recent Posts:
 
