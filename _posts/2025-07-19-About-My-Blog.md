@@ -25,22 +25,38 @@ In my first year I felt like I had taken part in some really cool things, but I 
 
 Since creating the blog, almost every event and competition I have attended, some things from school, and a few solo projects I have worked on, have been posted here. Looking back on them, not only can I see improvements in my knowledge and skill, but also my writing.
 
-Reflecting on all of these different things have helped me better remember what I've learnt from them, since I'm taking the time afterwards to write down key ideas or moments and expand on them.
+Reflecting on all of these different things have helped me better remember and understand what I've learnt from them, since I'm taking the time afterwards to write down key ideas or moments and expand on them.
 
-It has also pushed me to explore and reflect on technology used in assignments more. For example, the HackRF One and the Raspberry Pi Pico.
+It has also pushed me to explore and reflect on technology used in assignments more. For example, the posts on the HackRF One and the Raspberry Pi Pico.
 
 ### Transferable Skills 
 
 Being able to write and explain things is extremely important in the industry. This is something I found drilled into us while in school but also in the few months I've spent working.
 
-Blogs are constantly recommended from industry professionals to students as a way to show what you're learning or doing but I think another good reason is for a way to showcase these other skills.
+Blogs are constantly recommended from industry professionals to students as a way to show what you're learning or doing but I think another good reason is a way to showcase these other skills.
 
 Even though it's been less than a year and some of these posts are less technical than others, I do see improvement. Not all have something to compare to, but I think a good example where I can see improvements overtime are my CTF related posts.
 
-Now I do think I can still improve a lot more on my writing and explanations. At times I tend to word sentances weird or drag on ideas that can be said in a short simple sentence, but that is my part of my reason in the first place: to work on these transferable skills.
+Now I do think I can still improve a lot more on my writing and explanations. At times I tend to word sentances weird or drag on ideas that can be said in a short simple sentence, but that is part of it: an opportunity to work on these transferable skills.
 
-### Grow
+### Seeing Growth
 
 This isn't meant in the sense of gaining a following, but going off my last section, to expand and grow my skills. 
 
-Having this blog has pushed me to work on projects I think of or attempt online or in person challenges to gain or work on my technical skills while also being able to share something here.
+Having this blog has pushed me to work on projects or find and attempt more challenges to gain or work on my technical skills while also being able to share something here.
+
+I have notebooks filled with so many ideas for things to do, some that I've even worked through and posted here. Being able to take these ideas and turn them into projects where I can explore areas I've never really delve into, and then share here is amazing.
+
+Now I know that nothing is stopping me from exploring these ideas on my own without the need for writing them down, and don't get me wrong, I do constantly work through stuff that isn't posted. But there is something almost rewarding of being able to come back to my blog after sometime away to see what progress I've made when it comes to my skills.
+
+This is similar to the transferable skills, looking back at my CTF posts and seeing how I've become more confident with my challenge attempts overtime and my explanations of my solves, shows growth.
+
+### Recommendation
+
+This reason is shorter than the rest because it's more simple. Blogs have been heavily recommended to me as a student from industry professionals and professors. They recommend blogs as a way to show to employers what you have been working on or learning. 
+
+It's a small part of why I started it, but hearing it so many times and taking into consideration other things similar to it, like being more active on LinkedIn or posting on YouTube, I realized this better suited me. 
+
+### My Vision
+
+I think this kind of summarizes everything already mentioned above but I still think it's important to highlight. 
