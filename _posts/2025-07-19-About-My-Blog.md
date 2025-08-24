@@ -10,7 +10,7 @@ I originally started my blog over on Hashnode back in November. Once I had wrapp
 
 In this post I'm going to dive into more about the change over and just talk about why I started this blog in general.
 
-## Why
+## Why It Started
 
 ### Reflection
 
