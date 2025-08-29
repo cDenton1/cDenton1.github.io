@@ -5,7 +5,7 @@ title: Denton's Blog
 
 ### Highlights:
 
-Competed solo at the **AL1C3 1N PWN3RLAND** CTF hosted by SAIT on July 26th, and I placed **2nd**!
+August 28th marked the last day of my four month, summer internship! It was an awesome summer doing what I'm passionate about, but I am looking forward to be continuing classes!
 
 Released v2.0 of my modular command-line decryption tool, **Decrypter**. Read more about it [here](https://cdenton1.github.io/2025/07/10/Decrypter.html) on my blog, or over on [GitHub](https://github.com/cDenton1/Decrypter).
 
