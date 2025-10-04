@@ -5,9 +5,7 @@ title: Denton's Blog
 
 ### Highlights:
 
-August 28th marked the last day of my four month, summer internship! It was an awesome summer doing what I'm passionate about, but I am looking forward to be continuing classes!
-
-Released v2.0 of my modular command-line decryption tool, **Decrypter**. Read more about it [here](https://cdenton1.github.io/2025/07/10/Decrypter.html) on my blog, or over on [GitHub](https://github.com/cDenton1/Decrypter).
+Very busy couple months ahead, but I placed first (along with every other team) at the KPMG Cyber Hackathon! You read more about it [here](https://cdenton1.github.io/2025/10/03/KPMG-Cyber-Hackathon.html).
 
 ### Recent Posts:
 
