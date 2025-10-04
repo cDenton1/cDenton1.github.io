@@ -23,21 +23,21 @@ I have a lot of reasons for why I started this blog, a big part mainly including
 
 In my first year I felt like I had taken part in some really cool things, but I wasn't taking time for myself to look back on those things and see how and what I was learning from them.
 
-Since creating the blog, almost every event and competition I have attended, some things from school, and a few solo projects I have worked on, have been posted here. Looking back on them, not only can I see improvements in my knowledge and skill, but also my writing.
+Since creating the blog, almost every event and competition I have attended, some things from school, and a few solo projects I have worked on, have been posted here. Looking back on them, not only can I see improvements in my knowledge and skills, but also my writing.
 
 Reflecting on all of these different things have helped me better remember and understand what I've learnt from them, since I'm taking the time afterwards to write down key ideas or moments and expand on them.
 
-It has also pushed me to explore and reflect on technology used in assignments more. For example, the posts on the HackRF One and the Raspberry Pi Pico.
+It has also pushed me to explore and reflect on technology used in assignments more. For example, my posts on the HackRF One and the Raspberry Pi Pico.
 
 ### Transferable Skills 
 
 Being able to write and explain things is extremely important in the industry. This is something I found drilled into us while in school but also in the few months I've spent working.
 
-Blogs are constantly recommended from industry professionals to students as a way to show what you're learning or doing but I think another good reason is a way to showcase these other skills.
+Blogs are constantly recommended from industry professionals to students as a way to show what you're learning or doing but I also think another good reason is a way to showcase these other skills.
 
-Even though it's been less than a year and some of these posts are less technical than others, I do see improvement. Not all have something to compare to, but I think a good example where I can see improvements overtime are my CTF related posts.
+Even though it's almost been a year and some of these posts are less technical than others, I do see improvement. Not all have something to compare to, but I think a good example where I can see improvements overtime are my CTF related posts.
 
-Now I do think I can still improve a lot more on my writing and explanations. At times I tend to word sentances weird or drag on ideas that can be said in a short simple sentence, but that is part of it: an opportunity to work on these transferable skills.
+Now I do think I can still improve a lot more on my writing and explanations. At times I tend to word sentances weird or drag on ideas that can be said in a short simple sentence, but that is part of it: an opportunity to work on these skills.
 
 ### Seeing Growth
 
@@ -60,3 +60,7 @@ It's a small part of why I started it, but hearing it so many times and taking i
 ### My Vision
 
 I think this kind of summarizes everything already mentioned above but I still think it's important to highlight. 
+
+I envisioned my blog as being a space maybe helpful for people learning, for people to see more of what I'm doing, and again a place for me to reflect.
+
+Transferring over from Hashnode gave me a better opportunity I think of doing that.
