@@ -5,7 +5,7 @@ title: Denton's Blog
 
 ### Highlights:
 
-Very busy couple months ahead, but I placed first (along with every other team) at the KPMG Cyber Hackathon! You read more about it [here](https://cdenton1.github.io/2025/10/03/KPMG-Cyber-Hackathon.html).
+Very busy couple months ahead, but I placed first (along with every other team) at the KPMG Cyber Hackathon! You can read more about it [here](https://cdenton1.github.io/2025/10/03/KPMG-Cyber-Hackathon.html).
 
 ### Recent Posts:
 
