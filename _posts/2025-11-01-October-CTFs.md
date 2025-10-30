@@ -42,7 +42,25 @@ That being said I will be going back to give this one another attempt once I hav
 
 ### CUcybersec CTF
 
+This was a 24hr CTF hosted by the Carleton University cybersecurity club, I had only spent a couple hours one evening working on the challenges but they were pretty fun.
+
+#### crackme
+
 ...
+
+#### Double ROT Trouble
+
+...
+
+#### Reading the Void
+
+...
+
+#### Fellow Feeling
+
+...
+
+There was one challenge I couldn't do during the competition as I was at work when it became available but I saved the provided files and the description to give it a try later once I had the chance.
 
 ### Hack The Boo 2025
 
