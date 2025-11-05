@@ -63,4 +63,4 @@ I think this kind of summarizes everything already mentioned above but I still t
 
 I envisioned my blog as being a space maybe helpful for people learning, for people to see more of what I'm doing, and again a place for me to reflect.
 
-Transferring over from Hashnode gave me a better opportunity I think of doing that.
+Transferring over from Hashnode gave me a better opportunity I think of doing that. This blog gets to be what I want it to be, I get to customize it how I want to, and I a lot more control over it.
