@@ -1,6 +1,6 @@
 ---
 title: "Vault Door Series Writeup- picoCTF"
-tags: [picoctf, ctf-writeup]
+tags: [picoctf, hidden-1, hidden-2, hidden-3]
 read_time: "__ min read"
 ---
 
