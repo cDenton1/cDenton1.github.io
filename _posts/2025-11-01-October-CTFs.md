@@ -19,8 +19,7 @@ In this post I'm going to go through some of the memorable challenges from each,
 | KPMG Hackathon    | KPMG Canada         | Hackathon                   | Oct. 3rd               |
 | Echo Response     | OffSec              | Incident Response/Blue Team | Oct. 7th - Dec. 2nd    |
 | CUcybersec CTF    | Carleton University | N/A                         | Oct. 24th - 25th       |
-| Hack The Boo 2025 | HackTheBox          | N/A                         | Oct. 24th - 27th       |
-| Dragos CTF 2025   | Dragos              | ???                         | Oct. 28th - 31st       |
+| Dragos CTF 2025   | Dragos              | N/A                         | Oct. 28th - 31st       |
 
 The KPMG Hackathon and Huntress CTF have separate posts that can be found on my blog or linked in this post. I wrote about and posted the KPMG event the day of, and I completed a lot more challenges in the Huntress CTF so I felt it would be better off in its own post.
 
@@ -61,10 +60,6 @@ This was a 24hr CTF hosted by the Carleton University cybersecurity club, I had 
 ...
 
 There was one challenge I couldn't do during the competition as I was at work when it became available but I saved the provided files and the description to give it a try later once I had the chance.
-
-### Hack The Boo 2025
-
-...
 
 ### Dragos CTF 2025
 
