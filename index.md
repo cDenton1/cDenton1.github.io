@@ -5,7 +5,9 @@ title: Denton's Blog
 
 ### Highlights:
 
-Very busy couple months ahead, but I placed first (along with every other team) at the KPMG Cyber Hackathon! You can read more about it [here](https://cdenton1.github.io/2025/10/03/KPMG-Cyber-Hackathon.html).
+Built some challenges for the [Vault 403 CTF](https://cdenton1.github.io/2025/12/21/Vault-403-CTF.html) in November! <br>
+Placed **fourth** at CyberSci Regionals this year! <br>
+Successfully finished my first semester of the BTech Cybersecurity program!
 
 ### Recent Posts:
 
