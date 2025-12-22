@@ -1,5 +1,5 @@
 ---
-title: "Vault Door Series Writeup- picoCTF"
+title: "Vault Door Series Writeup - picoCTF"
 tags: [ctf-writeup, picoctf]
 read_time: "15 min read"
 ---
