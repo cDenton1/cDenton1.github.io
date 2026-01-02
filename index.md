@@ -5,9 +5,7 @@ title: Denton's Blog
 
 ### Highlights:
 
-Built some challenges for the [Vault 403 CTF](https://cdenton1.github.io/2025/12/21/Vault-403-CTF.html) in November! <br>
-Placed **fourth** at CyberSci Regionals this year! <br>
-Successfully finished my first semester of the BTech Cybersecurity program!
+Happy new year! I'm excited for 2026 and what's to come!
 
 ### Recent Posts:
 
