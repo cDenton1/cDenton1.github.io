@@ -1,14 +1,18 @@
 ---
 title: "Advent of Cyber 2025 - TryHackMe"
 tags: [tryhackme, ctf-writeup]
-read_time: "__ min read"
+read_time: "7 min read"
 ---
 
 # Advent of Cyber 2025 - TryHackMe
 
-Happy holidays, and happy new year! To finish off the year, I completed TryHackMe's Advent of Cyber 2025 event, as well attempted one of the five side-quest rooms available.
+Happy holidays, and happy new year! 
 
-In this post, I'm going to share my overall thoughts on this years event, highlighting any notiable favourites or least favourites, and towards the end, share my walkthrough for the **The Great Disappearing Act** side quest.
+To finish off the year, I completed TryHackMe's Advent of Cyber 2025 event, as well as attempted one of the five side-quest rooms available.
+
+In this post, I'm going to share my overall thoughts on this year's event, highlighting any notable favourites from the daily challenges and share my experience. 
+
+I am keeping this post quite a bit shorter than I normally would, as it's been a busy holiday season and with classes starting in less than a week, I'm wrapping up some small projects and making sure I'm well rested before the new semester.
 
 ## What is Advent of Cyber?
 
@@ -16,7 +20,7 @@ It's a free, beginner-friendly, cybersecurity challenge, hosted on TryHackMe dur
 
 Every day leading up to Christmas, a new cybersecurity challenge is released following the story of saving Christmas, finding McSkidy, and stopping King Malhare.
 
-There are a ton of topics covered thoughout the month, including analysis, exploitation, forensics, cryptography, and so much more. 
+There are a ton of topics covered throughout the month, including analysis, exploitation, forensics, cryptography, and so much more. 
 
 Along with that, each room completed earns you a ticket entered into a raffle to win some prizes at the end of the competition.
 
@@ -52,31 +56,31 @@ Along with that, each room completed earns you a ticket entered into a raffle to
 
 I was a little late to the event and didn't start till the 8th but once I caught up around the 15th, I would do the new challenge every day, first thing in the morning. 
 
-Similar to the [Huntress CTF 2025](https://cdenton1.github.io/2025/11/01/Huntress-CTF-2025.html), this challenge got me out of bed every morning and made me start the day with something productive, especially once I was done my classes and finished with my exams.
+Similar to the [Huntress CTF 2025](https://cdenton1.github.io/2025/11/01/Huntress-CTF-2025.html), this challenge got me out of bed every morning and made me start the day with something productive, especially once I was done with my classes and finished my exams.
 
 ### Notable Favourites
 
-When I was first started writing this post, I came to the realization that I loved almost every single challenge released this year, and if I could, I would write about each one. 
+When I first started writing this post, I came to the realization that I loved almost every single challenge released this year, and if I could, I would write about each one but I want to keep this on the shorter end. 
 
-I've done my best to narrow it done to a small handful and condense my thoughts, but just know my notes from this event are very lengthy.
+I've done my best to narrow it down to a small handful and condense my thoughts, but just know my notes from this event are very lengthy.
 
 #### Day 1 - Linux CLI
 
-> 1. Shell Bells - Explore the Linux command-line interface and use it to unveil Christmas mysteries.
+> 1 Shell Bells - Explore the Linux command-line interface and use it to unveil Christmas mysteries.
 
 Even though it was the first day and pretty simple, it really reminded me of the earlier OverTheWire Bandit levels, and I really liked the addition of challenge flags that could only be "submitted" through completing the necessary tasks on the provided machine.
 
-This level also included extra material that needed to be completed for accessing the first side quest level, **The Great Disappearing Act**, and if you didn't read properly (like myself originally), there is a lot of stuff that needs to be done to get the required pass key.
+This level also included extra material that needed to be completed for accessing the first side quest level, **The Great Disappearing Act**. If you didn't read properly (like myself originally), there is a lot of stuff that needs to be done to get the required passkey to access it.
 
 #### Day 2 & 12 - Phishing
 
-> 2. Merry Clickmas - Learn how to use the Social-Engineer Toolkit to send phishing emails.
+> 2 Merry Clickmas - Learn how to use the Social-Engineer Toolkit to send phishing emails.
 
 This was my first time hearing about and using the Social-Engineer Toolkit (SET), which was really interesting and super cool to mess around with a little and learn how to configure one of the many things it offers.
 
 I've never created phishing emails or simulations, so being on the backend of that and watching the logs come in for it was really neat.
 
-> 12. Phismas Greetings - Learn how to spot phishing emails from Malhare's Eggsploit Bunnies sent to TBFC users.
+> 12 Phismas Greetings - Learn how to spot phishing emails from Malhare's Eggsploit Bunnies sent to TBFC users.
 
 I know most people probably don't enjoy tasks centered around spotting phishing emails and stuff like that, but I honestly don't mind because I think it's very important and relevant whether you're in cybersecurity or not.
 
@@ -84,13 +88,15 @@ This room defined a handful of phishing email classifications, and then gave you
 
 #### Day 3 & 15 - Splunk Basics and Web Attack Forensics
 
-> 3. Did you SIEM? - Learn how to ingest and parse custom log data using Splunk.
+> 3 Did you SIEM? - Learn how to ingest and parse custom log data using Splunk.
 
-I want to work with SIEMS more, and I enjoy sifting through and peicing together the information to figure out what's going on. But I also find they can be a little complex and overwhelming, and thankfully I have experienced Splunk slightly in the past so this felt less daunting and was really fun to work with again.
+I want to work with SIEMS more, and I enjoy sifting through and piecing together the information to figure out what's going on. 
+
+But I also find they can be a little complex and overwhelming, and thankfully I have experienced Splunk slightly in the past so this felt less daunting and was really fun to work with again.
 
 I got a little stuck on the path traversal section of the challenge, but eventually I figured it out and it was really cool working through it.
 
-> 15. Drone Alone - Explore web attack forensics using Splunk.
+> 15 Drone Alone - Explore web attack forensics using Splunk.
 
 Continued using Splunk similar to day 3, however, this time centered around identifying the steps an attacker had taken to execute commands. 
 
@@ -98,28 +104,36 @@ Shorter room compared to the basics, but a great opportunity to build on the ski
 
 #### Day 17 - CyberChef
 
-> 17. Hoperation Save McSkidy - The story continues, and the elves mount a rescue and will try to breach the Quantum Fortress's defenses and free McSkidy.
+> 17 Hoperation Save McSkidy - The story continues, and the elves mount a rescue and will try to breach the Quantum Fortress's defenses and free McSkidy.
 
 I absolutely love cryptography related challenges and any opportunity to use CyberChef, so this one definitely made my favourites list. It also introduced me to a new tool, [CrackStation](https://crackstation.net/), a free, online, password hash cracker.
 
 This style of challenge really reminded me of the [picoCTF Vault Door Series](https://cdenton1.github.io/2025/12/22/Vault-Door-Series-Writeup-picoCTF.html), but less complex and instead of reverse engineering, it's cryptography. I loved the style of challenges and levels within it.
 
-### Least Favourites
+## Side Quests
 
-Unfortunately, I heavily disliked day 4 and 8, which were both AI focused. I think the content itself was interesting, and useful to know and learn, but found the practical portion extremely slow and frustrating. 
+For anyone who has never competed in an Advent of Cyber event, alongside the main, beginner-friendly daily tasks, there are sometimes also side quests available for those who want to take on an even harder challenge.
 
-Due to the fact that these challenges have to be completed in the AttackBox, they take forever to load, eating away at my only time to access the AttackBox. 
+Having learnt a lot from CTFs and about cybersecurity in-general throughout 2025, I wanted to take a swing at the first of five side quests available this year.
 
-Otherwise, I also didn't really care for these days, besides the time it had taken to find 3 total flags between the two days, they weren't super memorable to me.
+### The Great Disappearing Act 
 
-## Side Quest
+Now I was able to retrieve the required passkey from the day 1 challenge after quite a bit of digging and lots of re-reading info, before moving on to find the first flag of the actual room on my own.
 
-...
+From there I was able to gain access to the Asylum security site, but I wasn't able to get much further and successfully retrieve the last two flags before the competition ended. 
 
-### The Great Disappearing Act
+That being said, once it wrapped I went back and followed a walkthrough to see what I was missing.
 
-...
+This challenge combined a ton of skills together to make a really fun but difficult challenge, reminding me that there are always new things to learn.
+
+Goal for next year, beat one of the side quests for Advent of Cyber 2026.
 
 ## Conclusion
 
-...
+I had a ton of fun with this event, it introduced me to some new concepts and topics, and gave me the opportunity to practice my skills.
+
+It reminded me why I love learning about cybersecurity. It encouraged me to work on more projects and spend less of my time doom-scrolling or rotting in bed.
+
+As much as the holidays were a perfect chance for a break from the stress of studies and a constant list of deadlines, having this daily competition leading up to Christmas honestly kept me from crashing as soon as my exams were over.
+
+I would highly recommend competing next year if you have the chance, no more than 30 minutes a day and lots of fun!
