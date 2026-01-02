@@ -137,3 +137,5 @@ It reminded me why I love learning about cybersecurity. It encouraged me to work
 As much as the holidays were a perfect chance for a break from the stress of studies and a constant list of deadlines, having this daily competition leading up to Christmas honestly kept me from crashing as soon as my exams were over.
 
 I would highly recommend competing next year if you have the chance, no more than 30 minutes a day and lots of fun!
+
+![Advent of Cyber Certificate](/assets/images/thm-aoc-cert.png "Advent of Cyber Certificate")
