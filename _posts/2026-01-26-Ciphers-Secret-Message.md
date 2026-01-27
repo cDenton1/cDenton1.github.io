@@ -4,7 +4,7 @@ tags: [tryhackme, ctf-writeup]
 read_time: "3 min read"
 ---
 
-# Cipher's Secret Message Writeup- TryHackMe
+# Cipher's Secret Message Writeup - TryHackMe
 
 > Sharpen your cryptography skills by analyzing code to get the flag.
 
