@@ -36,25 +36,53 @@ Forensics - Easy
 >
 > Time is critical.
 
-How many decoy hosts are randomized in this reconnaissance evasion technique?
+For this challenge we were given a traffic capture to analyze to answer the following 10 questions. 
 
-What is the real attacker IP address?
+1. How many decoy hosts are randomized in this reconnaissance evasion technique? - `11`
 
-How many open ports did the attacker find?
+For this question I applied the filter `tcp.flags.syn == 1 && tcp.flags.ack == 0`. 
 
-What web enumeration tool did the attacker use?
+Within the filtered results I noticed a section of 11 light green colour coded packets, which stood out in contrast to the grey of everything else.
 
-What is the first endpoint discovered by the attacker?
+Each of those packets were from different IP addresses but all sending to the same destination.
 
-What was the first file extension tested during the enumeration?
+I did also note down that IP down as the possible victim IP address.
 
-What is the full vulnerable request parameter used in the attack?
+![image]
 
-What is the username discovered by the attacker?
+2. What is the real attacker IP address? - `192.168.1.23`
 
-What authentication-related file did the attacker attempt to access?
+Based off the last question, I went into endpoints to see which IP had the highest amount of packets.
 
-What time (HH:MM:SS,MS) did the attacker start brute forcing for SSH?
+![image]
+
+3. How many open ports did the attacker find? - `4`
+
+For this one I applied the filter `ip.dst == 192.168.1.23 && tcp.flags.syn == 1 && tcp.flags.ack == 1 && ip.src == 192.168.1.27` - including the real attacker IP address and the IP address that I thought might possibly belong to the victim.
+
+I noticed within the filter results that it listed four ports, repeated them a few times, and then only listing port 5000 over and over again. 
+
+![image]
+
+4. What web enumeration tool did the attacker use? - `gobuster`
+
+I applied the filter `ip.src == 192.168.1.23 && http`, then I began sifting through the remaining packets, looking at the Hypertext Transfer Protocol section of each packet.
+
+Within packet 25278, I spotted `gobuster` listed next to User-Agent.
+
+![image]
+
+5. What is the first endpoint discovered by the attacker?
+
+6. What was the first file extension tested during the enumeration?
+
+7. What is the full vulnerable request parameter used in the attack?
+
+8. What is the username discovered by the attacker?
+
+9. What authentication-related file did the attacker attempt to access?
+
+10. What time (HH:MM:SS,MS) did the attacker start brute forcing for SSH?
 
 ### Ready - Smile - Action
 
