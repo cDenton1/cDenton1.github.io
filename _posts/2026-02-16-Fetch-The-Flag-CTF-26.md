@@ -1,12 +1,12 @@
 ---
 title: "Snyk Fetch The Flag CTF 2026 - Writeup"
 tags: [ctf-writeup]
-read_time: "_ min read"
+read_time: "6 min read"
 ---
 
 # Snyk Fetch The Flag CTF 2026 - Writeup
 
-Snyk returned again to host their annual **Fetch The Flag CTF** challenge from Febraury 12th-13th. 
+Snyk returned again to host their annual **Fetch The Flag CTF** challenge from February 12th-13th. 
 
 For the busy week I had, I did take a small opportunity to work through a couple challenges, and I'm going to share a walk through of them here.
 
@@ -38,7 +38,7 @@ For this question I applied the filter `tcp.flags.syn == 1 && tcp.flags.ack == 0
 
 Within the filtered results I noticed a section of 11 light green colour coded packets, which stood out in contrast to the grey of everything else.
 
-Each of those packets were from different IP addresses but all sending to the same destination. I did also note down that IP down as the possible victim.
+Each of those packets were from different IP addresses but all sending to the same destination. I did also note that IP down as the possible victim.
 
 ![Question 1 - Forensics](/assets/images/fetchtheflag-26/ftf-1.png)
 
@@ -80,11 +80,11 @@ I went back to using the filter that helped me solve question four, then within 
 
 7. What is the full vulnerable request parameter used in the attack? - `file`
 
-When originally searching for this one I had gone a layer too deep and actually answering the next two questions first, but here's what I eventually figured out.
+When originally searching for this one I had gone a layer too deep and actually answered the next two questions first, but here's what I eventually figured out.
 
-On the right side of the packet pane, under the info column, specifically within packets 701832 and 708135, you can see an endpoint (`read`), paramater name (before the equals sign `file`), and the paramater value (comes after the equals sign, `%2Fhome...`).
+On the right side of the packet pane, under the info column, specifically within packets 701832 and 708135, you can see an endpoint (`read`), parameter name (before the equals sign `file`), and the parameter value (comes after the equals sign, `%2Fhome...`).
 
-For this question, we're looking for the paramater name, which is `file`.
+For this question, we're looking for the parameter name, which is `file`.
 
 ![Question 7 - Forensics](/assets/images/fetchtheflag-26/ftf-7.png)
 
@@ -176,6 +176,6 @@ Right at the top, underneath the first header, there was the flag - `flag{let_th
 
 ## Conclusion
 
-Even though I didn't get to spend as much time on the competition as I wanted, I'm happy with how did.
+Even though I didn't get to spend as much time on the competition as I wanted, I'm happy with how I did.
 
 They were a fun handful of challenges to work through, and I've even been working through a few of the other ones while the infrastructure is still up and available.
