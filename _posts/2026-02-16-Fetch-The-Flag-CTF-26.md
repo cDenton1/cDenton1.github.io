@@ -32,7 +32,7 @@ Forensics - Easy
 
 For this challenge we were given a traffic capture to analyze and answer the following 10 questions. 
 
-1. How many decoy hosts are randomized in this reconnaissance evasion technique? - `11`
+**1.** How many decoy hosts are randomized in this reconnaissance evasion technique? - `11`
 
 For this question I applied the filter `tcp.flags.syn == 1 && tcp.flags.ack == 0`. 
 
@@ -42,13 +42,13 @@ Each of those packets were from different IP addresses but all sending to the sa
 
 ![Question 1 - Forensics](/assets/images/fetchtheflag-26/ftf-1.png)
 
-2. What is the real attacker IP address? - `192.168.1.23`
+**2.** What is the real attacker IP address? - `192.168.1.23`
 
 Based off the last question, I went into endpoints to see which IP had the highest amount of packets.
 
 ![Question 2 - Forensics](/assets/images/fetchtheflag-26/ftf-2.png)
 
-3. How many open ports did the attacker find? - `4`
+**3.** How many open ports did the attacker find? - `4`
 
 For this one I applied the filter `ip.dst == 192.168.1.23 && tcp.flags.syn == 1 && tcp.flags.ack == 1 && ip.src == 192.168.1.27` - including the real attacker IP address and the IP address that I thought might possibly belong to the victim.
 
@@ -56,7 +56,7 @@ I noticed within the filter results that it listed four ports, repeated them a f
 
 ![Question 3 - Forensics](/assets/images/fetchtheflag-26/ftf-3.png)
 
-4. What web enumeration tool did the attacker use? - `gobuster`
+**4.** What web enumeration tool did the attacker use? - `gobuster`
 
 I applied the filter `ip.src == 192.168.1.23 && http`, then I began sifting through the remaining packets, looking at the **Hypertext Transfer Protocol** section of each packet.
 
@@ -64,7 +64,7 @@ Within packet 25278, I spotted `gobuster` listed next to **User-Agent**.
 
 ![Question 4 - Forensics](/assets/images/fetchtheflag-26/ftf-4.png)
 
-5. What is the first endpoint discovered by the attacker? - `/about`
+**5.** What is the first endpoint discovered by the attacker? - `/about`
 
 For this question I built off the filter used in the previous question, adding `&& http.response.code != 404` to the end of it.
 
@@ -72,13 +72,13 @@ Similar to that question as well, I began sifting through the packet data again,
 
 ![Question 5 - Forensics](/assets/images/fetchtheflag-26/ftf-5.png)
 
-6. What was the first file extension tested during the enumeration? - `html`
+**6.** What was the first file extension tested during the enumeration? - `html`
 
 I went back to using the filter that helped me solve question four, then within the info column of the packet pane, I looked for the first one to include a file extension.
 
 ![Question 6 - Forensics](/assets/images/fetchtheflag-26/ftf-6.png)
 
-7. What is the full vulnerable request parameter used in the attack? - `file`
+**7.** What is the full vulnerable request parameter used in the attack? - `file`
 
 When originally searching for this one I had gone a layer too deep and actually answered the next two questions first, but here's what I eventually figured out.
 
@@ -88,9 +88,9 @@ For this question, we're looking for the parameter name, which is `file`.
 
 ![Question 7 - Forensics](/assets/images/fetchtheflag-26/ftf-7.png)
 
-8. What is the username discovered by the attacker? - `zoro`
+**8.** What is the username discovered by the attacker? - `zoro`
 
-9. What authentication-related file did the attacker attempt to access? - `/home/zoro/.ssh/authorized_keys`
+**9.** What authentication-related file did the attacker attempt to access? - `/home/zoro/.ssh/authorized_keys`
 
 I found the answer for this one and question eight through the same packet, 701848, and filter, `ip.addr == 192.168.1.23 && http.request.uri contains "?"`.
 
@@ -98,7 +98,7 @@ Under the **Line-based text data** section of the packet data, there was a line 
 
 ![Question 8 and 9 - Forensics](/assets/images/fetchtheflag-26/ftf-8.png)
 
-10. What time (HH:MM:SS,MS) did the attacker start brute forcing for SSH? - `09:02:47,19`
+**10.** What time (HH:MM:SS,MS) did the attacker start brute forcing for SSH? - `09:02:47,19`
 
 For this final question I used the filter `ip.addr == 192.168.1.23 && ssh`, then I looked for the first packet where it looked like it began spamming them within a short amount of time.
 
