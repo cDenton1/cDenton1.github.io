@@ -1,6 +1,6 @@
 ---
 title: "Building a Honeypot"
-tags: [python, projects, hidden-1, hidden-2, hidden-3]
+tags: [hidden-1, hidden-2, hidden-3]
 read_time: "_ min read"
 ---
 
