@@ -1,10 +1,10 @@
 ---
-title: "Snyk Fetch The Flag CTF 2026 - Writeup"
+title: "Snyk Fetch The Flag CTF 2026"
 tags: [ctf-writeup]
 read_time: "6 min read"
 ---
 
-# Snyk Fetch The Flag CTF 2026 - Writeup
+# Snyk Fetch The Flag CTF 2026
 
 Snyk returned again to host their annual **Fetch The Flag CTF** challenge from February 12th-13th. 
 
