@@ -36,7 +36,7 @@ I outlined a project skeleton and steps for my initial plan, then adjusted both 
 
 ### Project Skeleton
 | File        | Reason |
-|-------------|-------------|
+| ----------- | ----------- |
 | Main Script | entry point |
 | Config Script | SSID, webhook, and any other settings |
 | WiFi AP Script | access point setup |
@@ -48,6 +48,7 @@ I outlined a project skeleton and steps for my initial plan, then adjusted both 
 | Background Script | combination of the dns hijacking and connection monitoring |
 | DNS Hijacking | redirect users to the web server form |
 | Connection Monitoring | monitor devices connecting to the AP and log to the terminal |
+
 
 ### Project Steps
 1. Get AP mode working and connecting some devices to it
