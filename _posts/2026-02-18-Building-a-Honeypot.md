@@ -35,7 +35,8 @@ Lastly I was hoping to use a Discord webhook for notifications, not something th
 I outlined a project skeleton and steps for my initial plan, then adjusted both as necessary while building the honeypot.
 
 ### Project Skeleton
-| File        | Reason |
+
+| File        | Reason      |
 | ----------- | ----------- |
 | Main Script | entry point |
 | Config Script | SSID, webhook, and any other settings |
@@ -43,7 +44,7 @@ I outlined a project skeleton and steps for my initial plan, then adjusted both 
 | Captive Portal Script | http server and pages |
 | Portal HTML | HTML code used by the captive portal |
 | HTML Form and Pages | initial form and success page |
-| Notifier Script | Discord webhook |
+| ~~Notifier Script~~ | ~~Discord webhook~~ |
 | Logger Script | event logging |
 | Background Script | combination of the dns hijacking and connection monitoring |
 | DNS Hijacking | redirect users to the web server form |
