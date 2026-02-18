@@ -5,7 +5,7 @@ title: Denton's Blog
 
 ### Highlights:
 
-Just wrapped up my **[Honeypot](https://cdenton1.github.io/2026/02/18/Building-a-Honeypot.html)** project and a few a more things in the works that I'm excited to share once done!
+Just wrapped up my **[Honeypot](https://cdenton1.github.io/2026/02/18/Building-a-Honeypot.html)** project and I'm excited to start on the next one!
 
 ### Recent Posts:
 
