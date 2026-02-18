@@ -43,7 +43,7 @@ I outlined a project skeleton and steps for my initial plan, then adjusted both 
 | Captive Portal Script | http server and pages |
 | Portal HTML | HTML code used by the captive portal |
 | HTML Form and Pages | initial form and success page |
-| ~~Notifier Script~~ | ~~Discord webhook~~ |
+| Notifier Script | Discord webhook |
 | Logger Script | event logging |
 | Background Script | combination of the dns hijacking and connection monitoring |
 | DNS Hijacking | redirect users to the web server form |
