@@ -1,7 +1,7 @@
 ---
 title: "Building a Honeypot"
 tags: [projects, python, raspberry-pi]
-read_time: "_ min read"
+read_time: "13 min read"
 ---
 
 # Building a Honeypot
@@ -10,11 +10,17 @@ I built a **Honeypot** on my Raspberry Pi Pico W during my winter break and I've
 
 In this post I'm going to share the building process, all the planning, everything I learnt, and my finished product.
 
-Quick ethical and legal note regarding this project. It involves logging email addresses and MAC addresses, and posing as a real network even though it's not. I built this for educational purposes only, and tested it within a controlled environment with my own devices.
+**Quick ethical and legal note regarding this project.** It involves logging email addresses and MAC addresses, and posing as a real network even though it's not. I built this for educational purposes only, and tested it within a controlled environment with my own devices.
 
 ## What is a honeypot?
 
-...
+A honeypot is a computer security mechanism set up to detect, deflect, or sometimes counteract unauthorized use of systems. 
+
+Now there are also types of malicious honeypots that are set up with the goal of tricking users into connecting to it and possibly steal data or monitor communications.
+
+There are a handful of different types within these two categories, however, for my project I built one more closely resembling an **Evil Twin**.
+
+An Evil Twin is a fraudulent WiFi access point that appears to be legit but is set up to eavesdrop and even possibly steal info. 
 
 ## My Idea and Plan
 
@@ -22,7 +28,7 @@ Using my Raspberry Pi Pico W, I wanted to build a honeypot from scratch in micro
 
 I planned to set it up as a WiFi access point, with no actual connection to the internet, posing as a legitimate network. 
 
-Then it would log any connections, tracking MAC addresses. As well as hosting a fake captive portal, that also tracked connections and form submissions. 
+Then it would log any connections, tracking MAC addresses. As well as hosting a fake captive portal that also tracked connections and form submissions. 
 
 Lastly I was hoping to use a Discord webhook for notifications, not something that would typically be seen but could be an interesting addition.
 
@@ -49,9 +55,9 @@ I outlined a project skeleton and steps for my initial plan, then adjusted both 
 3. ~~Setup Discord webhook and confirm the alerts work~~
 4. Improve the captive portal and make final adjustments
 
-Note - there was something I had outlined initially that I later found out while building that it wouldn't possible, so I still included it above but crossed it out and will be discussing further in the **Challenges I Faced** section. 
+Note - there was something I had outlined initially that I later found out while building that it wouldn't be possible, so I still included it above but crossed it out and will be discussing further in the **Challenges I Faced** section. 
 
-Throughout building the above, I also tracked everything I was doing and learning.
+Throughout building the above, I also tracked everything I was doing and learning in one document to return to later.
 
 ## What I Built
 
@@ -195,7 +201,7 @@ def startServer():
 
 I had a very basic page to start and initially test connections and logging, but then I made both look a little prettier and more legit once I got it working.
 
-For the server, I created a **Portal Form** page that requested the persons email for "connection":
+For the server, I created a **Portal Form** page that requested the person's email for "connection":
 ```html
 <!DOCTYPE html>
 <html>
@@ -325,11 +331,11 @@ Portal running
 
 Initially after this point I was done, I did almost everything I was hoping to do. But once I was running everything together, there were a few things I wanted to try correcting or forcing with a script.
 
-I didn't like the fact that I could only tell if someone connected to it once they accessed the server, so I made script to track any connections to the AP itself. 
+I didn't like the fact that I could only tell if someone connected to it once they accessed the server, so I made a script to track any connections to the AP itself. 
 
-Then I also noticed that there was no pop-up for the captive portal like you would typically see when connecting to a network, so I made a script that would attempt to redirect any web requests to the captive portal - this is called DNS hijacking.
+Then I also noticed that there was no pop-up for the captive portal like you would typically see when connecting to a network, so I made another script that would attempt to redirect any web requests to the captive portal - this is called DNS hijacking.
 
-I also learnt during the creation of both of these scripts that you can't setup more than one thread on the Pico W, so I combined them into one **Background** script to still be able to run both:
+I also learnt during the creation of both of those scripts that you can't setup more than one thread on the Pico W, so I combined them into one **Background** script to still be able to run both:
 ```python
 # background.py
 import time
@@ -429,7 +435,7 @@ There were three problems I ran into while building this.
 
 I briefly mentioned this towards the end of the previous section. In the end they seemed to be less but still there.
 
-During the halfway mark however, they were extremely noticable and the entire thing was unbearably slow. 
+During the halfway mark however, they were extremely noticeable and the entire thing was unbearably slow. 
 
 There was something I had done during my fourth day of building which seemed to cause it to slow quite a lot. I suspect it had something to do with the HTML forms and the web-server, but during my fifth day I reverted a few of my scripts back which did help. 
 
@@ -445,11 +451,19 @@ This was a simple fix, besides possibly still slowing down the Pico W, it didn't
 
 One of my initial ideas was notifications, utilizing Discord webhooks; I had never worked with them before and I thought it could be a cool addition.
 
-However, I didn't consider the fact that since the Pico W was already setup as an Access Point, it couldn't also connect to the internet at the same time. 
+However, I didn't consider the fact that since the Pico W was already set up as an Access Point, it couldn't also connect to the internet at the same time. 
 
 I looked into two work arounds: **HTTP Relay Server** and **Serial-Over-USB Logging**. Both were definitely possible but required lots of extra setup and some major changes to a lot of the stuff I had already built by this point.
 
 In the future I wouldn't mind returning to attempt one of the above again but even without notifications the rest of the project turned out as aspected and worked well.
+
+### Hardware Choice
+
+I think all of the above could have also been solved quite easily if I had used something else instead of a Pico W. 
+
+Nothing against the micro-controller, and for already having one on-hand, I didn't want to go out of my way to get something else. 
+
+However, having worked with a Raspberry Pi 5 for another project that had a similar setup, it didn't run into any of these challenges. If I still had access to it, I would have used that instead.
 
 ## Resources I Used
 
@@ -464,4 +478,10 @@ I tried to keep track of every resource I used during the building process and l
 
 ## Conclusion
 
-...
+I spent about 2-3 weeks working on this project. I built a honeypot on a Raspberry Pi Pico W, which appears as a network with free WiFi, logging MAC addresses from unsuspecting users.
+
+I set up DNS hijacking to force the users to the fake captive portal, where they're prompted to enter their email, logging them as well before redirecting users to a fake success page.
+
+I ran into a few challenges but found ways to work around and solve them, learning more and having a deeper understanding on how to set up something like this in the future.
+
+I'm extremely happy with how this entire project turned out and I'm glad I finally got to share my process for it here.
