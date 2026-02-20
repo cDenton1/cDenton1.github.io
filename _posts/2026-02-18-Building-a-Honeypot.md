@@ -24,7 +24,7 @@ An Evil Twin is a fraudulent WiFi access point that appears to be legit but is s
 
 ## My Idea and Plan
 
-Using my Raspberry Pi Pico W, I wanted to build a honeypot from scratch in micro python. 
+Using my Raspberry Pi Pico W, I wanted to build a honeypot from scratch in micro-python. 
 
 I planned to set it up as a WiFi access point, with no actual connection to the internet, posing as a legitimate network. 
 
@@ -457,7 +457,7 @@ However, I didn't consider the fact that since the Pico W was already set up as 
 
 I looked into two work arounds: **HTTP Relay Server** and **Serial-Over-USB Logging**. Both were definitely possible but required lots of extra setup and some major changes to a lot of the stuff I had already built by this point.
 
-In the future I wouldn't mind returning to attempt one of the above again but even without notifications the rest of the project turned out as aspected and worked well.
+In the future I wouldn't mind returning to attempt one of the above again but even without notifications the rest of the project turned out as expected and worked well.
 
 ### Hardware Choice
 
