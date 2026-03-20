@@ -1,6 +1,6 @@
 ---
 title: "FCFS Using Queues"
-tags: [projects, school-projects]
+tags: [hidden-1, hidden-2, hidden-3]
 read_time: "__ min read"
 ---
 
