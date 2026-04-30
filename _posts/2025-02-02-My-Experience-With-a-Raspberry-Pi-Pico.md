@@ -1,6 +1,6 @@
 ---
 title: "My Experience With a Raspberry Pi Pico"
-image: assets/images/raspberrypipico.png
+image: assets/images/raspb-pi/raspberrypipico.png
 tags: [raspberry-pi, projects, python]
 read_time: "11 min read"
 ---
@@ -85,7 +85,7 @@ button_tails = Pin(15, Pin.IN, Pin.PULL_UP)  # button for tails
 
 Here is what mine looked like in reference to what I explained above:
 
-![](/assets/images/raspberryPic1.jpeg "Coin Flip Setup")
+![](/assets/images/raspb-pi/raspberryPic1.jpeg "Coin Flip Setup")
 
 Below is the code I wrote for the coin flip game. Once started it will prompt you with heads or tails and tell you which button on the breadboard is for which; left is tails and right is heads. When a user presses a button, the OLED screen will display whatever they had chosen before calling the coin flip animation function, it will decide the result of the coin flip randomly before cycling through the draw coin and draw ellipse functions three times. Then it will land on the winning side and print out a message saying the user either won or lost. 
 
@@ -277,7 +277,7 @@ Here is how I setup my breadboard:
 
 Here is what mine looked like in reference to what I explained above:
 
-![](/assets/images/raspberryPic2.jpeg "Bar Graph Setup")
+![](/assets/images/raspb-pi/raspberryPic2.jpeg "Bar Graph Setup")
 
 Once you have set this up, if you use the code I included below, as you turn the knob clockwise on the potentiometer, the LEDs on the display will get brighter from right to left; if you turn it counter-clockwise, they will get dimmer. It will also print the brightness percentage of the display in the terminal. 
 
