@@ -1,5 +1,5 @@
 ---
-title: "FCFS Simulator - Raspberry Pi Pico W"
+title: "FCFS Simulator - Raspberry Pi Pico"
 tags: [projects, python, raspberry-pi]
 read_time: "13 min read"
 ---
@@ -10,7 +10,7 @@ For my Data Structures class (DATA 3000) we had an assignment where we had to im
 
 I really enjoyed this assignment and it actually helped me to better understand FCFS for things like networking, so I wanted to take it another step further and build a physical device to simulate it visually.
 
-For any of the files I share in this post check out this GitHub repo, [Raspberry Pi Files](https://github.com/cDenton1/Raspberry-Pi-Files) and to see a visual demonstration of this project check out this video, [FCFS Simulator | Raspberry Pi Pico W](https://www.youtube.com/watch?v=2HHmcEU_PsQ).
+For any of the files I share in this post check out this GitHub repo, [Raspberry Pi Files](https://github.com/cDenton1/Raspberry-Pi-Files) and to see a visual demonstration of this project check out this video, [FCFS Simulator Raspberry Pi Pico W](https://www.youtube.com/watch?v=2HHmcEU_PsQ).
 
 ## First Come First Serve
 
@@ -450,7 +450,7 @@ Just like the [Honeypot](https://cdenton1.github.io/2026/02/18/Building-a-Honeyp
 
 The sources were used as a guide for the hardware setup and verification at different steps throughout development.
 
-- [Arduino Tutorial - LCD Display | Arduino Project Hub](https://projecthub.arduino.cc/khushisahil36/arduino-tutorial-lcd-display-b8285a) - great resource for the initial set up but eventually I figured out that I required a few extra parts
+- [Arduino Tutorial - LCD Display Arduino Project Hub](https://projecthub.arduino.cc/khushisahil36/arduino-tutorial-lcd-display-b8285a) - great resource for the initial set up but eventually I figured out that I required a few extra parts
 - [Raspberry Pi Pico and Rotary Encoder : 4 Steps - Instructables](https://www.instructables.com/Raspberry-Pi-Pico-and-Rotary-Encoder/) - useful for resource for setting up the rotary encoder
 - [Process Scheduling Solver](https://process-scheduling-solver.boonsuen.com/) - double check and visualize the calculation process of the scheduling times
 
