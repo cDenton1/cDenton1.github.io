@@ -20,7 +20,7 @@ The password for the next level is stored in a file called - located in the home
 
 ## Solution
 
-This level from a first glance might seem very easy, however, if you don't have some experience working with a Linux OS, you may have never seen something like this. `-` is most often seen when used for setting flags/options with a command, for example `-p` to set a port for `ssh`.
+> This level from a first glance might seem very easy, however, if you don't have some experience working with a Linux OS, you may have never seen something like this. `-` is most often seen when used for setting flags/options with a command, for example `-p` to set a port for `ssh`.
 
 Running the command `ls` will show that the file we're looking for is in the home directory, and similar to the last level, you might run the command `cat <filename>` to see what's in it. When running `cat -` though, `cat` will read the `-` as STDIN and wait for user input.
 
