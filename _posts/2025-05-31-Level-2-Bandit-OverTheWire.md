@@ -16,7 +16,7 @@ Previous Level: [Level 1 - File Reading](https://cdenton1.github.io/2025/05/25/L
 
 ## Level Goal
 
-The password for the next level is stored in a file called - located in the home directory
+>The password for the next level is stored in a file called - located in the home directory
 
 ## Solution
 

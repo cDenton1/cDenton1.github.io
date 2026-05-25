@@ -16,7 +16,7 @@ Previous Level: [Level 0 - SSH Login](https://cdenton1.github.io/2025/05/25/Leve
 
 ## Level Goal
 
-The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
+> The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
 
 ## Solution
 
