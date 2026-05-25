@@ -36,6 +36,6 @@ bandit2@bandit:~$ cat "spaces in this filename"
 
 ---
 
-Next Level: Level 4 - Hidden Files
+Next Level: [Level 4 - Hidden Files](https://cdenton1.github.io/2026/05/24/Level-4-Bandit-OverTheWire.html)
 
 ---

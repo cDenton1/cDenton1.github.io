@@ -10,7 +10,7 @@ To know more about OverTheWire, check out my post, [Bandit Writeup - OverTheWire
 
 ---
 
-Previous Level: [Level 3 - Spaces In a Filename](https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html)
+Previous Level: [Level 3 - Spaces in a Filename](https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html)
 
 ---
 
