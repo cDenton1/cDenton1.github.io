@@ -71,5 +71,3 @@ The first level was simply to login, meaning you have successfully completed it 
 ---
 
 Next Level: [Level 1 - File Reading](https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html)
-
----
