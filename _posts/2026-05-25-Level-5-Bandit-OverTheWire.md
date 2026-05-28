@@ -8,17 +8,11 @@ read_time: "2 min read"
 
 To know more about OverTheWire, check out my post, [Bandit Writeup - OverTheWire](https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html). For these walkthroughs, I am using a Linux OS.
 
----
+### Level Goal
 
-Previous Level: [Level 4 - Spaces in a Filename](https://cdenton1.github.io/2026/05/24/Level-4-Bandit-OverTheWire.html)
+The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
 
----
-
-## Level Goal
-
-> The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
-
-## Solution
+### Solution
 
 For this level we are moving away from naming conventions and instead dealing with specific file types; in this case human-readable.
 
@@ -52,6 +46,8 @@ bandit4@bandit:~/inhere$ cat ./-file07
 
 ---
 
-Next Level: Level 6 - File Characteristics
-
----
+<div style="display: flex; justify-content: space-between;">
+  <span>Previous Level: <a href="https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html">Level 3 - Spaces in a Filename</a></span>
+  <!-- <span>Next Level: <a href="...">Level 6 - File Characteristics</a></span> -->
+  <span>Main Post: <a href="https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html">Bandit Writeup - OverTheWire</a></span>
+</div>
