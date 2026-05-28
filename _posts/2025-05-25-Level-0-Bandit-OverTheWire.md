@@ -68,5 +68,7 @@ The first level was simply to login, meaning you have successfully completed it 
 
 ---
 
-Next Level: [Level 1 - File Reading](https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html)
-
+<div style="display: flex; justify-content: space-between;">
+  <span>Main Post: <a href="https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html">Bandit Writeup - OverTheWire</a></span>
+  <span>Next Level: <a href="https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html">Level 1 - File Reading</a></span>
+</div>
