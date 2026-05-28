@@ -8,17 +8,11 @@ read_time: "1 min read"
 
 To know more about OverTheWire, check out my post, [Bandit Writeup - OverTheWire](https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html). For these walkthroughs, I am using a Linux OS.
 
----
-
-Previous Level: [Level 0 - SSH Login](https://cdenton1.github.io/2025/05/25/Level-0-Bandit-OverTheWire.html)
-
----
-
-## Level Goal
+### Level Goal
 
 > The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
 
-## Solution
+### Solution
 
 The task description is very simple and straightforward for this level and in the previous level you figured out how to access bandit0 using SSH. Hoping you didn't disconnect from the previous level before moving on, this will be pretty quick and only require 1 or 2 commands.
 
@@ -46,6 +40,7 @@ The password you are looking for is: [password]
 
 ---
 
-Next Level: [Level 2 - Accessing Unusually Named Files](https://cdenton1.github.io/2025/05/31/Level-2-Bandit-OverTheWire.html)
-
----
+<div style="display: flex; justify-content: space-between;">
+  <span>Previous Level: <a href="https://cdenton1.github.io/2025/05/25/Level-0-Bandit-OverTheWire.html">Level 0 - SSH Login</a></span>
+  <span>Next Level: <a href="https://cdenton1.github.io/2025/05/31/Level-2-Bandit-OverTheWire.html">Level 2 - Accessing Unusually Named Files</a></span>
+</div>
