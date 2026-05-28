@@ -8,17 +8,11 @@ read_time: "1 min read"
 
 To know more about OverTheWire, check out my post, [Bandit Writeup - OverTheWire](https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html). For these walkthroughs, I am using a Linux OS.
 
----
+### Level Goal
 
-Previous Level: [Level 1 - File Reading](https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html)
+The password for the next level is stored in a file called - located in the home directory
 
----
-
-## Level Goal
-
->The password for the next level is stored in a file called - located in the home directory
-
-## Solution
+### Solution
 
 This level from a first glance might seem very easy, however, if you don't have some experience working with a Linux OS, you may have never seen something like this. `-` is most often seen when used for setting flags/options with a command, for example `-p` to set a port for `ssh`.
 
@@ -36,6 +30,7 @@ bandit1@bandit:~$ cat ./-
 
 ---
 
-Next Level: [Level 3 - Spaces In a Filename](https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html)
-
----
+<div style="display: flex; justify-content: space-between;">
+  <span>Previous Level: <a href="https://cdenton1.github.io/2025/05/25/Level-1-Bandit-OverTheWire.html">Level 1 - File Reading</a></span>
+  <span>Next Level: <a href="https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html">Level 3 - Spaces In a Filename</a></span>
+</div>

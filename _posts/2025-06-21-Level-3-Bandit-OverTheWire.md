@@ -8,17 +8,11 @@ read_time: "1 min read"
 
 To know more about OverTheWire, check out my post, [Bandit Writeup - OverTheWire](https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html). For these walkthroughs, I am using a Linux OS.
 
----
+### Level Goal
 
-Previous Level: [Level 2 - Accessing Unusually Named Files](https://cdenton1.github.io/2025/05/31/Level-2-Bandit-OverTheWire.html)
+The password for the next level is stored in a file called **spaces in this filename** located in the home directory
 
----
-
-## Level Goal
-
-> The password for the next level is stored in a file called **spaces in this filename** located in the home directory
-
-## Solution
+### Solution
 
 Just like the last level, we are continuing to deal with naming conventions within the Linux OS. In most cases, you will see spaces used for separating arguments or options in commands.
 
@@ -36,6 +30,7 @@ bandit2@bandit:~$ cat "spaces in this filename"
 
 ---
 
-Next Level: [Level 4 - Hidden Files](https://cdenton1.github.io/2026/05/24/Level-4-Bandit-OverTheWire.html)
-
----
+<div style="display: flex; justify-content: space-between;">
+  <span>Previous Level: <a href="https://cdenton1.github.io/2025/05/31/Level-2-Bandit-OverTheWire.html">Level 2 - Accessing Unusually Named Files</a></span>
+  <span>Next Level: <a href="https://cdenton1.github.io/2026/05/24/Level-4-Bandit-OverTheWire.html">Level 4 - Hidden Files</a></span>
+</div>
