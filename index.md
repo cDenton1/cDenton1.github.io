@@ -5,7 +5,7 @@ title: Denton's Blog
 
 ### Highlights:
 
-Just wrapped up my **[Honeypot](https://cdenton1.github.io/2026/02/18/Building-a-Honeypot.html)** project and I'm excited to start on the next one!
+Finally back to updating my **[Bandit Writeup - OverTheWire](https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html)** posts while also working through the OverTheWire Wargame: **Krypton**.
 
 ### Recent Posts:
 
