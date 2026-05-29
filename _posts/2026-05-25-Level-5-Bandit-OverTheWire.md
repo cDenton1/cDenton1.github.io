@@ -47,7 +47,7 @@ bandit4@bandit:~/inhere$ cat ./-file07
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <span>Previous Level: <a href="https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html">Level 3 - Spaces in a Filename</a></span>
+  <span>Previous Level: <a href="https://cdenton1.github.io/2026/05/24/Level-4-Bandit-OverTheWire.html">Level 4 - Hidden Files</a></span>
   <!-- <span>Next Level: <a href="...">Level 6 - File Characteristics</a></span> -->
   <span>Main Post: <a href="https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html">Bandit Writeup - OverTheWire</a></span>
 </div>
