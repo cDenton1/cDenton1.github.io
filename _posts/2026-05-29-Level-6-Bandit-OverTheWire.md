@@ -1,6 +1,6 @@
 ---
 title: "Level 6 - OverTheWire Bandit"
-tags: [overthewire, otw-bandit, hidden-1, hidden-2]
+tags: [overthewire, otw-bandit, hidden-1, hidden-2, hidden-3]
 read_time: "_ min read"
 ---
 
