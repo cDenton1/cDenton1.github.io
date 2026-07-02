@@ -1,7 +1,7 @@
 ---
-title: "Level 5 - OverTheWire Bandit"
-tags: [overthewire, otw-bandit, hidden-1, hidden-2]
-read_time: "2 min read"
+title: "Level 7 - OverTheWire Bandit"
+tags: [overthewire, otw-bandit, hidden-1, hidden-2, hidden-3]
+read_time: "_ min read"
 ---
 
 # Level 5 - OverTheWire Bandit
@@ -10,7 +10,7 @@ To know more about OverTheWire, check out my post, [Bandit Writeup - OverTheWire
 
 ### Level Goal
 
-The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+[ level goal from website ]
 
 ### Solution
 
@@ -47,7 +47,7 @@ bandit4@bandit:~/inhere$ cat ./-file07
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <span>Previous Level: <a href="https://cdenton1.github.io/2026/05/24/Level-4-Bandit-OverTheWire.html">Level 4 - Hidden Files</a></span>
-  <!-- <span>Next Level: <a href="...">Level 6 - File Characteristics</a></span> -->
+  <span>Previous Level: <a href="https://cdenton1.github.io/2026/05/29/Level-6-Bandit-OverTheWire.html">Level 6 - File Characteristics</a></span>
+  <!-- <span>Next Level: <a href="...">Level 8 - ...</a></span> -->
   <span>Main Post: <a href="https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html">Bandit Writeup - OverTheWire</a></span>
 </div>
