@@ -1,0 +1,140 @@
+---
+layout: default
+title: Minesweeper
+permalink: /minesweeper
+---
+<head>
+    <style>
+      .container div {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      
+      #board {
+        display: grid;
+        padding: 10px;
+      }
+    </style>
+</head>
+
+<h1>Minesweeper</h1>
+
+<button onclick="createGrid(8, 8)" >Easy </button>
+<button onclick="createGrid(16, 16)">Medium </button>
+<button onclick="createGrid(22, 18)">Hard </button>
+
+<div id="board" class="container"></div>
+
+<p id="flag-count">Flags: 0</p>
+
+<script>
+  let flagCount = 0;
+  
+  function createGrid(columns, rows) {
+      const board = document.getElementById("board");
+      let grid = []
+  
+      flagCount = 0;
+  
+      if (columns == 8) {
+          var mines = 10;
+      } else if (columns == 16) {
+          var mines = 40;
+      } else {
+          var mines = 65;
+      }
+  
+      board.innerHTML = "";
+      for (let i = 0; i < rows; i++) {
+          grid[i] = []
+          for (let j = 0; j < columns; j++) {
+              const cell = document.createElement("div");
+              cell.className = "cell";
+              grid[i][j] = cell;
+  
+              cell.textContent = "x"
+              const m = Math.floor(Math.random() * 10);
+              if (m == 9 && mines > 0) {
+                  cell.id = "mine"
+                  mines--;
+                  flagCount++;
+              } else {
+                  cell.id = "safe"
+              }
+  
+              cell.style.backgroundColor = '#76d576';
+  
+              cell.style.cursor = 'pointer';
+              cell.onclick = cellClick;
+              cell.oncontextmenu = rightClick;
+  
+              board.appendChild(cell);
+          }     
+      }
+  
+      board.style.gridTemplateColumns = `repeat(${columns}, 35px)`;
+      board.style.gridTemplateRows = `repeat(${rows}, 35px)`
+  
+      document.getElementById("flag-count").textContent = `Flags: ${flagCount}`;
+      calcValue(grid, columns, rows);
+  
+  }
+  
+  function calcValue(grid, columns, rows) {
+      for (let i = 0; i < rows; i++) {
+          for (let j = 0; j < columns; j++) {
+              var mineCount = 0;
+  
+              for (let iO = -1; iO <= 1; iO++) {
+                  for (let jO = -1; jO <= 1; jO++) {
+                      if (iO == 0 && jO == 0) {
+                          continue
+                      }
+  
+                      let iN = i + iO;
+                      let jN = j + jO;
+  
+                      if (iN >= 0 && iN < rows && jN >= 0 && jN < columns) {
+                          if (grid[iN][jN].id == "mine") {
+                              mineCount++;
+                          }
+                      }
+                  }
+              }
+              
+              grid[i][j].dataset.mineCount = mineCount;
+  
+          }     
+      }
+  }
+  
+  function cellClick() {
+      if (this.id == "mine") {
+          endGame()
+      } else {
+          this.style.backgroundColor = '#d8f3d8';
+          this.textContent = this.dataset.mineCount;
+      }
+  }
+  
+  function rightClick() {
+      if (this.textContent != 'F' && flagCount > 0) {
+          this.style.backgroundColor = '#db4d4d';
+          this.textContent = 'F';
+          flagCount--;
+      } else if (this.textContent == 'F') {
+          this.style.backgroundColor  = '#76d576';
+          this.textContent = 'x';
+          flagCount++;
+      }
+  
+      console.log(flagCount);
+      document.getElementById("flag-count").textContent = `Flags: ${flagCount}`;
+  
+  }
+  
+  function endGame() {
+      board.innerHTML = ""
+      board.innerHTML = "GAME OVER YOU LOSE"
+  }
+</script>
