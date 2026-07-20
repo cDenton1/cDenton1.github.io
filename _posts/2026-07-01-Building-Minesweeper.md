@@ -22,7 +22,7 @@ So here was the big idea and end goal: making a working version of minesweeper i
 
 ### Scope
 
-On the evening of July 1st I began this project and gave myself the rest of the weekend to complete the majority of the project. After that, any changes I wanted to make could be done any evening once I was off work but I wanted the majority of the functionality completed first.
+On the evening of July 1st I began this project and gave myself the rest of the day as well as the upcoming weekend to complete the majority of the project. After that, any changes I wanted to make could be done any evening once I was off work but I wanted the majority of the functionality completed first.
 
 It required (at first) three different files; this changed once I added it to my site as I combined all of the code into one file. It was made up of HTML for the base, JavaScript for the functionality and logic, and CSS for the appearance.
 
@@ -38,7 +38,7 @@ Along with that I added a new button to my site header, next to my social media 
 
 ### Code
 
-The first chunk included the typical Github pages headed which held the layout, title, and permalink for the page. It also included the CSS which handled the appearance of the grid.
+The first chunk included the typical Github pages header which held the layout, title, and permalink for the page. It also included the page head with the CSS which handled mainly the appearance of the grid.
 
 ```html
 ---
@@ -61,7 +61,7 @@ permalink: /minesweeper
 </head>
 ```
 
-The second chunk included the HTML. Handling the page header, the buttons for creating the grid, creating the div that holds that grid, and lastly the line that tracks the amound of flags.
+The second chunk included the HTML. Handling the page header, the buttons for creating the grid, creating the div that holds that grid, and lastly the line that tracks the amount of flags.
 
 ```html
 <h1>Minesweeper</h1>
@@ -192,5 +192,11 @@ The last chunk of code and the largest out of everything is the JavaScript secti
 ```
 
 ## Challenges
+
+I haven't done much in JavaScript in general and haven't touched it in two years so all the functionality and logic required reading lots of resources and testing to get it where I wanted.
+
+Even once it was completed I realized there are a mix of things I want to change or looking back I think I could make even better.
+
+## Future Ideas
 
 ## Conclusion
