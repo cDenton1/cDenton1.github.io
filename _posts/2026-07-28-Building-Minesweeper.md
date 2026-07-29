@@ -169,8 +169,7 @@ The following function calculates the value of each cell based on how many mines
 
 The last 3 functions are simply for click functionality and ending the game. In this original version, there isn't much to it besides adjusting flag related values, appearance of the cell, or simply ending the game.
 
-```
-  
+```html
   function cellClick() {
       if (this.id == "mine") {
           endGame()
