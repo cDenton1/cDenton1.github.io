@@ -28,113 +28,321 @@ permalink: /minesweeper
 <p id="flag-count">Flags: 0</p>
 
 <script>
-  let flagCount = 0;
-  
-  function createGrid(columns, rows) {
-      const board = document.getElementById("board");
-      let grid = []
-  
-      flagCount = 0;
-  
-      if (columns == 8) {
-          var mines = 10;
-      } else if (columns == 16) {
-          var mines = 40;
-      } else {
-          var mines = 65;
-      }
-  
-      board.innerHTML = "";
-      for (let i = 0; i < rows; i++) {
-          grid[i] = []
-          for (let j = 0; j < columns; j++) {
-              const cell = document.createElement("div");
-              cell.className = "cell";
-              grid[i][j] = cell;
-  
-              cell.textContent = "x"
-              const m = Math.floor(Math.random() * 10);
-              if (m == 9 && mines > 0) {
-                  cell.id = "mine"
-                  mines--;
-                  flagCount++;
-              } else {
-                  cell.id = "safe"
-              }
-  
-              cell.style.backgroundColor = '#76d576';
-  
-              cell.style.cursor = 'pointer';
-              cell.onclick = cellClick;
-              cell.oncontextmenu = rightClick;
-  
-              board.appendChild(cell);
-          }     
-      }
-  
-      board.style.gridTemplateColumns = `repeat(${columns}, 35px)`;
-      board.style.gridTemplateRows = `repeat(${rows}, 35px)`
-  
-      document.getElementById("flag-count").textContent = `Flags: ${flagCount}`;
-      calcValue(grid, columns, rows);
-  
-  }
-  
-  function calcValue(grid, columns, rows) {
-      for (let i = 0; i < rows; i++) {
-          for (let j = 0; j < columns; j++) {
-              var mineCount = 0;
-  
-              for (let iO = -1; iO <= 1; iO++) {
-                  for (let jO = -1; jO <= 1; jO++) {
-                      if (iO == 0 && jO == 0) {
-                          continue
-                      }
-  
-                      let iN = i + iO;
-                      let jN = j + jO;
-  
-                      if (iN >= 0 && iN < rows && jN >= 0 && jN < columns) {
-                          if (grid[iN][jN].id == "mine") {
-                              mineCount++;
-                          }
-                      }
-                  }
-              }
-              
-              grid[i][j].dataset.mineCount = mineCount;
-  
-          }     
-      }
-  }
-  
-  function cellClick() {
-      if (this.id == "mine") {
-          endGame()
-      } else {
-          this.style.backgroundColor = '#d8f3d8';
-          this.textContent = this.dataset.mineCount;
-      }
-  }
-  
-  function rightClick() {
-      if (this.textContent != 'F' && flagCount > 0) {
-          this.style.backgroundColor = '#db4d4d';
-          this.textContent = 'F';
-          flagCount--;
-      } else if (this.textContent == 'F') {
-          this.style.backgroundColor  = '#76d576';
-          this.textContent = 'x';
-          flagCount++;
-      }
-  
-      console.log(flagCount);
-      document.getElementById("flag-count").textContent = `Flags: ${flagCount}`;
-  
-  }
-  
-  function endGame() {
-      board.innerHTML = ""
-      board.innerHTML = "GAME OVER YOU LOSE"
-  }
+  let c = 0;
+let r = 0;
+let grid = []
+
+let clickEnable = 0;
+let score = 0;
+let flagCount = 0;
+let mineTotal = 0;
+
+let firstCell = null;
+let holdi = 0;
+let holdj = 0;
+
+function createGrid(columns, rows) {
+    const board = document.getElementById("board");
+
+    c = columns;
+    r = rows;
+    
+    flagCount = 0;
+    clickEnable = 0;
+
+    firstCell = null;
+
+    board.innerHTML = "";
+    for (let i = 0; i < rows; i++) {
+        grid[i] = []
+        for (let j = 0; j < columns; j++) {
+            const cell = document.createElement("button");
+            cell.className = "cell";
+            grid[i][j] = cell;
+
+            cell.dataset.row = `${i}`;
+            cell.dataset.column = `${j}`;
+            cell.dataset.mineCount = 0;
+            cell.dataset.revealed = false;
+
+            cell.textContent = "x"
+            cell.style.backgroundColor = '#76d576';
+
+            cell.style.cursor = 'pointer';
+            cell.onclick = cellClick;
+            cell.oncontextmenu = rightClick;
+
+            board.appendChild(cell);
+        }     
+    }
+
+    document.addEventListener('contextmenu', function (event) {
+        if (event.target.closest('.cell')) {
+            event.preventDefault();
+        }
+    });
+
+    board.style.gridTemplateColumns = `repeat(${columns}, 35px)`;
+    board.style.gridTemplateRows = `repeat(${rows}, 35px)`;
+
+    console.log(firstCell)
+
+}
+
+function setMines(firstR, firstC) {
+
+    if (c == 8) {
+        var mines = 10;
+    } else if (c == 16) {
+        var mines = 40;
+    } else {
+        var mines = 65;
+    }
+
+    while (mines != 0) {
+        for (let i = 0; i < r; i++) {
+            for (let j = 0; j < c; j++) {
+                if (i == (firstR - 1) || i == firstR || i == (firstR + 1)) {
+                    if (j == (firstC - 1) || j == firstC || j == (firstC + 1)) {
+                        grid[i][j].id = "safe"
+                    }
+                } else {
+                    const m = Math.floor(Math.random() * 8);
+                    if (m == 7 && mines != 0) {
+                        grid[i][j].id = "mine"
+                        mines--;
+                        // console.log(grid[i][j], mines);
+                        flagCount++;
+                    }
+                }
+            }     
+        }
+    }
+
+    for (let i = 0; i < r; i++) {
+        for (let j = 0; j < c; j++) {
+            if (grid[i][j].id == null) {
+                grid[i][j].id = "safe"
+            }
+        }     
+    }
+
+    mineTotal = flagCount;
+
+    document.getElementById("flag-count").textContent = `Flags: ${flagCount}`;
+    calcValue(grid, r, c);
+
+}
+
+function calcValue(grid, rows, columns) {
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < columns; j++) {
+            var mineCount = 0;
+
+            for (let iO = -1; iO <= 1; iO++) {
+                for (let jO = -1; jO <= 1; jO++) {
+                    if (iO == 0 && jO == 0) {
+                        continue
+                    }
+
+                    let iN = i + iO;
+                    let jN = j + jO;
+
+                    if (iN >= 0 && iN < rows && jN >= 0 && jN < columns) {
+                        if (grid[iN][jN].id == "mine") {
+                            mineCount++;
+                        }
+                    }
+                }
+            }
+            
+            grid[i][j].dataset.mineCount = mineCount;
+            // checkForZero(firstCell);
+
+        }     
+    }
+}
+
+function cellClick() {
+    firstCell = this;
+    checkFirstClick(this);
+    if (clickEnable == 0) {
+        if (this.textContent == "F") {
+            flagCount++;
+            document.getElementById("flag-count").textContent = `Flags: ${flagCount}`
+        }
+        if (this.id == "mine") {
+            endGame()
+        } else {
+            // checkForZero(this);
+            this.style.backgroundColor = '#d8f3d8';
+            this.textContent = this.dataset.mineCount;
+        }
+    }
+}
+
+function checkFirstClick(firstCell) {
+    for (let i = 0; i < r; i++) {
+        for (let j = 0; j < c; j++) {
+            if (grid[i][j].textContent != "x") {
+                return;
+            }
+        }     
+    }
+    setMines(firstCell.dataset.row, firstCell.dataset.column);
+}
+
+
+// fix to only happen on the first click and semi-loop so its not a perfect 9
+function checkForZero(clickedCell) {
+    for (let i = -1; i <= 1; i++) {
+        for (let j = -1; j <= 1; j++) {
+
+            let iCheck = Number(clickedCell.dataset.row) + i;
+            if (iCheck < 0 || iCheck > r-1) {
+                continue;
+            }
+
+            let jCheck = Number(clickedCell.dataset.column) + j;
+            if (jCheck < 0 || jCheck > c-1) {
+                continue;
+            }
+
+            console.log(iCheck, jCheck);
+
+            if (grid[iCheck][jCheck].dataset.mineCount == 0) {
+                // add something in here to check if the board has been generated yet - otherwise infinite loop because everything is 0
+                grid[iCheck][jCheck].style.backgroundColor = '#d8f3d8';
+                grid[iCheck][jCheck].textContent = grid[iCheck][jCheck].dataset.mineCount;
+                
+                grid[iCheck][jCheck].dataset.revealed = true;
+                checkForZero(grid[iCheck][jCheck]);
+            }  
+            
+            if (grid[iCheck][jCheck].id != "mine") {
+                grid[iCheck][jCheck].style.backgroundColor = '#d8f3d8';
+                grid[iCheck][jCheck].textContent = grid[iCheck][jCheck].dataset.mineCount;
+            }
+        }     
+    }
+}
+
+function rightClick() {
+    // console.log(firstCell)
+    if (clickEnable == 0 && firstCell != null) {
+        if (this.textContent != 'F' && flagCount > 0) {
+            this.style.backgroundColor = '#db4d4d';
+            this.textContent = 'F';
+            flagCount--;
+        } else if (this.textContent == 'F') {
+            this.style.backgroundColor  = '#76d576';
+            this.textContent = 'x';
+            flagCount++;
+        }
+
+        console.log(flagCount);
+        document.getElementById("flag-count").textContent = `Flags: ${flagCount}`;
+
+        if (flagCount == 0) { endGame(); }
+    }
+}
+
+function endGame() {
+    score = 0;
+    if (flagCount == 0) {
+        for (let i = 0; i < r; i++) {
+            for (let j = 0; j < c; j++) {
+                if (grid[i][j].id == "mine") {
+                    if (grid[i][j].textContent == "F") {
+                        console.log('mine with flag - ', grid[i][j].dataset.row, grid[i][j].dataset.column)
+                        score++;
+                    } else {
+                        console.log('mine no flag - ', grid[i][j].dataset.row, grid[i][j].dataset.column)
+                        return;
+                    }
+                }
+            }     
+        }
+        console.log(score, " - ", mineTotal)
+        // re-loop through the grid to color each of the cells
+        for (let i = 0; i < r; i++) {
+            for (let j = 0; j < c; j++) {
+                if (grid[i][j].id != "mine" && score == mineTotal) {
+                    clickEnable = 1;
+                    grid[i][j].style.backgroundColor = '#b3daff';
+                    grid[i][j].textContent = grid[i][j].dataset.mineCount;
+                }
+            }     
+        }
+    }
+
+    for (let i = (r/2) - 1; i < (r/2) + 1; i++) {
+        for (let j = (c/2) - 2; j < (c/2) + 2; j++) {
+
+            clickEnable = 1;
+            grid[i][j].style.backgroundColor = '#ffffff';
+
+            if (mineTotal == score) {
+                if (i == (r/2)-1) {
+                    if (j == (c/2) - 2) {
+                        grid[i][j].textContent = "W"
+                    } else if (j == (c/2) - 1) {
+                        grid[i][j].textContent = "E"
+                    } else if (j == (c/2)) {
+                        grid[i][j].textContent = "L"
+                    } else if (j == (c/2) + 1) {
+                        grid[i][j].textContent = "L"
+                    }
+                } else if (i == (r/2)) {
+                    if (j == (c/2) - 2) {
+                        grid[i][j].textContent = "D"
+                    } else if (j == (c/2) - 1) {
+                        grid[i][j].textContent = "O"
+                    } else if (j == (c/2)) {
+                        grid[i][j].textContent = "N"
+                    } else if (j == (c/2) + 1) {
+                        grid[i][j].textContent = "E"
+                    }
+                }
+            } else {
+
+                grid[i][j].style.backgroundColor = '#db4d4d';
+
+                for (let i = 0; i < r; i++) {
+                    for (let j = 0; j < c; j++) {
+                        if (grid[i][j].id == "mine") {
+                            grid[i][j].style.backgroundColor = '#bfbfbf';
+                            grid[i][j].textContent = 'M';
+                        } else if (grid[i][j].textContent == "F") {
+                            grid[i][j].textContent = "x"
+                            grid[i][j].style.backgroundColor = '#76d576';
+                        }
+                    }     
+                }
+
+                if (i == (r/2)-1) {
+                    if (j == (c/2) - 2) {
+                        grid[i][j].textContent = "G"
+                    } else if (j == (c/2) - 1) {
+                        grid[i][j].textContent = "A"
+                    } else if (j == (c/2)) {
+                        grid[i][j].textContent = "M"
+                    } else if (j == (c/2) + 1) {
+                        grid[i][j].textContent = "E"
+                    }
+                } else if (i == (r/2)) {
+                    if (j == (c/2) - 2) {
+                        grid[i][j].textContent = "O"
+                    } else if (j == (c/2) - 1) {
+                        grid[i][j].textContent = "V"
+                    } else if (j == (c/2)) {
+                        grid[i][j].textContent = "E"
+                    } else if (j == (c/2) + 1) {
+                        grid[i][j].textContent = "R"
+                    }
+                }
+            }
+        }     
+    }
+}
 </script>
