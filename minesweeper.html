@@ -28,7 +28,7 @@ permalink: /minesweeper
 <p id="flag-count">Flags: 0</p>
 
 <script>
-  let c = 0;
+let c = 0;
 let r = 0;
 let grid = []
 
@@ -164,10 +164,9 @@ function calcValue(grid, rows, columns) {
 }
 
 function cellClick() {
-    firstCell = this;
     checkFirstClick(this);
     if (clickEnable == 0) {
-        if (this.textContent == "F") {
+        if (this.textContent == "F" && this.id != "mine") {
             flagCount++;
             document.getElementById("flag-count").textContent = `Flags: ${flagCount}`
         }
@@ -181,13 +180,17 @@ function cellClick() {
     }
 }
 
-function checkFirstClick(firstCell) {
-    for (let i = 0; i < r; i++) {
-        for (let j = 0; j < c; j++) {
-            if (grid[i][j].textContent != "x") {
-                return;
-            }
-        }     
+function checkFirstClick(cell) {
+    if (firstCell == null) { 
+        firstCell = cell; 
+    } else {
+        for (let i = 0; i < r; i++) {
+            for (let j = 0; j < c; j++) {
+                if (grid[i][j].textContent != "x" || firstCell != null) {
+                    return;
+                }
+            }     
+        }
     }
     setMines(firstCell.dataset.row, firstCell.dataset.column);
 }
