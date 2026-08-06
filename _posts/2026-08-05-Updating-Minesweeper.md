@@ -1,6 +1,6 @@
 ---
 title: "Updating Minesweeper"
-tags: [projects]
+tags: [projects, hidden-1, hidden-2, hidden-3]
 read_time: "__ min read"
 ---
 
