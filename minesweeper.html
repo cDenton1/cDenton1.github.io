@@ -102,16 +102,15 @@ function setMines(firstR, firstC) {
     while (mines != 0) {
         for (let i = 0; i < r; i++) {
             for (let j = 0; j < c; j++) {
-                if (i == (firstR - 1) || i == firstR || i == (firstR + 1)) {
-                    if (j == (firstC - 1) || j == firstC || j == (firstC + 1)) {
-                        grid[i][j].id = "safe"
-                    }
+                if (Math.abs(i - firstR) <= 1 && Math.abs(j - firstC) <= 1) {
+                    console.log(i - firstR, j - firstC)
+                    grid[i][j].id = "safe"
                 } else {
                     const m = Math.floor(Math.random() * 8);
-                    if (m == 7 && mines != 0) {
+                    if (m == 7 && mines != 0 && grid[i][j].id != "mine") {
                         grid[i][j].id = "mine"
                         mines--;
-                        // console.log(grid[i][j], mines);
+                        console.log(grid[i][j].dataset.row, ",", grid[i][j].dataset.column, "- number:", mines);
                         flagCount++;
                     }
                 }
@@ -157,8 +156,7 @@ function calcValue(grid, rows, columns) {
             }
             
             grid[i][j].dataset.mineCount = mineCount;
-            // checkForZero(firstCell);
-
+            checkForZero(firstCell);
         }     
     }
 }
@@ -195,38 +193,30 @@ function checkFirstClick(cell) {
     setMines(firstCell.dataset.row, firstCell.dataset.column);
 }
 
-
-// fix to only happen on the first click and semi-loop so its not a perfect 9
 function checkForZero(clickedCell) {
     for (let i = -1; i <= 1; i++) {
         for (let j = -1; j <= 1; j++) {
 
-            let iCheck = Number(clickedCell.dataset.row) + i;
-            if (iCheck < 0 || iCheck > r-1) {
-                continue;
+            let iCheck;
+            let jCheck;
+
+            if (clickedCell.dataset.row != "0") {
+                iCheck = Number(clickedCell.dataset.row) + i;
+            } else {
+                break;
             }
 
-            let jCheck = Number(clickedCell.dataset.column) + j;
-            if (jCheck < 0 || jCheck > c-1) {
-                continue;
+            if (clickedCell.dataset.column != "0") {
+                jCheck = Number(clickedCell.dataset.column) + j;
+            } else {
+                break;
             }
 
-            console.log(iCheck, jCheck);
-
-            if (grid[iCheck][jCheck].dataset.mineCount == 0) {
-                // add something in here to check if the board has been generated yet - otherwise infinite loop because everything is 0
-                grid[iCheck][jCheck].style.backgroundColor = '#d8f3d8';
-                grid[iCheck][jCheck].textContent = grid[iCheck][jCheck].dataset.mineCount;
-                
-                grid[iCheck][jCheck].dataset.revealed = true;
-                checkForZero(grid[iCheck][jCheck]);
-            }  
-            
-            if (grid[iCheck][jCheck].id != "mine") {
+            if (grid[iCheck][jCheck] != clickedCell && grid[iCheck][jCheck].id != "mine") {
                 grid[iCheck][jCheck].style.backgroundColor = '#d8f3d8';
                 grid[iCheck][jCheck].textContent = grid[iCheck][jCheck].dataset.mineCount;
             }
-        }     
+        }
     }
 }
 
