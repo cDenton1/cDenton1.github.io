@@ -1,7 +1,7 @@
 ---
 title: "Updating Minesweeper"
-tags: [project(s), hidden-1, hidden-2, hidden-3]
-read_time: "__ min read"
+tags: [projects, games]
+read_time: "12 min read"
 ---
 
 # Updating Minesweeper
@@ -288,7 +288,7 @@ function checkForZero(clickedCell) {
 }
 ```
 
-I will admit, the final product of this feature wasn't exactly what I imagined but I liked and it works. 
+I will admit, the final product of this feature wasn't exactly what I imagined but I liked it and it works. 
 
 ## Challenges
 
@@ -298,51 +298,51 @@ I kept track of each one and the solutions, so that I could go back in the futur
 
 **1.** the win/lose screen is not properly determined so running out of flags triggered the win screen
 
-Problem: 
+Problem: Wasn't properly checking the mines when counting, so just hitting 0 flags was good enough
 
-Solution: 
+Solution: Adjusting the order of lines in function that handles the right click and end game
 
 **2.** flags could be placed prior to the first click, and also for some reason triggered the win screen
 
-Problem: 
+Problem: Since the mines aren't generated until after the first click, placing a flag first meant the counter at the end matched the mine total, triggering the win
 
-Solution: 
+Solution: Disable the ability to right click until after the first click by checking if the `firstCell` variable is null
 
 **3.** once you ran out of flags, you could not left-click mines or un-place flags
 
-Problem: 
+Problem: Once the function `endGame()` was called, all clicks were disabled even if the player didn't win or lose
 
-Solution: 
+Solution: Properly reset it when the grid is created and don't call it until after a win or loss is actually decided
 
 **4.** only the squares after the last mine in the grid changed their color to blue while the rest didn't
 
-Problem: 
+Problem: One for loop handled the coloring of the grid for a win and checking if all the mines were flagged
 
-Solution: 
+Solution: Split them into separate for loops, the score is now completely counted before being checked
 
 **5.** if I place all flags and then remove some, all of a sudden the flag count shoots up
 
-Problem: 
+Problem: Every click set the first cell again so if I placed any amount of flags and then removed them all, it would replace all the mines and recalculate all their values
 
-Solution: 
+Solution: Adjusted the variable `firstCell` to only be set when it was null so it couldn't be reset
 
 **6.** if I have two cells left, and I flag one then unflag and flag the other - I lose, even if right
 
-Problem: 
+Problem: The score used for counting the flag placement and comparing to the mine total was only reset at the very beginning, meaning if the user placed and then unplaced, even if they won the numbers wouldn't match
 
-Solution: 
+Solution: Reset the score every time the `endGame()` function was called
 
 **7.** the supposed safe space around the first click was actually smaller than it should have been
 
-Problem: 
+Problem: It only counted four of the eight cells around it, the non-corners
 
-Solution: 
+Solution: I tweaked the if statement to `if ((i - firstR0 <= 1 && (j - firstC) <= 1) {...}`
 
 **8.** the supposed safe space is too big and if you click too far to the right it crashes
 
-Problem: 
+Problem: My fix to the last problem considered any computed number that was negative safe
 
-Solution: 
+Solution: Added `Math.abs` to each computed value, the **absolute** method returns negatives as positives so now it only catches 0s and 1s for the safe zone
 
 **9.** the losing screens display is weird and doesn't always work properly
 
@@ -352,8 +352,22 @@ Solution: Add a separate for loop to color the mines before the for loop that ha
 
 ## Future Ideas
 
-...
+Minesweeper seems pretty much complete, so unless I find more bugs or someone else does (please let me know), then this is the end for this project. 
+
+However, it is very much the beginning for building games or little interactive stuff on my site.
+
+For about a week now I have been thinking of a few different game ideas, with two I really want to do being: a simple matching game and [2048](https://www.2048.org/).
+
+I think the matching game would be more simple compared to this and 2048 would be more complicated, but both being a good challenge for my CSS skills.
+
+For interactive kind of stuff, I had some ideas but nothing that I have thought about too much.
+
+That being said, as I slowly work on building and adding these in, some other stuff might slowly disappear or be adjusted. I've started to want to make some design choice changes to spice up this space a little more visually.
 
 ## Conclusion
 
-...
+This project really gave me the motivation and energy this past month. Work keeps me busy and when I get home I'm exhausted some days, so something like this to do a little here and there is refreshing.
+
+It taught me a lot, was super fun to build and test, and genuinely felt like a decent small project to do in the evenings. 
+
+No it's not cybersecurity focused, but it's coding practice and both a technical and creative hobby I really enjoy.
