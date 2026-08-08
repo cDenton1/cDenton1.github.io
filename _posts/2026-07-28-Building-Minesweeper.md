@@ -1,6 +1,6 @@
 ---
 title: "Building Minesweeper"
-tags: [projects]
+tags: [projects, games]
 read_time: "6 min read"
 ---
 
