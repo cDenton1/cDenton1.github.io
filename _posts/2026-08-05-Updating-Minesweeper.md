@@ -10,11 +10,11 @@ I did not realize just how much motivation finishing my last post would give me 
 
 On July 1st, I built minesweeper for my blog and posted it to it's own custom page. On July 28th, I posted about building the game and shared my entire initial process and code, **[Building Minesweeper](https://cdenton1.github.io/2026/07/28/Building-Minesweeper.html)**.
 
-But I didn't want to stop there! I knew very early on that it was basically the bare bones of what minesweeper is and I could already spot all of these parts in it that I wanted to fix or improve in my version.
+But I didn't want to stop there! I knew very early on that it was basically the bare bones of what minesweeper is and I could already spot all of these parts in it that I wanted to fix or improve.
 
 Well here it is, and in this post I'm going to share my updated code and my experience building it from start to finish over the past month.
 
-## Code
+## Plan
 
 In my last post, I think my wording on game improvements were poor with little to no explanation for them. So here is what I set out to improve initially:
 
@@ -32,7 +32,7 @@ This especially made it easier once I learned that minesweeper boards are typica
 
 The following function is triggered once either a mine is clicked or if all the flags are placed, and it handles anything end game related such as the output and disabling any mouse activity on the grid.
 
-```html
+```js
 function endGame() {
     score = 0;
     if (flagCount == 0) {
@@ -68,7 +68,7 @@ It keeps score to then determine in the following for loop if it's a win and the
 
 Next in the function is another if statement that handles the cell colors incase of a loss:
 
-```html
+```js
     if (score != mineTotal) {
         for (let i = 0; i < r; i++) {
             for (let j = 0; j < c; j++) {
@@ -84,11 +84,11 @@ Next in the function is another if statement that handles the cell colors incase
     }
 ```
 
-It simply sets mines to a grey with an 'M', and any flags that aren't on a mine are set to the default green with an 'x'.
+It simply sets mines to grey with an 'M', and any flags that aren't on a mine are set to the default green with an 'x'.
 
 And lastly a for loop that only cycles through the cells in the center of the grid and outputs the corresponding message based on whether the user won or lost.
 
-```
+```js
 for (let i = (r/2) - 1; i < (r/2) + 1; i++) {
         for (let j = (c/2) - 2; j < (c/2) + 2; j++) {
 
@@ -156,17 +156,199 @@ For the loss, any mines that overlap the message keep their grey color to stay i
 
 ### Mine Placement
 
-...
+Like I mentioned above, I didn't learn till later that minesweeper boards aren't generated until after the first click. So when adjusting the mine placement to ensure it landed on the required amount, I made a massive change.
+
+Initially, I started with the function `createGrid()` which handled building the grid and generating the mine placement, before calling the function that calculated each cell's value all immediately once the user selected a difficulty.
+
+But for the improved version and fixing my issue of mine placement, it actually helped to split this function into two and call this second function after the first cell was clicked.
+
+The function starts by deciding the number of mines based on the number of columns, which is decided by the difficulty.
+
+```js
+function setMines(firstR, firstC) {
+
+    if (c == 8) {
+        var mines = 10;
+    } else if (c == 16) {
+        var mines = 40;
+    } else {
+        var mines = 65;
+    }
+```
+
+Then using a while loop that runs as long as there are less than the required of numbers placed, it loops through the grid placing mines.
+
+However, two factors are tracked to determine if a mine can be placed. 
+1. A "safe" zone is set around the initial click to ensure that it's not adjacent to any mines
+2. It checks the ID of the cell to ensure it's not placing another mine in the same spot
+
+```js
+    while (mines != 0) {
+        for (let i = 0; i < r; i++) {
+            for (let j = 0; j < c; j++) {
+                if (Math.abs(i - firstR) <= 1 && Math.abs(j - firstC) <= 1) {
+                    grid[i][j].id = "safe"
+                } else {
+                    const m = Math.floor(Math.random() * 8);
+                    if (m == 7 && mines != 0 && grid[i][j].id != "mine") {
+                        grid[i][j].id = "mine"
+                        mines--;
+                        flagCount++;
+                    }
+                }
+            }     
+        }
+    }
+
+    for (let i = 0; i < r; i++) {
+        for (let j = 0; j < c; j++) {
+            if (grid[i][j].id == null) {
+                grid[i][j].id = "safe"
+            }
+        }     
+    }
+
+    mineTotal = flagCount;
+
+    document.getElementById("flag-count").textContent = `Flags: ${flagCount}`;
+    calcValue(grid, r, c);
+
+}
+```
+
+Then at the end of the function, a line visible to the user is updated with the number of flags they have and the function that handles calculating the value of each cell is called.
 
 ### Initial Click
 
-...
+If you play any other version of minesweeper, you will notice in most, that the initial click clears a lot of ground.
+
+In my version, I tweaked that to just reveal the safe zone around the first click. But just like my last improvement, it required reworking a lot of my initial code.
+
+The function that handles when a cell is clicked didn't change much besides now calling a new function that checks if it's the first click.
+
+```js
+function cellClick() {
+    checkFirstClick(this);
+    if (clickEnable == 0) {
+        if (this.textContent == "F" && this.id != "mine") {
+            flagCount++;
+            document.getElementById("flag-count").textContent = `Flags: ${flagCount}`
+        }
+        if (this.id == "mine") {
+            endGame()
+        } else {
+            this.style.backgroundColor = '#d8f3d8';
+            this.textContent = this.dataset.mineCount;
+        }
+    }
+}
+
+function checkFirstClick(cell) {
+    if (firstCell == null) { 
+        firstCell = cell; 
+    } else {
+        return;
+    }
+    setMines(firstCell.dataset.row, firstCell.dataset.column);
+}
+```
+
+Simply by checking if the variable `firstCell` is null and then either returning or calling the function `setMines()`.
+
+And I would like to note that while I was writing this out, I have already noticed multiple changes I could make to cut down on the amount of code while still keeping the functionality and logic.
+
+Now lastly the function that handles the extra revealing of cells is finally called after the mines are set and values are calculated (this function as well could be also be improved).
+
+```js
+function checkForZero(clickedCell) {
+    for (let i = -1; i <= 1; i++) {
+        for (let j = -1; j <= 1; j++) {
+
+            let iCheck;
+            let jCheck;
+
+            if (clickedCell.dataset.row != "0") {
+                iCheck = Number(clickedCell.dataset.row) + i;
+            } else {
+                break;
+            }
+
+            if (clickedCell.dataset.column != "0") {
+                jCheck = Number(clickedCell.dataset.column) + j;
+            } else {
+                break;
+            }
+
+            if (grid[iCheck][jCheck] != clickedCell && grid[iCheck][jCheck].id != "mine") {
+                grid[iCheck][jCheck].style.backgroundColor = '#d8f3d8';
+                grid[iCheck][jCheck].textContent = grid[iCheck][jCheck].dataset.mineCount;
+            }
+        }
+    }
+}
+```
+
+I will admit, the final product of this feature wasn't exactly what I imagined but I liked and it works. 
 
 ## Challenges
 
 Throughout building this improved version I ran into multiple problems; often fixing one and then creating or discovering another in the process.
 
-For any that weren't mentioned above, I still wanted to share them as they taught me a lot and were pretty fun to solve. 
+I kept track of each one and the solutions, so that I could go back in the future if I didn't solve it immediately to see what I already tried. Some were quite simple, while others took me a while to figure out.
+
+**1.** the win/lose screen is not properly determined so running out of flags triggered the win screen
+
+Problem: 
+
+Solution: 
+
+**2.** flags could be placed prior to the first click, and also for some reason triggered the win screen
+
+Problem: 
+
+Solution: 
+
+**3.** once you ran out of flags, you could not left-click mines or un-place flags
+
+Problem: 
+
+Solution: 
+
+**4.** only the squares after the last mine in the grid changed their color to blue while the rest didn't
+
+Problem: 
+
+Solution: 
+
+**5.** if I place all flags and then remove some, all of a sudden the flag count shoots up
+
+Problem: 
+
+Solution: 
+
+**6.** if I have two cells left, and I flag one then unflag and flag the other - I lose, even if right
+
+Problem: 
+
+Solution: 
+
+**7.** the supposed safe space around the first click was actually smaller than it should have been
+
+Problem: 
+
+Solution: 
+
+**8.** the supposed safe space is too big and if you click too far to the right it crashes
+
+Problem: 
+
+Solution: 
+
+**9.** the losing screens display is weird and doesn't always work properly
+
+Problem: I was trying to color every mine cell in the grid grey while only looping through the center cells
+
+Solution: Add a separate for loop to color the mines before the for loop that handles the message
 
 ## Future Ideas
 
