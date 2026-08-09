@@ -20,7 +20,7 @@
 
   <body>
 
-    <!-- HEADER -->
+    <!-- site header -->
     <div id="header_wrap" class="outer">
         <header class="inner">
           {% if site.github.is_project_page %}
@@ -40,7 +40,7 @@
               </a>
             </div>  
         </div>
-        <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+        <!-- <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2> -->
 
           {% if site.show_downloads %}
             <section id="downloads">
@@ -63,14 +63,14 @@
         </header>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- site main content -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         {{ content }}
       </section>
     </div>
 
-    <!-- FOOTER  -->
+    <!-- site footer  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         {% if site.github.is_project_page %}
