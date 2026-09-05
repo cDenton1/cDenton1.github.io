@@ -1,6 +1,6 @@
 ---
 title: "MangoBleed Writeup - Hack The Box"
-tags: [ctf-writeup, hackthebox]
+tags: [writeup, hackthebox, challenge-writeup]
 read_time: "11 min read"
 ---
 
