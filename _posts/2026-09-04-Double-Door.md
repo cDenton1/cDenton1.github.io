@@ -1,6 +1,6 @@
 ---
 title: "Double Door Writeup - Crackmes"
-tags: [crackmes, ctf-writeup]
+tags: [crackmes, writeup, challenge-writeup]
 read_time: "6 min read"
 ---
 

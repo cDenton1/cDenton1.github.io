@@ -2,7 +2,7 @@
 layout: default
 title: "Infected Networks CTF 2024"
 image: assets/images/infectednetworksctf.jpeg
-tags: [ctf-writeup, cyber-events]
+tags: [ctf-writeup, cyber-events, writeup]
 read_time: "6 min read"
 ---
 

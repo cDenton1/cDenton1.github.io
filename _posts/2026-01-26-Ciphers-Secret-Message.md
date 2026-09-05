@@ -1,6 +1,6 @@
 ---
 title: "Cipher's Secret Message Writeup - TryHackMe"
-tags: [tryhackme, ctf-writeup]
+tags: [tryhackme, writeup, challenge-writeup]
 read_time: "3 min read"
 ---
 

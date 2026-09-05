@@ -1,17 +1,35 @@
 ---
 layout: default
-title: CTF Writeups
+title: Writeups
 permalink: /writeups
 ---
 
-<h1>CTF Writeups</h1>
+<head>
+  <style>
+    .box {
+      width: 130px;
+      background-color: #373737;
+      padding: 30px;
+      margin: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<h1>Writeups</h1>
 <p>
-  Capture The Flag (CTF) competitions are cybersecurity competitions where you are tasked with solving and completing challenges to find flags. Here you can find my writeups for some of the CTF competitions I have competed in and other challenegs I've completed. <br>
+  I enjoy competing in Capture The Flag (CTF) competitions, building challenges for them, and completing various other challenges in my free time. Here you can find all of my related posts or filter it down based on larger competitions, smaller or singular challenges, and challenge creation. <br>
 </p>
+
+<div style="display: flex; justify-content: space-between;">
+  <span> <div class="box"> <a style="color: white; font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;" href="https://cdenton1.github.io/writeups/ctf">CTF Competitons</a> </div> </span>
+  <span> <div class="box"> <a style="color: white; font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;" href="https://cdenton1.github.io/writeups/challenges">Practice Challenges</a> </div> </span>
+  <span> <div class="box"> <a style="color: white; font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;" href="https://cdenton1.github.io/tags/challenge-creation/">Challenge Creation</a> </div> </span>
+</div>
 
 <ul>
   {% for post in site.posts %}
-    {% if post.tags contains "ctf-writeup" %}
+    {% if post.tags contains "writeup" %}
       <li class="post-preview">
         <div>
           <a href="{{ post.url }}">{{ post.title }}</a> <br>

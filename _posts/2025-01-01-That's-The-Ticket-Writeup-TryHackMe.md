@@ -2,7 +2,7 @@
 layout: default
 title: "That's The Ticket Writeup - TryHackMe"
 image: /assets/images/thatstheticket.png
-tags: [tryhackme, ctf-writeup]
+tags: [tryhackme, writeup, challenge-writeup]
 read_time: "9 min read"
 ---
 

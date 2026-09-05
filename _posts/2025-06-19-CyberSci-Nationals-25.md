@@ -1,6 +1,6 @@
 ---
 title: "CyberSci Nationals 2025"
-tags: [cyber-events, ctf-writeup]
+tags: [cyber-events, ctf-writeup, writeup]
 read_time: "17 min read"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Snyk Fetch The Flag CTF 2026"
-tags: [ctf-writeup]
+tags: [ctf-writeup, writeup]
 read_time: "6 min read"
 ---
 
