@@ -3,9 +3,7 @@ layout: default
 title: Denton's Blog
 ---
 
-### Highlights:
-
-Finally back to updating my **[Bandit Writeup - OverTheWire](https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html)** posts while also working through the OverTheWire Wargame: **Krypton**.
+**Updates:** Making some small changes to various parts of the site to hopefully make it more visually appealing and easier to navigate
 
 ### Recent Posts:
 
