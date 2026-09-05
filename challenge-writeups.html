@@ -1,17 +1,17 @@
 ---
 layout: default
-title: CTF Writeups
-permalink: /writeups/ctf
+title: Challenge Writeups
+permalink: /writeups/challenges
 ---
 
-<h1>CTF Writeups</h1>
+<h1>Challenges Writeups</h1>
 <p>
-  Capture The Flag (CTF) competitions are cybersecurity competitions where you are tasked with solving and completing challenges to find flags. Here you can find my writeups for some of the CTF competitions I have competed in and challenges I have built. <br>
+  In-between all the larger CTF competitions I compete in throughout the year I also a do lot of smaller challenges on various other sites. Here you can find my writeups for those, some are singular challenges while others are smaller sets. <br>
 </p>
 
 <ul>
   {% for post in site.posts %}
-    {% if post.tags contains "ctf-writeup" %}
+    {% if post.tags contains "challenge-writeup" %}
       <li class="post-preview">
         <div>
           <a href="{{ post.url }}">{{ post.title }}</a> <br>
