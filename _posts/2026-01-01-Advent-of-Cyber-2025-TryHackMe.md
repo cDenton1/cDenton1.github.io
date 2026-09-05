@@ -1,6 +1,6 @@
 ---
 title: "Advent of Cyber 2025 - TryHackMe"
-tags: [tryhackme, ctf-writeup]
+tags: [tryhackme, ctf-writeup, writeup]
 read_time: "7 min read"
 ---
 
