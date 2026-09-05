@@ -1,17 +1,34 @@
 ---
 layout: default
-title: CTF Writeups
+title: Writeups
 permalink: /writeups
 ---
 
-<h1>CTF Writeups</h1>
+<head>
+  <style>
+    .box {
+      width: 130px;
+      background-color: #373737;
+      padding: 30px;
+      margin: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<h1>Writeups</h1>
 <p>
   Capture The Flag (CTF) competitions are cybersecurity competitions where you are tasked with solving and completing challenges to find flags. Here you can find my writeups for some of the CTF competitions I have competed in and other challenegs I've completed. <br>
 </p>
 
+<div style="display: flex; justify-content: space-between;">
+  <span> <div class="box"> <a style="color: white; font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;" href="https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html">CTF Competitons</a> </div> </span>
+  <span> <div class="box"> <a style="color: white; font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;" href="https://cdenton1.github.io/2025/05/19/Bandit-Writeup-OverTheWire.html">Practice Challenges</a> </div> </span>
+</div>
+
 <ul>
   {% for post in site.posts %}
-    {% if post.tags contains "ctf-writeup" %}
+    {% if post.tags contains "writeup" %}
       <li class="post-preview">
         <div>
           <a href="{{ post.url }}">{{ post.title }}</a> <br>
