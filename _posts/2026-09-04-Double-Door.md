@@ -10,11 +10,11 @@ I'm back in school this week and during my computer architecture class someone a
 
 So with that reminder, some motivation to do things I enjoy before school gets heavy, and hearing about the site Crackmes.one for the first time: I attempted my first **crackme** challenge!
 
-## What is Crackmes.one?
+## What is a crackme?
 
 While watching the YouTube video, [The Fun Way To Learn Reverse Engineering](https://youtu.be/u-ahOATO62U?si=-jUF39XdD4xV__8l) by CyberFlow, they mentioned the site [Crackmes.one](https://crackmes.one/) as a site to learn and practice reverse engineering challenges.
 
-"[Crackmes.one] was created as a place for reverse engineers to upload their creations and help newcomers learn this discipline." - Crackmes.one FAQ. Users can download crackmes, upload writeups for them, and even submit their own for other users to attempt to "crack".
+"[crackmes] was created as a place for reverse engineers to upload their creations and help newcomers learn this discipline." - crackmes FAQ. Users can download crackmes, upload writeups for them, and even submit their own for other users to attempt to "crack".
 
 The whole focus is reverse engineering: challenges are written in a wide variety of languages, for various platforms, and can even extend to include different anti-debugging techniques for a harder challenge.
 
@@ -24,8 +24,9 @@ The site really reminds me of [CryptoHack](https://cryptohack.org/) in a way but
 
 The first challenge I decided to attempt was [Double Door](https://crackmes.one/crackme/6a9281f948cda5a2aaa3dbf3) by the user chaltu. 
 
-| Language: C/C++ | Upload: 2026-08-29 | Platform: Windows | Difficulty: 1.2 |
-|-----------------|--------------------|-------------------|-----------------|
+| Language | Upload     | Platform | Difficulty |
+|----------|------------|----------|------------|
+| C/C++    | 2026-08-29 | Windows  | 1.2        |
 
 **Description:**
 
@@ -106,11 +107,11 @@ The result from that is stored in the variable `uVar3` and is checked for whethe
 
 My last step was actually entering the passwords into the executable to 100% confirm my findings above. First the main password: 
 
-![](/assets/images/crackmes/double-door-4.png "Symbol Tree Functions")
+![](/assets/images/crackmes/double-door-6.png "Symbol Tree Functions")
 
 Then the hidden backdoor string:
 
-![](/assets/images/crackmes/double-door-5.png "Symbol Tree Functions")
+![](/assets/images/crackmes/double-door-7.png "Symbol Tree Functions")
 
 And that's it, I successfully cracked this challenge!
 
