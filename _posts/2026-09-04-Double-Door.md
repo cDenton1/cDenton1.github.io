@@ -1,10 +1,10 @@
 ---
-title: "Double Door Writeup - Crackmes.one"
+title: "Double Door Writeup - Crackmes"
 tags: [crackmes, ctf-writeup]
 read_time: "6 min read"
 ---
 
-# Double Door Writeup - Crackmes.one
+# Double Door Writeup - Crackmes
 
 I'm back in school this week and during my computer architecture class someone asked about **Ghidra**; reminding me of the tool and how I have wanted to practice reverse engineering more recently.
 
