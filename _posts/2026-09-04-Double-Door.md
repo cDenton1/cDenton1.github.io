@@ -1,5 +1,5 @@
 ---
-title: "Double Door Writeup - Crackmes.one"
+title: "Double Door Writeup - Crackmes"
 tags: [crackmes, ctf-writeup]
 read_time: "6 min read"
 ---
