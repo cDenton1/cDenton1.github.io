@@ -1,7 +1,7 @@
 ---
 title: "Bandit Writeup - OverTheWire"
 tags: [writeup, overthewire, otw-bandit, challenge-writeup]
-read_time: "9 min read"
+read_time: "12 min read"
 ---
 
 # Bandit Writeup - OverTheWire
@@ -58,4 +58,31 @@ Below you will find my post links for each level walkthrough; I will do my best 
 [Level 3](https://cdenton1.github.io/2025/06/21/Level-3-Bandit-OverTheWire.html) - Spaces in a Filename <br>
 [Level 4](https://cdenton1.github.io/2026/05/24/Level-4-Bandit-OverTheWire.html) - Hidden Files <br>
 [Level 5](https://cdenton1.github.io/2026/05/25/Level-5-Bandit-OverTheWire.html) - Human Readable Files <br>
-Level 6 - File Characteristics <br>
+[Level 6](https://cdenton1.github.io/2026/07/29/Level-6-Bandit-OverTheWire.html) - File Characteristics <br>
+[Level 7](https://cdenton1.github.io/2026/07/30/Level-7-Bandit-OverTheWire.html) - File Ownership <br>
+Level 8 - Searching Through Text <br>
+Level 9 - Searching Through Duplicates <br>
+Level 10 - Non-Human Readable Strings <br>
+Level 11 - Base64 Encoding <br>
+Level 12 - Rotating Character Positions <br>
+Level 13 - Repeated Compression <br>
+Level 14 - Private SSH Key <br>
+Level 15 - Netcat Localhost <br>
+Level 16 - SSL/TLS Localhost <br>
+Level 17 - Connect via Port Range <br>
+Level 18 - Comparing File Content <br>
+Level 19 - Modified SSH <br>
+Level 20 - Set User ID <br>
+Level 21 - More SetUID <br>
+Level 22 - Cron Jobs <br>
+Level 23 - More Cron Jobs <br>
+Level 24 - Scripts and Cron Jobs <br>
+Level 25 - Brute Force a Daemon <br>
+Level 26 - Broken Shell <br>
+Level 27 - Broken Shell Still <br>
+Level 28 - Git Repo <br>
+Level 29 - Git Repo Commits <br>
+Level 30 - Git Repo Branches <br>
+Level 31 - Git Repo Tags <br>
+Level 32 - Git Commit <br>
+Level 33 - Final Escape <br>
