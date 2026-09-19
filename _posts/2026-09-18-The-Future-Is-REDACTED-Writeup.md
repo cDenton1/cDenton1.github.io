@@ -24,8 +24,8 @@ The first issue released early 2025, and as of writing this post, the 17th issue
 
 ## Issue Writeups
 
-[Issue #01](https://cdenton1.github.io/2026/09/18/Issue-01-TFIR.html) - OGN <br>
-[Issue #02](https://cdenton1.github.io/2026/09/18/Issue-02-TFIR.html) - MARTINA <br>
-[Issue #03](https://cdenton1.github.io/2026/09/18/Issue-03-TFIR.html) - ELI <br>
-[Issue #04](https://cdenton1.github.io/2026/09/18/Issue-04-TFIR.html) - SALLY <br>
-[Issue WWHF](https://cdenton1.github.io/2026/09/18/Issue-WWHF-TFIR.html) - Free Comic Book Day Special Edition <br>
+[Issue #01](https://cdenton1.github.io/2026/09/19/Issue-01-TFIR.html) - OGN <br>
+[Issue #02](https://cdenton1.github.io/2026/09/20/Issue-02-TFIR.html) - MARTINA <br>
+[Issue #03](https://cdenton1.github.io/2026/09/21/Issue-03-TFIR.html) - ELI <br>
+[Issue #04](https://cdenton1.github.io/2026/09/22/Issue-04-TFIR.html) - SALLY <br>
+[Issue WWHF](https://cdenton1.github.io/2026/09/23/Issue-WWHF-TFIR.html) - Free Comic Book Day Special Edition <br>
