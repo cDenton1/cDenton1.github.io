@@ -4,9 +4,9 @@ tags: [writeup, challenge-writeup, the-future-is-redacted]
 read_time: "11 min read"
 ---
 
-# THE FUTURE IS ****** - Writeup
+# THE FUTURE IS REDACTED - Writeup
 
-As a massive comic book fan and someone who has been getting back into reading recently, I am super excited to have finally got my hands on the first few issues of the series: THE FUTURE IS ******.
+As a massive comic book fan and someone who has been getting back into reading recently, I am super excited to have finally got my hands on the first few issues of the series: THE FUTURE IS REDACTED.
 
 As of now I am solely stuck to the digital versions that have recently become available on the [Spearphish General Store](https://spearphish-general-store.myshopify.com/), but I'm still extremely happy to have finally been able to begin reading this fantastic series.
 
@@ -14,9 +14,9 @@ I have been working my way through the challenges in the first four issues and t
 
 Similar to my OverTheWire Bandit Writeup, each issue will be split into it's own post and linked here. This will be updated as I read more of the issues and put together my writeups for the challenges.
 
-## What is THE FUTURE IS ******? 
+## What is THE FUTURE IS REDACTED? 
 
-THE FUTURE IS ****** is a 60 issue cybersecurity comic series inspired by media like _WarGames_, and is published by REKCAH COMICS, who is a part of BLACK HILLS INFORMATION SECURITY.
+THE FUTURE IS REDACTED is a 60 issue cybersecurity comic series inspired by media like _WarGames_, and is published by REKCAH COMICS, who is a part of BLACK HILLS INFORMATION SECURITY.
 
 The series combines futuristic technology and blockbuster action into comic books made by actual hackers and an extremely talented team: writer Fred Van Lente, artist Ennio Bufi, colorist Andrea Meloni, and letterer Taylor Esposito.
 
