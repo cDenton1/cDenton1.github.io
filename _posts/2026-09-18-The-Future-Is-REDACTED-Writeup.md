@@ -1,7 +1,7 @@
 ---
 title: "THE FUTURE IS ****** - Writeup"
 tags: [writeup, challenge-writeup, the-future-is-redacted]
-read_time: "2 min read"
+read_time: "11 min read"
 ---
 
 # THE FUTURE IS ****** - Writeup
