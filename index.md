@@ -3,7 +3,7 @@ layout: default
 title: Denton's Blog
 ---
 
-**Updates:** Making some small changes to various parts of the site to hopefully make it more visually appealing and easier to navigate
+**Updates:** Making some small changes to various parts of the site slowly modifying or just removing older posts if I don't feel they fit my purpose of this site anymore
 
 ### Recent Posts:
 
