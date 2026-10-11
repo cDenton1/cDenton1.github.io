@@ -1,0 +1,191 @@
+---
+layout: default
+title: Card Matching
+permalink: /card-matching
+---
+<head>
+    <style>
+      .container div {
+          border: 5px solid white;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      #board {
+          display: grid;
+          padding: 10px;
+      }
+      
+      #empty {
+          background-color: #cdb798;
+          content: "";
+      }
+      
+      #square {
+          background-color: #e8ddcf;
+      }
+    </style>
+</head>
+
+<h1>Matching Game</h1>
+
+<button onclick="placeCards(8)" >Easy </button>
+<button onclick="placeCards(18)">Medium </button>
+<button onclick="placeCards(24)">Hard </button>
+
+<div id="board" class="container"></div>
+
+<p id="win-message"></p>
+
+<script>
+let col = 0
+let row = 0
+let grid = []
+
+let pairs = 0
+let pMatched = 0
+let pVal = {}
+
+let flipped = 0
+
+function placeCards(cards) {
+    const board = document.getElementById("board");
+    document.getElementById("win-message").textContent = "";
+    flipped = 0;
+
+    if (cards == 8) {
+        col = 4;
+        row = 2;
+    } else if (cards == 18) {
+        col = 6;
+        row = 3;
+    } else if (cards == 24) {
+        col = 8;
+        row = 3;
+    }
+
+    pairs = cards / 2;
+    pMatched = 0;
+    var size = Object.keys(pVal).length;
+    for (let i = 0; i < size; i++) {
+        delete pVal[i];
+    }
+    console.log(pVal)
+
+    for (let p = 0; p < pairs; p++) {
+        const newPair = {[p] : 2}
+        pVal = Object.assign(pVal, newPair);
+    }
+    console.log(pVal)
+
+    board.innerHTML = "";
+    for (let i = 0; i < col; i++) {
+        grid[i] = []
+        for (let j = 0; j < row; j++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            grid[i][j] = cell;
+
+            cell.dataset.row = `${i}`;
+            cell.dataset.col = `${j}`;
+
+            cell.dataset.revealed = "false";
+            cell.dataset.matched = "false";
+
+            cell.dataset.value = "";
+
+            cell.textContent = "x";
+            cell.style.backgroundColor = '#999999';
+
+            cell.style.cursor = 'pointer';
+            cell.onclick = cellClick;
+            board.appendChild(cell);
+        }
+    }
+
+    board.style.gridTemplateColumns = `repeat(${col}, 75px)`;
+    board.style.gridTemplateRows = `repeat(${row}, 100px)`;
+    assignValues();
+}
+
+function assignValues() {    
+    for (let i = 0; i < col; i++) {
+        for (let j = 0; j < row; j++) {
+            let m = Math.floor(Math.random() * pairs);
+            while (pVal[m] == 0) {
+                m = Math.floor(Math.random() * pairs);
+            }
+            pVal[m] -= 1;
+            grid[i][j].dataset.value = m;
+        }
+    }
+}
+
+function cellClick() {
+    console.log(this.dataset.revealed)
+
+    if (this.dataset.revealed == "false") {
+        this.textContent = this.dataset.value;
+        this.style.backgroundColor = '#ff704d';
+
+        this.dataset.revealed = "true";
+        flipped += 1;
+    }
+
+    console.log(flipped);
+    if (flipped == 2) {
+        flipped = 0;
+        setTimeout(checkMatch, 500);
+    }
+}
+
+function checkMatch() {
+    let card1 = null;
+    for (let i = 0; i < col; i++) {
+        for (let j = 0; j < row; j++) {
+            console.log(grid[i][j], grid[i][j].dataset.revealed);
+            if (grid[i][j].dataset.revealed == "true" && grid[i][j].dataset.matched == "false") {
+                if (card1 == null) {
+                    card1 = grid[i][j];
+                } else {
+                    if (card1.dataset.value == grid[i][j].dataset.value) {
+                        grid[i][j].dataset.matched = "true";
+                        card1.dataset.matched = "true";
+
+                        grid[i][j].style.backgroundColor = '#85e085';
+                        card1.style.backgroundColor = '#85e085';
+                        setTimeout(1000);
+                        
+                        pMatched += 1;
+                        console.log("matching pair");
+
+                        checkWin();
+                        return;
+                    } else {
+                        grid[i][j].dataset.revealed = "false";
+                        grid[i][j].textContent = "x";
+
+                        card1.dataset.revealed = "false";
+                        card1.textContent = "x";
+
+                        grid[i][j].style.backgroundColor = '#999999';
+                        card1.style.backgroundColor = '#999999';
+                        return;
+                    }
+                }
+            }
+        }
+    }
+    return;
+}
+
+function checkWin() {
+    if (pMatched == pairs) {
+        document.getElementById("win-message").textContent = "Congrats you won!";
+    } else {
+        return;
+    }
+}
+</script>
