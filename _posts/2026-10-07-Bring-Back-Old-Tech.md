@@ -18,24 +18,58 @@ I shouldn't say this change is solely because of AI, I actually started making t
 
 A friend of mine bought a new phone over the summer and had showed me just how much AI was crammed into the device. Don't get me wrong, the specs on the phone are great but something we both discussed was who really needs that kind of tech in their pocket at all times?
 
-Now I personally am not one for upgrading my devices frequently, even if they are old; it doesn't make sense. 
+Now I personally am not one for upgrading my devices frequently, even if they are old; it doesn't make sense to me. 
 
 My phone for example is around five years old and was a hand-me-down from my parents a couple years ago. It stills runs decent and receives updates, so I continue using it.
 
-Along with that, in my house we don't really get rid of tech either. In my journey of finding an old camera I vividly remember using as a kid, I also came across my old iPhone 5 as well as my mom's 4th generation iPod Shuffle.
-
-We also have a ton of "older" gaming consoles that still get used from time to time, including a DSi XL which I've even brought to campus to play games with friends with less than a month ago.
+Along with that, in my house we don't really get rid of tech either. We have kept almost every device we have used over the years, including a variety of game consoles that still get used from time to time. One of them being a DSi XL, which I've even brought to campus to play games with some friends a few weeks ago.
 
 ## The Changes
 
-1. iPod Shuffle - non-streaming music
+### iPod Shuffle - non-streaming music
 
-This was my favourite and most recent change.
+This is my favourite and most recent change so far. It has about 2GB of storage, adding MP3 files onto it is extremely easy, and it gives me a very small device  with one sole purpose: music.
 
-2. iPad Mini - fancy Kindle alternative
+It might seem like a downside having to actually go through the effort of adding the music onto it but I enjoy what I am listening to so much more. There is a process of picking out what I actually want on it instead of a 12+ hour long playlist full of stuff I don't really care for.
+
+And instead of draining my phone battery first thing in the morning, on my way home, or throughout the day because I love listening to music, and I have one device that can last days and only does the one specific thing.
+
+The only downside I have ran into so far is: no Bluetooth. Different iPod models allow for mods that can add the functionality but with how small the 4th gen shuffle is, the ability here is slim to none.
+
+Some big wins though are cutting down on streaming any music through the few services out there and getting myself off of my phone; no screen on the shuffle to distract me.
+
+### iPad Mini - fancy Kindle alternative
 
 The device has tons of storage and can't really hook up to the internet anymore but airdrop still works. Solution: airdrop books from my phone onto it for a digital collection, including textbooks and various novel and comic book series'.
 
-3. Sony CyberShot - tiny digital camera
+This one I actually started over a year ago when I started my bachelors program. I don't like reading on my laptop but I refuse to pay the insane cost for a physical textbook or buy something brand-new like a Kindle.
 
-I've always had an interest in photography and watching my classmates around breakout small digital cameras to take photos instead of using their phones inspired me to get back into it.
+I have had this iPad since probably 2017 or 2018 when I bought it used. It's the 1st generation of the iPad mini, and has been used a ton over the years.
+
+It always upset me that even though it was still in such great condition that it didn't have anymore support, so I'm glad I found a way to reuse it.
+
+For those of you who might be reading this and asking about the security risks of using tech this old with no more support, here are the measures I have in place:
+
+1. Wi-Fi is always turned off, with the exception of when it is connected to my phone hotspot to airdrop books.
+2. The only apps still downloaded on it are those that cannot be deleted.
+3. Airdrop is limited to contacts only, with my phone being the only contact, and airdrop is always turned off otherwise.
+
+I have looked into ways to exploit the device as well out of curiosity to be honest, but I haven't come across any major concerns with how I'm using it.
+
+This change though has got me back into reading a ton, in-turn encouraging me get rid of more social media apps on my phone and cancel any subscription services I had for entertainment.
+
+### Sony CyberShot - small digital camera
+
+I've always had an interest in photography and watching my classmates breakout small digital cameras to take photos instead of using their phones inspired me to get back into it.
+
+Now I do have a Canon EOS Rebel T3i, which I love. But it's a little bulky to carry around everywhere, especially when I have all my stuff for school.
+
+The Sony CyberShot though is small and compact, fitting easily into my backpack or jacket pocket. The vibe of the photos are awesome, and the quality is pretty decent too.
+
+I don't need to worry about filling my storage with random photos that I forget exist and take up too much space on my phone. Instead, I get to go through the process of sifting through them on my laptop later after taking them and then sharing them to my friends through our groupchats.
+
+The only downside so far with this one is the proprietary storage type that it uses, Sony's very own Memory Stick PRO Duo. 
+
+I still have not come across a cheap, usable reader for the card. Yes Amazon has some available but either a) they don't actually read this type or b) there $40+ to buy, which I cannot shell out right now.
+
+I have been using the camera still even with that being the case because I'm not going to let it stop me just yet, and I will continue checking pawn shops or used tech stores in my area to maybe eventually spot one.
