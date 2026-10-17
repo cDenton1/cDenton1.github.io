@@ -24,6 +24,20 @@ My phone for example is around five years old and was a hand-me-down from my par
 
 Along with that, in my house we don't really get rid of tech either. We have kept almost every device we have used over the years, including a variety of game consoles that still get used from time to time. One of them being a DSi XL, which I've even brought to campus to play games with some friends a few weeks ago.
 
+## Disclaimer
+
+One thing I would like to note prior to talking about the changes, almost everything I'm using is something I already owned. 
+
+This isn't a post encouraging people to buy new, in fact it's the opposite. I know pretty much everything I'm going to mention can't be bought new anyways, but I want this to encourage people to look at what they might already have and start there.
+
+If you have any "older" tech, whether it's similar to what I'm using or not, I want this to hopefully give you ideas on ways you can reuse them to your own benefit.
+
+That being said though, I also understand that I'm in a fortunate position where my parents and I kept a lot of this over the years and I have it readily available to me now unlike most people. 
+
+So if you are inspired by this in whatever way, but don't already own anything like it, then buy used instead of newer cheap off-brand alternatives. 
+
+Buying used means re-purposing something that may just end up in a landfill. And if you are getting rid of anything, either look to sell, donate, or recycle it at a proper e-waste facility in your area if available.
+
 ## The Changes
 
 ### iPod Shuffle - non-streaming music
@@ -32,7 +46,7 @@ This is my favourite and most recent change so far. It has about 2GB of storage,
 
 It might seem like a downside having to actually go through the effort of adding the music onto it but I enjoy what I am listening to so much more. There is a process of picking out what I actually want on it instead of a 12+ hour long playlist full of stuff I don't really care for.
 
-And instead of draining my phone battery first thing in the morning, on my way home, or throughout the day because I love listening to music, and I have one device that can last days and only does the one specific thing.
+And instead of draining my phone battery first thing in the morning, on my way home, or throughout the day because I love listening to music, I instead have one device that can last days and only does the one specific thing.
 
 The only downside I have ran into so far is: no Bluetooth. Different iPod models allow for mods that can add the functionality but with how small the 4th gen shuffle is, the ability here is slim to none.
 
@@ -58,9 +72,11 @@ I have looked into ways to exploit the device as well out of curiosity to be hon
 
 This change though has got me back into reading a ton, in-turn encouraging me get rid of more social media apps on my phone and cancel any subscription services I had for entertainment.
 
+I do often prefer physical books and choose to support local bookstores and the public library when able but things like textbooks and the comic series _The Future is [REDACTED]_ are much easier and cheaper to get a hold of digitally.
+
 ### Sony CyberShot - small digital camera
 
-I've always had an interest in photography and watching my classmates breakout small digital cameras to take photos instead of using their phones inspired me to get back into it.
+I've always had an interest in photography, and watching my classmates breakout small digital cameras to take photos instead of using their phones inspired me to get back into it.
 
 Now I do have a Canon EOS Rebel T3i, which I love. But it's a little bulky to carry around everywhere, especially when I have all my stuff for school.
 
@@ -68,8 +84,30 @@ The Sony CyberShot though is small and compact, fitting easily into my backpack 
 
 I don't need to worry about filling my storage with random photos that I forget exist and take up too much space on my phone. Instead, I get to go through the process of sifting through them on my laptop later after taking them and then sharing them to my friends through our groupchats.
 
-The only downside so far with this one is the proprietary storage type that it uses, Sony's very own Memory Stick PRO Duo. 
+The only downside so far with this one is the proprietary storage type that it uses, Sony's very own Memory Stick PRO Duo. And I was struggling to come across a cheap, usable reader for the card. 
 
-I still have not come across a cheap, usable reader for the card. Yes Amazon has some available but either a) they don't actually read this type or b) there $40+ to buy, which I cannot shell out right now.
+Yes, sites like Amazon have some available but a) they don't actually typically read this type of card, b) there $40+ to buy, which I cannot shell out right now, and c) I would rather not support Amazon or some company mass producing cheap variants with the risk of not even working.
 
-I have been using the camera still even with that being the case because I'm not going to let it stop me just yet, and I will continue checking pawn shops or used tech stores in my area to maybe eventually spot one.
+I have been using the camera still even with that being the case because I'm not going to let it stop me just yet.
+
+And literally as I was working on this post I decided to take a look at Facebook Marketplace, something I had kind of been avoiding, and to my luck I found an official Sony reader for $12 that was available for me to pick up the next day. 
+
+It didn't come with the required cable, a USB Mini-B but still having a PS3 meant I could borrow one of the cords used for charging my controllers in this case.
+
+Even with the process of hunting down a reader for the card, I'm extremely happy with the camera overall, and getting to look at photos from old trips that never got pulled from it.
+
+### Windows 8 PC - Linux PC or home server
+
+This one I actually mentioned in a post almost two years ago now. I had found this old PC in my basement, it was built for Windows 8 but now ran Windows 10.
+
+At the time, I completely wiped it because I knew no one had used it in years, but I shouldn't have redownloaded Windows onto it. 
+
+I didn't use it again after having written that post because my laptop was more convenient and ran better. 
+
+The PC ran okay but Windows definitely wasn't helping, and I have had multiple ideas for it since but haven't really sat down to do any of them yet.
+
+Back in about April of this year though I set up a test Ubuntu server VM on my laptop to start building out some of those ideas. 
+
+Everything was going smoothly with it, and I know there will be a ton of differences between virtual and physical hardware but this gave me more of a push to start this larger project. It has also given me other ideas besides a home server.
+
+Another push for this has also been watching more and more of my friends start switching over to Linux on their laptops and also getting into fixing up old laptops and PCs as well.
