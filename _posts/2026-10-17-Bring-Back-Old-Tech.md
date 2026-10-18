@@ -6,7 +6,7 @@ readtime: "13 min read"
 
 # Bring Back Old Tech
 
-Recently I have gone down the route of hating things like generative AI, which has ultimately led towards me disliking a lot of new tech.
+Recently I have gone down the route of really HATING generative AI, which has ultimately led towards me disliking a lot of new tech.
 
 These past few weeks I have started using "older" tech that I already own, minimizing my phone usage and once again carrying multiple devices.
 
@@ -94,7 +94,7 @@ And literally as I was working on this post I decided to take a look at Facebook
 
 It didn't come with the required cable, a USB Mini-B but still having a PS3 meant I could borrow one of the cords used for charging my controllers in this case.
 
-Even with the process of hunting down a reader for the card, I'm extremely happy with the camera overall, and getting to look at photos from old trips that never got pulled from it makes me so happy.
+Even with the process of hunting down a reader for the card, I'm extremely happy with the camera overall, and getting to look at photos from old trips that never got pulled from it is so satisfying.
 
 ### Windows 8 PC - Linux PC or home server
 
