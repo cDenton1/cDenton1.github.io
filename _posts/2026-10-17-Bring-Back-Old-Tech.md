@@ -1,7 +1,7 @@
 ---
 title: "Bring Back Old Tech"
 tags: [projects]
-readtime: "13 min read"
+read_time: "13 min read"
 ---
 
 # Bring Back Old Tech
