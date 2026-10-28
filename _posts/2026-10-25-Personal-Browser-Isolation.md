@@ -47,17 +47,15 @@ I won't be covering any of them in particular in this post but understanding wha
 
 One point I mentioned above is what immediately gave me this idea: an email gateway rewriting the links in emails to open in an isolated browser if clicked.
 
-There is a company who offers this at larger scale for businesses, but being that I'm not a business and I cannot modify my email gateway in anyway, I wanted to build a personal version for myself that is slightly modified.
+There is a company who offers this at larger scale for businesses, but as I'm not a business and I cannot modify my email gateway in anyway, I wanted to build a personal version for myself that is slightly modified.
 
 The idea being, a script would read unopened emails from my mailbox, parse for any links from its content, and then rewrite them wrapped in the URL that opens the site inside an isolated browser.
 
-Now Gmail also can't modify emails coming in, so I decided it would be best to send a separate email with details about the original and wrapped links.
+Gmail also can't modify emails coming in, so I decided it would be best to send a separate email with details about the original with it's now wrapped links.
 
-The more I planned this out though, the more I was reminded by just how many emails I get in a day. 
+To avoid sending myself a bunch of extra emails, I also created some labels for emails I typically expect so I can sort them, and then only apply the above to unexpected senders or whatever I decided.
 
-To minimize sending myself even more emails, I also created some labels for emails I typically expect so I can sort them, and then only apply the above to unexpected senders or whatever I decided.
-
-This isn't the most secure thing though on the off chance that one of those companies is comprised and sending out phishing emails, however, I already don't really click links in emails anyway so I'm not very worried.
+This isn't the most secure if one of those companies is comprised and sending out phishing emails, however, I already practice not clicking links in emails to begin with.
 
 ### The Plan
 
@@ -117,7 +115,7 @@ Be aware that most of these are just placeholders and mine includes a lot more t
 
 This second section is the function that actually handles labeling the emails. First searching my mailbox for any unread emails with no user labels.
 
-Then it goes through one checking the sender, subject, and/or attachment of the email and assigning labels based off what I set above. Then for anything that does not get picked up by these labels call for the function that handles "scanning".
+Then it goes through one by one checking the sender, subject, and/or attachment of the email and assigning labels based off what I set above. For anything that doesn't get picked up by these labels got to the function that handles "scanning".
 
 ```js
 function labelEmails() {
@@ -169,7 +167,7 @@ function labelEmails() {
 
 Again, similar to the first chunk I explained, I cut out a lot here and swapped stuff for placeholders so if you're building your own you will most likely need more conditions.
 
-This next chunk does the so called scanning, first by replacing the slashes and semicolon in each URL with the URL encoded values, and then creating the entire request with the MyBrowser URL before adding it to an array to store them.
+This next chunk does the so called scanning, first by replacing the slashes, semicolon, and spaces in each URL with the URL encoded values, and then creating the entire request with the MyBrowser URL before adding it to an array to store them.
 
 ```js
 function scanEmail(message) {
@@ -197,7 +195,7 @@ function scanEmail(message) {
 }
 ```
 
-Lastly I build out the email being sent back to myself. This includes the subject and sender it's coming from and the list of wrapped URLs.
+Lastly I built out the email being sent back to myself. This includes the subject and sender it's coming from and the list of wrapped URLs.
 
 ```js
 function sendEmail(message) {
@@ -223,7 +221,7 @@ function sendEmail(message) {
 
 ### Results
 
-I tested this by sending an email to myself with some URLs and got another email that included the following:
+I tested this by sending an email to myself with some URLs, receiving the following email:
 
 ```
 An email with the subject: URL Test
@@ -235,4 +233,14 @@ Included the following links:
 3: https://www.mybrowser.lol/session?browser=firefox&url=https%3A%2F%2Fbushrabook.com%2FBooks%2FCryptography%2520%26%2520Network%2520Security%25208th%2520Ed.pdf.pdf
 ```
 
+I just tested some simple links for GitHub, YouTube, and my cryptography textbook, but it was good demonstration for some variety.
+
+I don't think I'd very often get these but if I do, I think it could be quite useful to 1) know that this isn't a typical sender I receive from and 2) if I wanted to click the links, at least I know it won't run anything on my own machine.
+
 ## Conclusion
+
+Even if this isn't a project I might ever really use, I have already noticed just how simple but useful I find the labeling itself to be. 
+
+Everyone should practice not clicking email links but adding this extra layer makes me feel a little better if I was to click by accident or for whatever reason.
+
+And also a great chance to continue practicing my JavaScript abilities and learn about the Gmail API.
