@@ -1,10 +1,10 @@
 ---
-title: "Personal Browser Isolation"
+title: "Email Browser Isolation"
 tags: [hidden-1, hidden-2, hidden-3]
 read_time: "__ min read"
 ---
 
-# Personal Browser Isolation
+# Email Browser Isolation
 
 A seemingly mundane thing that has always captivated me for some reason since starting college is email security and the technology behind emails in general. 
 
