@@ -182,6 +182,7 @@ function scanEmail(message) {
     } else {
       var result = links[i].replace(/\//g, '%2F')
       result = result.replace(':', '%3A')
+      result = result.replace(/ /g, '%20')
       urls.push(result);
     }
   }
@@ -221,5 +222,17 @@ function sendEmail(message) {
 ```
 
 ### Results
+
+I tested this by sending an email to myself with some URLs and got another email that included the following:
+
+```
+An email with the subject: URL Test
+Sent from the address: [ myself ] <myself@placeholder.com>
+
+Included the following links:
+1: https://www.mybrowser.lol/session?browser=firefox&url=https%3A%2F%2Fgithub.com%2FcDenton1
+2: https://www.mybrowser.lol/session?browser=firefox&url=https%3A%2F%2Fyoutu.be%2Frwe9fKfnNS0?si=prqrPxmgvXjcdZTi
+3: https://www.mybrowser.lol/session?browser=firefox&url=https%3A%2F%2Fbushrabook.com%2FBooks%2FCryptography%2520%26%2520Network%2520Security%25208th%2520Ed.pdf.pdf
+```
 
 ## Conclusion
