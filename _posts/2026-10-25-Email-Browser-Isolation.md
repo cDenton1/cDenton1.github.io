@@ -1,7 +1,7 @@
 ---
 title: "Email Browser Isolation"
-tags: [hidden-1, hidden-2, hidden-3]
-read_time: "__ min read"
+tags: [projects]
+read_time: "9 min read"
 ---
 
 # Email Browser Isolation
