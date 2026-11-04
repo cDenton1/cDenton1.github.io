@@ -146,7 +146,7 @@ Many people don't have the skills (or interest) to repair their tech when it's r
 
 Lots of companies are pushing for subscription models and/or digital libraries where you don't own anything you purchase. Meaning they have the control to take away the content you bought for any reason they want or go back and change content that was already released.
 
-It's frustrating as a consumer, and I think my last [post](https://cdenton1.github.io/2026/10/03/Anti-AI.html) touches on this more, but I miss when tech wasn't so sterile and outright owned by like the same few big tech companies who are basically now trying to get rid of humans.
+It's frustrating as a consumer, and I think my upcoming anti-AI post will touch on this more, but I miss when tech wasn't so sterile and outright owned by like the same few big tech companies who are basically now trying to get rid of humans.
 
 I miss when tech wasn't some social status and was actually something unique that people wanted to build, share, and cherish.
 
