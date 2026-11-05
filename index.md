@@ -3,7 +3,7 @@ layout: default
 title: Denton's Blog
 ---
 
-**Updates:** Making some small changes to various parts of the site and removing older posts if I don't feel they fit my purpose of this site anymore. Added a new game in the meantime: [Card Matching](https://cdenton1.github.io/card-matching).
+**Updates:** Making some small changes to various parts of the site and removing older posts if I don't feel they fit my purpose of this site anymore. Added [Card Matching](https://cdenton1.github.io/card-matching) in the meantime.
 
 ### Highlighted Posts
 
