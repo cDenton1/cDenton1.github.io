@@ -3,7 +3,15 @@ layout: default
 title: Denton's Blog
 ---
 
-**Updates:** Making some small changes to various parts of the site and slowly modifying or just removing older posts if I don't feel they fit my purpose of this site anymore. Added a new game in the meantime: [Card Matching](https://cdenton1.github.io/card-matching).
+**Updates:** Making some small changes to various parts of the site and removing older posts if I don't feel they fit my purpose of this site anymore. Added a new game in the meantime: [Card Matching](https://cdenton1.github.io/card-matching).
+
+### Highlighted Posts
+
+[Building a Honeypot](https://cdenton1.github.io/2026/02/18/Building-a-Honeypot.html) - Built a modified evil twin honeypot on a Raspberry Pi Pico W for my own learning and to further test my Python abilities.
+
+[CyberSci Nationals 2025](https://cdenton1.github.io/2025/06/19/CyberSci-Nationals-25.html) - Had the opportunity to compete amongst the top 45 cybersecurity students from across the country in Ottawa.
+
+[Bring Back Old Tech](https://cdenton1.github.io/2026/10/17/Bring-Back-Old-Tech.html) - Passion project of mine, breaking out and reusing/repurposing older technology to avoid it from going to waste and limit my phone usage.
 
 ### Recent Posts:
 
